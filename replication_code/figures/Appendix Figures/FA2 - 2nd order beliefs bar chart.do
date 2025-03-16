@@ -128,9 +128,9 @@ graph bar normsqdummy* if inlist(qversion,2,3,4), over(normgroup) horizontal sta
 	graph save "Graph" "$output_descr/figures/gph_files/childrensuffer_combined.gph", replace
 	
 
-	grc1leg "$output_descr/Raw graphs/menexecs_combined.gph" ///
-	"$output_descr/Raw graphs/womanpriority_combined.gph" ///
-	"$output_descr/Raw graphs/childrensuffer_combined.gph", col(1) 
+	grc1leg "$output_descr/figures/gph_files/menexecs_combined.gph" ///
+	"$output_descr/figures/gph_files/womanpriority_combined.gph" ///
+	"$output_descr/figures/gph_files/childrensuffer_combined.gph", col(1) 
 	graph save "Graph" ///
 	"$output_descr/figures/gph_files/2nd order gender attitudes fig_control group.gph", ///
 	replace 
