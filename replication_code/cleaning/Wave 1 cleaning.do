@@ -38,7 +38,7 @@ drop if new_id == .
 save "RCT admin and wave 1/Data/Exclusion_sheet.dta", replace
 */
 
-import excel "${data}/RCT admin and wave 1/Data/deidentified commute dataset-20191017.xlsx", ///
+import excel "${data}/RCT admin and wave 1/Raw/deidentified commute dataset-20191017.xlsx", ///
 sheet("Full Uber dataset") cellrange(A1:CG1114) firstrow clear
 
 *labeling variables with first row
@@ -152,9 +152,8 @@ replace wusool_T = 0 if wusool_ct2 == "Control"
 replace wusool_T = 1 if wusool_ct2 == "Treatment"
 tab wusool_T 
 
-								  
 replace Notes = "" if new_id == "1617" //there was a mistake in the notes for this ID
-
+								  
 
 ************ Dropping late joiners from same household ************
 * There was imbalance in the number of household members in the study, possibly because
@@ -546,101 +545,7 @@ label var HH_size2 "HH Members"
 tostring randomization_cohort, gen(randomization_cohort2)
 
 
-////////////////////////////////////////////////////////////////////////////////
 
-// EDITED AUG 2, 2023: COMMENTING OUT THIS SECTION
-
-/*
-
-encode randomization_cohort2, gen(randomization_cohort3)
-
-
-
-***********************************************************
-*    Balance Check F regressions
-***********************************************************
-encode group, gen(group2)
-encode randomization_cohort2, gen(randomization_cohort4)
-
-*generate missing dummies:
-local  variables age ///
-        education2 educated education_masters education_college education_diploma education_highschool ///
-		education_elementary education_primary education_read no_education ///
-		employed married car2 icar driving_not_unlikely_BL dr_Def_No HH_size2 
-		
-		
-foreach i of local variables{
-gen `i'_m = 0
-replace `i'_m = 1 if `i' == . 
-}
-
-local variables age education2 educated employed married car2 icar driving_not_unlikely_BL dr_Def_No HH_size2
-
-		
-foreach i of local variables{
-reg `i' i.group2 i.randomization_cohort4 if dup == 0
-estimate store `i'
-test 2.group = 3.group = 4.group = 0
-}
-
-estout age education2 educated employed married car2 icar driving_not_unlikely_BL dr_Def_No HH_size2 ///
-	   ,cells( b(star fmt(3)  ) se(par fmt(3)) ) starlevels(* .1 ** .05 *** .01) stats(F p N r2_a ) style(tex)
-
-
-
-local variables education_masters education_college education_diploma education_highschool ///
-		education_elementary education_primary education_read no_education 
-
-		
-foreach i of local variables{
-reg `i' i.group2 i.randomization_cohort4 if dup == 0
-estimate store `i'
-test 2.group = 3.group = 4.group = 0 
-}
-estout  education_masters education_college education_diploma education_highschool ///
-		education_elementary education_primary education_read no_education ///
-	   ,cells( b(star fmt(3)  ) se(par fmt(3)) ) starlevels(* .1 ** .05 *** .01) stats(F p N r2_a ) style(tex)
-
-
-************* Household size diagnostics ***************
-
-sum HH_size2
-tab HH_size2 Institution
-tab HH_size2 randomization_cohort if Institution == "Alanahda"
-
-reg HH_size2 i.group2 i.randomization_cohort4 if dup == 0 & Institution == "Alanahda"
-reg HH_size2 i.group2 i.randomization_cohort4 if dup == 0 & Institution != "Alanahda"
-
-
-***********************************************************
-*    Balance Tables
-***********************************************************
-/* THESE WILL BE DONE DIFFERENTLY MOVING FORWARD (note from Adam)
-drop if dup != 0
-*run to save as latex
-iebaltab  age education2 educated employed married car2 icar driving_not_unlikely_BL dr_Def_No HH_size2 ///
-education_masters education_college education_diploma education_highschool ///
-		education_elementary education_primary education_read no_education /// 
- , fixedeffect(randomization_cohort3) ftest fmissok ///
-   grpvar(group) savetex("C:\Users\Hussasin Alshammasi\Dropbox\EPoD Female Transport\2. Background and design\Baseline regressions\balance_table\balance_table2.tex")
-
-
-* Run to browsw in stata:
-iebaltab  age education2 educated employed married car2 icar driving_not_unlikely_BL dr_Def_No HH_size2 ///
-education_masters education_college education_diploma education_highschool ///
-		education_elementary education_primary education_read no_education ///
- , fixedeffect(randomization_cohort3) ftest fmissok ///
-   grpvar(group) browse
-*/
-
-* drop unnecessary variables
-drop _est_age _est_education2 _est_educated _est_employed _est_married _est_car2 _est_icar driving_not_unlikely_BL _est_dr_Def_No _est_HH_size2 _est_education_masters _est_education_college _est_education_diploma _est_education_highschool _est_education_elementary _est_education_primary _est_education_read _est_no_education
-
-drop age_m education2_m educated_m education_masters_m education_college_m education_diploma_m education_highschool_m education_elementary_m education_primary_m education_read_m no_education_m employed_m married_m car2_m icar_m driving_not_unlikely_BL_m dr_Def_No_m HH_size2_m randomization_cohort4 group2 randomization_cohort3
-
-*/
-
-////////////////////////////////////////////////////////////////////////////////
 
 destring new_id, replace
 
@@ -652,7 +557,7 @@ replace BLsearch = 1 if are_you_employed == "لا، أنا طالبة وأنوي
 label variable BLsearch "baseline job search"
 
 ***** bring in exclusion sheet and drop necessary observations
-merge m:1 new_id using "${data}/RCT admin and wave 1/Data/Exclusion_sheet.dta"
+merge m:1 new_id using "${data}/RCT admin and wave 1/Raw/Exclusion_sheet.dta"
 drop _merge
 
 
@@ -1322,4 +1227,4 @@ label var wusool "Commute subsidy information"
 	"Subsidy Info Treatment Only" 3 "Both Treatments"
 	lab val treat treatments_4
 
-save "${data}/RCT admin and wave 1/Data/Final/Wave1.dta", replace
+save "${data}/RCT admin and wave 1/Final/Wave1.dta", replace

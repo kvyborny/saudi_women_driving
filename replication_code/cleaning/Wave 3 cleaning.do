@@ -219,7 +219,7 @@ save "$data/RCT wave 3/Cleaned/Wave3_combinedrawdata.dta", replace
 * SECTION 2 - MERGE IN DATA FROM WAVES 1 AND 2
 *****************************************************************
 
- use "$data/RCT merged/Final/Combined_waves1and2_final.dta", clear
+ use "$data/RCT wave 2/Final/Combined_waves1and2_final.dta", clear
  
 	* let's remove observations that have been excluded from the sample (sample = 606)
 	drop if Excluded==1
@@ -1960,7 +1960,7 @@ keep 	randomization_cohort2 file_nbr participantid treatment ///
 		G8_1_propor_st G8_2_propor_st G8_3_propor_st G10_1_propor_st ///
 		G10_2_propor_st G10_3_propor_st ga_1st_order_likert_sw ga2nd_mfam_likert_sw ///
 		ga2nd_fcom_likert_sw ga2nd_mcom_likert_sw P3_scale hh_kid_adult_abovemed_BL ///
-		Neighborhood_admin_BL salary_BL_cat trip_all_leisure_cond_w2 ///
+		salary_BL_cat trip_all_leisure_cond_w2 ///
 		trip_personal_errands_cond_w2 trip_HH_errands_cond_w2 trip_commute_cond_w2 ///
 		endline_start_w3 husb_influence_kids_original age_med edu_nohs owns_car ///
 		relationship_status_BL ever_married trip_any_shopping_pers_w2 trip_commute_w2 ///
