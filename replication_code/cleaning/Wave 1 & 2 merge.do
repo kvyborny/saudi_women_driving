@@ -10,12 +10,12 @@ set more off
 
 **************************************************************************
 
-use "${data}/RCT admin and wave 1/Data/Final/Wave1.dta", clear
+use "${data}/RCT admin and wave 1/Final/Wave1.dta", clear
 
 
-merge 1:1 participantid using "${data}/RCT wave 2/Data/Final/Wave2.dta"
+merge 1:1 participantid using "${data}/RCT wave 2/Final/Wave2.dta"
 drop _merge
 
 
-save "${data}/RCT merged/Final/Combined_waves1and2_final.dta", replace 
+save "${data}/RCT wave 2/Final/Combined_waves1and2_final.dta", replace 
 

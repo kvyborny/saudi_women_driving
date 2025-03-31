@@ -12,20 +12,20 @@ set more off
 **************************************************************************
 
 * get order randomizing info
-import excel "${data}/RCT wave 2/Data/block randomizer.xlsx", sheet("Sheet2")  firstrow clear
+import excel "${data}/RCT wave 2/Raw/block randomizer.xlsx", sheet("Sheet2")  firstrow clear
 drop if _n == 1 
 destring FL_17_DO_Wusool FL_17_DO_Driving FL_17_DO_Travel FL_17_DO_Traveldiaryonpaper, replace
 rename ResponseId ResponseID
 egen blockorder = concat(FL_17_DO_Wusool FL_17_DO_Driving FL_17_DO_Travel FL_17_DO_Traveldiaryonpaper)
 replace blockorder = "" if FL_17_DO_Wusool == .
 destring blockorder, replace
-save "${data}/RCT wave 2/Data/blockrandomizer.dta", replace 
+save "${data}/RCT wave 2/Cleaned/blockrandomizer.dta", replace 
 
 * bring in raw data
-import excel "${data}/RCT wave 2/Data/Commute Wave 2 round 1-raw-deidentified.xlsx", ///
+import excel "${data}/RCT wave 2/Raw/Commute Wave 2 round 1-raw-deidentified.xlsx", ///
 sheet("Commute+Endline+Survey_March+16") firstrow clear
 
-merge 1:1 ResponseID using "${data}/RCT wave 2/Data/blockrandomizer.dta"
+merge 1:1 ResponseID using "${data}/RCT wave 2/Cleaned/blockrandomizer.dta"
 drop _merge 
 
 * note that there are 101 observations with same participantid of 0, and after collapse, 6 have less than 1000 as their participantID, which does not coincide with lists (participantids 0 3 9 22 77 199)
@@ -57,13 +57,13 @@ collapse (lastnm) StartDate EndDate Progress Finished RecordedDate UserLanguage 
 
 
 * Merge in treatment status from wave 1
-save "${data}/RCT wave 2/Data/Wave2_raw.dta", replace
+save "${data}/RCT wave 2/Cleaned/Wave2_raw.dta", replace
 
-use "${data}/RCT admin and wave 1/Data/Final/Wave1.dta", clear
+use "${data}/RCT admin and wave 1/Final/Wave1.dta", clear
 
 keep participantid treat
 
-merge 1:1 participantid using "${data}/RCT wave 2/Data/Wave2_raw.dta"
+merge 1:1 participantid using "${data}/RCT wave 2/Cleaned/Wave2_raw.dta"
 keep if _merge==3
 drop _merge
 
@@ -558,7 +558,7 @@ replace driverfam = . if consentall == 0
 label variable driversolo "Solo Driver"
 label variable driverfam "Driver with Family"
 
-save "${data}/RCT wave 2/Data/cleaned_wave2_dataset_full.dta", replace
+save "${data}/RCT wave 2/Cleaned/cleaned_wave2_dataset_full.dta", replace
 
 * if desired, remove string equivalents of the above new numeric variables so as to not have duplicate variables
 drop callbackattempts participantgroup callanswered consent monthlysalary attend_careerfair jobhunt_friends jobhunt_jpc jobhunt_inperson jobhunt_calledemplo jobhunt_advert jobhunt_agency jobhunt_other jobhunt_noanswer jobhunt_callended jobhunt_none jobsappli_lastmnth jobsappli_lastmnth_txt jobinterv_lastmnth jobinterv_lastmnth_txt jobinterv_go jobinterv_go_txt drivinglicense anydrivingtraining sauditraining drivinh_lastmnth driving_times driving_likely trip_yesterday lasttrip_when lasttrip_noacco_when lasttrip_relat_when lasttrip_friend_when
@@ -918,5 +918,5 @@ foreach var of local missing_w2_suffix {
 }
 		
 
-save "${data}/RCT wave 2/Data/Final/Wave2.dta", replace
+save "${data}/RCT wave 2/Final/Wave2.dta", replace
 
