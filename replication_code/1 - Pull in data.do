@@ -11,5 +11,5 @@ Purpose: 		Pull in dataset for paper tables and figures; this dataset
 *******************************************************************************/
 
 * Pull in final dataset
-use  "$data/endline/final/Combined_allwaves_final.dta", clear
+use  "$data/RCT wave 3/Final/Combined_allwaves_final.dta", clear
 
