@@ -26,7 +26,7 @@ Purpose: 		Settings for Saudi commute project
 	
 		if "`c(username)'" == "Kendal" | "`c(username)'" == "kendalswanson" {
 		global 		mainfolder "/Users/kendalswanson/OneDrive - Duke University/saudi_women_driving"
-		global 		output "/Users/kendalswanson/OneDrive - Duke University/saudi_women_driving/results"
+		
 	}
 	
 	
@@ -37,7 +37,7 @@ Purpose: 		Settings for Saudi commute project
 * Subfolder globals 
 ********************************************************************************/
 
-
+global output "$mainfolder/results"
 global rep_code "$mainfolder/replication_code"
 global data "$mainfolder/data"
 global output_descr "$output/descriptive"
