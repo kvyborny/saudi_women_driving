@@ -1226,5 +1226,11 @@ label var wusool "Commute subsidy information"
 	lab def treatments_4 0 "Control" 1 "Driving Treatment Only" 2 ///
 	"Subsidy Info Treatment Only" 3 "Both Treatments"
 	lab val treat treatments_4
+	
+* Heard of Wusool program
+gen subsidy_unaware_BL = 0 if Haveyouheardaboutthisprogra_BL!="" 
+replace subsidy_unaware_BL = 1 if strpos(Haveyouheardaboutthisprogra_BL, "no" ) ///
+	| strpos(Haveyouheardaboutthisprogra_BL, "No" )
+lab var subsidy_unaware_BL "Unaware of subsidy program at BL"
 
 save "${data}/RCT admin and wave 1/Final/Wave1.dta", replace

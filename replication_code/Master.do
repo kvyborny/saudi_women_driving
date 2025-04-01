@@ -106,8 +106,14 @@ ssc install			ietoolkit
 	do 		"$rep_code/tables/Appendix tables/Appendix B/TB10 Panel C - permissions_attitudes women working_strata.do"
 	
 
+	* Robustness / results referenced in text
+	do 		"$rep_code/Stats_for_paper.do"	// Stats referred to in text
+	do 		"$rep_code/tables/Robustness referred to in paper/BL char and diff attrition.do"
+	do 		"$rep_code/tables/Robustness referred to in paper/Alt Table 1_altunemp.do"
+	do 		"$rep_code/tables/Robustness referred to in paper/Alt Table A11_altunemp.do"
+	do 		"$rep_code/tables/Robustness referred to in paper/Alt Table A17 - Employed_treatment interactions_marital dummies.do"
 	
-	
+
 	
 	
 	
