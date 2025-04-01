@@ -1973,7 +1973,8 @@ keep 	randomization_cohort2 file_nbr participantid treatment ///
 		P3_abovemed_st  R17_scale_st R14_scale_st driving_likely_likert_BL jobs_applied_w3 ///
 		G13_scale_st modstart_1 modstart_2 modstart_3 start_survey_w3 one_child ///
 		mult_children work_experience_BL unempl_jobsearch_w3 Institution saudi_drive_training ///
-		trips_unaccompanied_w3 mobspencntrl_binary_sw job_search_binary_sw any_jobsearch_w3
+		trips_unaccompanied_w3 mobspencntrl_binary_sw job_search_binary_sw any_jobsearch_w3 ///
+		education_diploma education_college education_masters subsidy_unaware_BL
 		
 		  
 			
