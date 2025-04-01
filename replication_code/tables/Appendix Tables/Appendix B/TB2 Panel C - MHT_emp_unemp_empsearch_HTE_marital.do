@@ -2,13 +2,24 @@
 ********************************************************************************
 ********************************************************************************
 
-Purpose: 		APPEN TABLE - 	HTE (MARITAL STATUS) FOR OUTCOMES: EMPLOYED,
-								UNEMPLOYED, AND EMPLOYED SEARCH
+Purpose: 		MULTIPLE HYPOTHESIS TESTING - JOB SEARCH; HTE (MARITAL STATUS); 
+											  PANEL C
 								  
 								  
-TABLE FOOTNOTES:							 
-
-
+TABLE FOOTNOTES: Variations in sample size are due to drop-off from telephone 
+survey; order of survey modules was randomized. Outcomes are defined as described 
+in Table 1. All estimates include individual and household controls: age (above 
+median dummy), education level (less than a high school degree), marital status 
+(indicators for married, never-married, and widowed), household size (number of 
+members), number of cars owned (indicators for one car and for more than one car), 
+an indicator for baseline labor force participation, and strata fixed effects.
+SEs are clustered at household level. We replace missing control values with 0 
+and include missing dummies for each, except for the interaction control. As such, 
+some Ns are lower relative to Table 1. 10 respondents are missing values for 
+education level at baseline, with some overlap in respondents who are also missing 
+values for outcomes. Four respondents are missing values marital status. We include
+multiple hypothesis tests by calculating the False Discovery Rate (FDR) q-values 
+following Anderson (2008). * p < 0.1 ** p < 0.05 *** p < 0.01.							 
 ********************************************************************************
 ********************************************************************************
 *******************************************************************************/

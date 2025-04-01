@@ -2,12 +2,29 @@
 ********************************************************************************
 ********************************************************************************
 
-Purpose: 		APPEN TABLE - Test robustness of marital status results to 
-							  treatment interactions 
+Purpose: 		APPENDIX TABLE - Robustness of heterogeneity results (employed) 
+								 to treatment interactions with BL characteristics
+								 
 
-Table footnotes: Column 2 repeats the estimation in Column 1 but additionally controls for treatment interacted with the respondent's education, age, and the number of children under 18 years old in the household at baseline.   `Has husband/co-parent' is defined as (a) currently married or (b) divorced/separated with children under 18 in the household. Four observations are dropped due to missing baseline marital status and twelve additional observations are dropped due to missing administrative data on children in the household for divorced or separated women. In Column 2 an additional three observations are dropped due to missing administrative data on children in the household for single or widowed women (these observations take a value of zero for `has husband/co-parent'; results are similar if we alternatively assume that respondents with missing data on number of children in the household do not have children), and nine additional observations are dropped to do missing education at baseline. This causes a difference in sample size to Table \ref{tab:lfpdecision}.  Both columns include individual and household controls: age (above median dummy), education level (less than a highschool degree),  household size (number of members), number of cars owned (indicators for one car and for more than one car), an indicator for baseline labor force participation, and 
- randomization cohort fixed effects. SEs are clustered at household level. We impute for missing control values and include missing dummies for each, except for the interaction controls. Marital status dummies are not included as a control in this table because they are highly  collinear with ``has husband/co-parent". However, results are similar if we include individual indicators as controls for: married; single; and widowed (divorced/separated is the reference group).  * p $<$ 0.1 ** p $<$ 0.05 *** p $<$ 0.01 
-							  
+Table footnotes: Column 2 repeats the estimation in Column 1 but additionally 
+controls for treatment interacted with the respondent's education, age, and the 
+number of children under 18 years old in the household at baseline. `Has 
+husband/co-parent' is defined as (a) currently married or (b) divorced/separated 
+with children under 18 in the household. Four observations are dropped due to 
+missing baseline marital status. In Column 2 an additional 15 observations are 
+dropped due to missing administrative data on children in the household, and nine 
+additional observations are dropped due to missing education at baseline. This 
+causes a difference in sample size to Table 1. Both columns include individual 
+and household controls: age (above median dummy), education level (less than a 
+high school degree), household size (number of members), number of cars owned 
+(indicators for one car and for more than one car), an indicator for baseline 
+labor force participation, and strata fixed effects. SEs are clustered at household 
+level. We replace missing control values with 0 and include missing dummies for 
+each, except for the interaction controls. Marital status dummies are not included 
+as a control in this table because they are highly collinear with "has 
+husband/co-parent". However, results are similar if we include individual 
+indicators as controls for: married; single; and widowed (divorced/separated is 
+the reference group). * p < 0.1 ** p < 0.05 *** p < 0.01
 ********************************************************************************
 ********************************************************************************
 ********************************************************************************/

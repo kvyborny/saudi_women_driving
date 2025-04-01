@@ -3,9 +3,16 @@
 ********************************************************************************
 
 Purpose: 		APPENDIX - 	Permissions (leave house and make purchase) and 
-							second order attitudes; strata FEs, no controls
+							second order attitudes with Lee bounds. No strata FEs; 
+							no controls
 	
-Table footnotes: Outcome variables are constructed as described in the notes for Tables 1 - 3. Variations in sample size are due to drop-off from telephone survey; order of survey modules was randomized. All estimates include randomization cohort fixed effects, SEs are clustered at household level. * p < 0.1 ** p < 0.05 *** p < 0.01.
+Table footnotes: Outcome variables are constructed as described in the notes for 
+Table 1 and A12. Variations in sample size are due to drop-off from telephone 
+survey; order of survey modules was randomized. Because our strata are small, 
+Lee bounds are unstable with the strata and control variables in our preferred 
+specification, so this table includes the main point estimate and the bounds 
+estimated with no controls or fixed effects. SEs are clustered at the household 
+level. * p < 0.1 ** p < 0.05 *** p < 0.01.	
 	
 ********************************************************************************
 ********************************************************************************

@@ -4,8 +4,18 @@
 
 Purpose: 		MULTIPLE HYPOTHESIS TESTING - JOB SEARCH
 				
-Table footnotes: 
-
+Table footnotes: The outcome in Column 3 indicates whether the respondent is 
+employed and applied for at least one job in the previous month (a more general 
+measure of search beyond job applications was not collected for employed 
+respondents); five individuals responded to work status but not to the applications 
+measure, leading to the variation in sample size between columns. Order of survey 
+modules was randomized. All estimates include individual and household controls: 
+age (above median dummy), education level (less than a high school degree), marital 
+status (indicators for married, never-married, and widowed), household size (number 
+of members), number of cars owned (indicators for one car and for more than one car),
+an indicator for baseline labor force participation, and strata fixed effects. 
+SEs are clustered at household level. We replace missing control values with 0 
+and include missing dummies for each. * p < 0.1 ** p < 0.05 *** p < 0.01.
 ********************************************************************************
 ********************************************************************************
 *******************************************************************************/

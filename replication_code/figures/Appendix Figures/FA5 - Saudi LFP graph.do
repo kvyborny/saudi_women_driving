@@ -5,8 +5,8 @@
 Purpose:				Generate LFP figure with employed / unemployed 
 
 
-Figure footnotes: Notes: Source: Estimates from Saudi LFS - GASTAT. Red vertical line shows the date of the driving ban repeal
-				
+Figure footnotes: Source: Estimates from Saudi LFS - GASTAT. Red vertical line 
+shows the date of the driving ban repeal.				
 ********************************************************************************
 ********************************************************************************
 ********************************************************************************/

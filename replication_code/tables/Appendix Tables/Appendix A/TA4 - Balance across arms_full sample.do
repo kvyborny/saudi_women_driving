@@ -4,8 +4,13 @@
 
 Purpose: 		APPENDIX - Balance across arms in full sample; strata FEs
 
-Table footnotes: TO ADD
-		
+Table footnotes: Data from administrative records and baseline survey. "Likely to 
+drive soon after ban is lifted" variables are binary response indicators based on 
+the following scale for whether the respondent would be likely to drive once the 
+ban on female driving would be lifted (it was lifted partway through the baseline): 
+unlikely to drive, somewhat likely, likely but not at first, and likely. Estimated 
+differences and p-values reported from OLS; strata FEs and household-level clustered 
+SEs. To estimate the F-stat, we impute variable means for missing values.		
 ********************************************************************************
 ********************************************************************************
 *******************************************************************************/

@@ -6,13 +6,20 @@ Purpose: 		APPENDIX TABLE - PAP -  training, license, expected commute,
 										mobility
 
 
-Table footnotes: The outcome in Panel A, Column 6 was constructed as follows: respondents who reported not driving in the previous month were asked "will you drive in the future? How likely are
-you to drive?" with a Likert response scale. This was also coded as "likely" if the respondent reported driving in the previous month. Responses were transformed into a binary indicator for
-above median response. All outcomes reported in this table were collected during the interim follow-up. Variations in sample size are due to drop-off from telephone survey. All estimates
-include individual and household controls: age (above median dummy), education level (less than a highschool degree), marital status (indicators for married, never-married, and widowed),
-household size (number of members), number of cars owned (indicators for one car and for more than one car), an indicator for baseline labor force participation, and strata fixed effects. SEs
-are clustered at household level. We replace missing control values with 0 and include missing dummies for each. * p < 0.1 ** p < 0.05 *** p < 0.01
-				
+Table footnotes: The outcome in Panel A, Column 6 was constructed as follows: 
+respondents who reported not driving in the previous month were asked "will you 
+drive in the future? How likely are you to drive?" with a Likert response scale. 
+This was also coded as "likely" if the respondent reported driving in the previous 
+month. Responses were transformed into a binary indicator for above median response. 
+All outcomes reported in this table were collected during the interim follow-up. 
+Variations in sample size are due to drop-off from telephone survey. All estimates
+include individual and household controls: age (above median dummy), education 
+level (less than a high school degree), marital status (indicators for married, 
+never-married, and widowed), household size (number of members), number of cars 
+owned (indicators for one car and for more than one car), an indicator for baseline 
+labor force participation, and strata fixed effects. SEs are clustered at household 
+level. We replace missing control values with 0 and include missing dummies for each. 
+* p < 0.1 ** p < 0.05 *** p < 0.01
 ********************************************************************************
 ********************************************************************************
 ********************************************************************************/

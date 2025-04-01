@@ -5,17 +5,27 @@
 Purpose: 		APPENDIX - 	First order beliefs and social contact; index and
 							index components
 
-
-
-Table footnotes: Column 1 in each panel is a weighted index of the standardized responses to the statements/questions reported under Index Components (Columns 2-7 in Panel A, Columns 2-3 in Panel B),
-using the swindex command developed by Schwab et al. (2020). The command uses all available data (hence a higher N in Column 1) and assigns lower weight to index components with missing
-values. Respondents were asked to rate their own level of agreement (using a 5 point Likert scale from completely disagree' to completely agree') for each statement in Panel A, Columns 2-5 and
-7. All estimates include individual and household controls: age (above median dummy), education level (less than a highschool degree), marital status (indicators for married, never-married, and
-widowed), household size (number of members), number of cars owned (indicators for one car and for more than one car), an indicator for baseline labor force participation, and randomization cohort
-fixed effects. SEs are clustered at household level. We impute for missing control values and include missing dummies for each. Variations in sample size are due to drop-off from telephone survey;
-order of survey modules was randomized. * p < 0.1 ** p < 0.05 *** p < 0.01
-
-					   				
+							
+Table footnotes: Respondents were asked to rate their own level of agreement 
+(using a 5 point Likert scale from `completely disagree' to `completely agree') 
+for each statement in Panel A, Columns 2-5 and 7. Responses were transformed into 
+binary indicators for above median response and are reported in their respective 
+columns. Respondents were also asked what the ideal age is for a women to have
+her first child. As reported in Panel B, Columns 2 and 3, respondents were also 
+asked about the number of people they spoke to and met in the previous 7 days. 
+Outcomes in Column 1 are weighted indices of the standardized responses reported 
+in Panel A, Columns 2-7 and Panel B, Columns 2-3, respectively, using the swindex 
+command developed by Schwab et al. (2020). The command uses all available data 
+(hence a higher N in Column 1) and assigns lower weight to index components with 
+missing values. All estimates include individual and household controls: age 
+(above median dummy), education level (less than a high school degree), marital 
+status (indicators for married, never-married, and widowed), household size 
+(number of members), number of cars owned (indicators for one car and for more 
+than one car), an indicator for baseline labor force participation, and strata 
+fixed effects. SEs are clustered at household level. We replace missing control 
+values with 0 and include missing dummies for each. Variations in sample size are 
+due to drop-off from telephone survey; order of survey modules was randomized. 
+* p < 0.1 ** p < 0.05 *** p < 0.01					   				
 ********************************************************************************
 ********************************************************************************
 *******************************************************************************/
