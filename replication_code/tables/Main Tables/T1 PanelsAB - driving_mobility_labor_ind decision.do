@@ -6,30 +6,53 @@ Purpose: 		MAIN TABLE - Stacked: driving, mobility, labor market outcomes,
 							 and independent decision making
 				
 Table footnotes: 
-
-Table 1: Column (5) and (6) outcomes are set to zero for 24 observations in which the respondent reported making no trips
-outside the home in the previous 7 days. Variations in sample size are due to drop-off from telephone survey; order of survey
-modules was randomized. All estimates include individual and household controls: age (above median dummy), education level
-(less than a highschool degree), marital status (indicators for married, never-married, and widowed), household size (number
-of members), number of cars owned (indicators for one car and for more than one car), an indicator for baseline labor force
-participation, and randomization cohort fixed effects. SEs are clustered at household level. We impute for missing control
-values and include missing dummies for each. * p < 0.1 ** p < 0.05 *** p < 0.01.
-
-Table 2: The outcome in column (4) indicates whether the respondent is employed and applied for at least one job in the previous
-month (a more general measure of search beyond job applications was not collected for employed respondents). Results for
-unemployment are similar if we redefine unemployed to include only those who applied for at least one job in the previous month.
-The outcomes in Columns 5 and 6 were constructed as follows: respondents were asked to rate their own level of agreement (using
-a 5 point Likert scale from `completely disagree' to `completely agree') for each of the statements in Panel A, Columns 2-5 and 7 of
-Table A10. Responses to each statement were then transformed into binary indicators for above median responses. Respondents
-were also asked what the ideal age is for a woman to have her first child (Panel A, Column 6 of Table A10). Respondents were
-also asked about the number of people they spoke to on the phone and met with in the previous 7 days (Panel B, Columns
-2-3 of Table A10). Weighted indices of the standardized responses to each set of questions, respectively, were generated using
-the swindex command developed by Schwab et al. (2020). Variations in sample size are due to drop-off from telephone survey;
-order of survey modules was randomized. All estimates include individual and household controls: age (above median dummy),
-education level (less than a highschool degree), marital status (indicators for married, never-married, and widowed), household size
-(number of members), number of cars owned (indicators for one car and for more than one car), an indicator for baseline labor
-force participation, and strata fixed effects. SEs are clustered at household level. We replace missing control values with 0 and
-include missing dummies for each. * p < 0.1 ** p < 0.05 *** p < 0.01
+Panel A, Column 5 and 6 outcomes are set to zero for 24 observations in which the 
+respondent reported making no trips outside the home in the previous 7 days. The 
+outcome in Panel B, Column 4 indicates whether the respondent is employed and 
+applied for at least one job in the previous month (a more general measure of 
+search beyond job applications was not collected for employed respondents); five
+individuals responded to work status but not to the applications measure, 
+leading to the variation in sample size between columns. Results for unemployment 
+are similar if we redefine unemployed to include only those who applied for at 
+least one job in the previous month. The outcomes in Panel B, Columns 5 and 6 and 
+in Panel C, Columns 3 and 4 are weighted indices of sets of standardized outcomes 
+described as follows using the swindex command developed by Schwab et al. (2020). 
+For Panel B, Column 5, respondents were asked to rate their own level of agreement 
+(using a 5 point Likert scale) for the following statements: `Women can be equally 
+good business executives', `It's ok for a woman to have priorities outside the 
+home', `Children are OK if a mother works', `It's OK to put my own needs above 
+those of my family', and `The Government should allow a national women's soccer 
+team'. Responses were transformed into binary indicators for above median response. 
+Respondents were also asked what the ideal age is for a woman to have her first 
+child. These outcomes are reported in Table A12, Panel A. For Panel B, Column 6, 
+women were asked about the number of people they spoke with and met in the previous 
+7 days. These outcomes are reported in Table A12, Panel B. For Panel C, Columns 
+1 and 2, respondents were asked to rate their level of agreement (on a 5 point 
+Likert scale) with the following statements: "If I wanted to meet with a friend 
+outside of my home, I could do so without seeking approval / permission from anyone 
+in my household first" and "I can make a purchase of 1000 SAR without needing to 
+take permission from any member of my family" (1000 SAR is roughly equivalent to 
+265 USD, in 2021 dollars), respectively. Responses were transformed into binary 
+indicators for above median response. For Panel C, Columns 3 and 4, respondents 
+were asked to think about a group and report what share of that group (`none`, 
+`a minority', `about half', `a majority', or `all') they think would `somewhat' 
+or `completely' agree with the following statements: `Women can be equally good 
+business executives', `It's ok for a woman to have priorities outside the home', 
+and `Children are OK if a mother works'. Responses were transformed into binary 
+indicators for above median response. Second order beliefs questions are indexed 
+for one female reference group (female community members) in Column 3 and two male 
+reference groups: male family members and male community members in Column 4. The 
+components of the second order attitudes indices are reported in Table A16; in 
+Panel B and C of that table, we additionally report the indices separately for male 
+family members and male community. Variations in sample size are due to drop-off 
+from telephone survey; order of survey modules was randomized. All estimates 
+include individual and household controls: age (above median dummy), education 
+level (less than a high school degree), marital status (indicators for married,
+never-married, and widowed), household size (number of members), number of cars 
+owned (indicators for one car and for more than one car), an indicator for baseline 
+labor force participation, and strata fixed effects. SEs are clustered at household 
+level. We replace missing control values with 0 and include missing dummies for 
+each. * p < 0.1 ** p < 0.05 *** p < 0.01
 ********************************************************************************
 ********************************************************************************
 *******************************************************************************/

@@ -1,15 +1,11 @@
 /*******************************************************************************
 
 
-* PURPOSE:	FDR CORRECTIONS  - THIS CODE WAS ORIGINALLY WRITTEN BY ANDERSON (2008)
-							   AND WAS SLIGHTLY MODIFIED TO RUN IN CONJUNCTION 
-							   WITH THE TABLES IN THIS PAPER THAT CORRECT FOR
-							   MULTIPLE HYPOTHESES.
-							   This code was originally written by Anderson (2008).
+* PURPOSE:	FDR CORRECTIONS  - This code was originally written by Anderson (2008).
 							   We modify it slightly so that it can be run as part
 							   of the do files for Tables B1-B6. It does not need
 							   to be run separately as it is called within the 
-							   table do files.
+							   relevant table do files.
 
 *******************************************************************************/
 

@@ -6,9 +6,10 @@ Purpose: 		APPENDIX TABLE - descriptive stats on wave 2 travel patterns in
 					controls group
 				
 				
-Table footnotes: Descriptive statistics from detailed travel diary collected as part of the interim follow-up. Control group sample only.
-Respondents may report multiple trips and/or multiple modes for each trip, so means for trip purposes and modes can sum to greater than 1.
-				
+Table footnotes: Descriptive statistics from detailed travel diary collected as 
+part of the interim follow-up. Control group sample only. Respondents may report 
+multiple trips and/or multiple modes for each trip, so means for trip purposes 
+and modes can sum to greater than 1.			
 ********************************************************************************
 ********************************************************************************
 *******************************************************************************/

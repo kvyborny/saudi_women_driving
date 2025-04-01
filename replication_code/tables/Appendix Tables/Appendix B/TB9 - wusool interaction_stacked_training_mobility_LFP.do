@@ -3,14 +3,19 @@
 ********************************************************************************
 
 Purpose: 		APPENDIX TABLE - Wusool/Uber interaction - stacked: training/license, 
-				mobility, and LFP
+				mobility, LFP, attitudes, social interactions, decision-making
 				
 				
-Table footnotes: Outcome variables are constructed as described in the notes for Tables 1 - 3. Variations in sample size are due to drop-off from telephone survey; order of survey modules was randomized.
-All estimates include individual and household controls: age (above median dummy), education level (less than a highschool degree), marital status (indicators for married, never-married, and
-widowed), household size (number of members), number of cars owned (indicators for one car and for more than one car), an indicator for baseline labor force participation, and randomization
-cohort fixed effects. SEs are clustered at household level. We impute for missing control values and include missing dummies for each. * p < 0.1 ** p < 0.05 *** p < 0.01
-
+Table footnotes: Outcome variables are constructed as described in the notes for 
+Table 1. Variations in sample size are due to drop-off from telephone survey; 
+order of survey modules was randomized. All estimates include individual and 
+household controls: age (above median dummy), education level (less than a high 
+school degree), marital status (indicators for married, never-married, and widowed),
+household size (number of members), number of cars owned (indicators for one car 
+and for more than one car), an indicator for baseline labor force participation, 
+and strata fixed effects. SEs are clustered at household level. We replace missing 
+control values with 0 and include missing dummies for each. * p < 0.1 ** p < 0.05 
+*** p < 0.01
 ********************************************************************************
 ********************************************************************************
 *******************************************************************************/

@@ -8,30 +8,16 @@ Purpose: 		Settings for Saudi commute project
 ********************************************************************************
 *******************************************************************************/
 
-	* Root folder globals 
-		
-	if "`c(username)'" == "pc" {
+
+	/* 	Instructions to set root folder globals:
 	
-		global 		github "C:/Users/pc/Documents/GitHub/saudi_female_commute"
-		global 		dropbox "C:/Users/pc/OneDrive/Female_Transport_Riyadh"
-		global 		onedrive "C:/Users/pc/OneDrive/Female_Transport_Riyadh"		
-		global 		data "$dropbox/Surveys and data"
-		global 		results "$dropbox/Results"
-		global		box "$dropbox" 
+		Add file path to folder "saudi_women_driving". Global should be
+		called "mainfolder". The Subfolder globals are set to run based on
+		"mainfolder" and do not need to be edited.	*/
 
-
-	}
+		global 		mainfolder "[INSERT FILE PATH TO REP PACKAGE]/saudi_women_driving"
 		
 
-	
-		if "`c(username)'" == "Kendal" | "`c(username)'" == "kendalswanson" {
-		global 		mainfolder "/Users/kendalswanson/OneDrive - Duke University/saudi_women_driving"
-		
-	}
-	
-	
-
-		
 	
 ********************************************************************************
 * Subfolder globals 

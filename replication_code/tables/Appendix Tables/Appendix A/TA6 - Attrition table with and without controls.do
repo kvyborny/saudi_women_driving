@@ -4,11 +4,16 @@
 
 Purpose: 						APPENDIX - Attrition (with and without controls)
 				
-Table footnotes: Dependent variables are indicators for whether the respondent began the respective module in the survey; the order of modules was randomized. Estimates in even numbered columns include
-individual and household controls: age (above median dummy), education level (less than a highschool degree), marital status (indicators for married, never-married, and widowed), household size
-(number of members), number of cars owned (indicators for one car and for more than one car), an indicator for baseline labor force participation, and randomization cohort fixed effects. SEs are
-clustered at household level. We impute for missing control values and include missing dummies for each. * p < 0.1 ** p < 0.05 *** p < 0.01
-				
+Table footnotes: Dependent variables are indicators for whether the respondent 
+began the respective module in the survey; the order of modules was randomized. 
+Estimates in even numbered columns include individual and household controls: age 
+(above median dummy), education level (less than a high school degree), marital 
+status (indicators for married, never-married, and widowed), household size
+(number of members), number of cars owned (indicators for one car and for more 
+than one car), an indicator for baseline labor force participation, and strata 
+fixed effects. SEs are clustered at household level. We replace missing control 
+values with 0 and include missing dummies for each. * p < 0.1 ** p < 0.05 *** 
+p < 0.01	
 ********************************************************************************
 ********************************************************************************
 ********************************************************************************/

@@ -2,14 +2,26 @@
 ********************************************************************************
 ********************************************************************************
 
-Purpose: 		MULTIPLE HYPOTHESIS TESTING: Ability to leave the house, 
-				Ability to make purchases
+Purpose: 		MULTIPLE HYPOTHESIS TESTING - Ability to leave the house, 
+											  Ability to make purchases
 
 
 
-Table footnotes: TO ADD
-
-					   				
+Table footnotes: Outcomes were constructed as follows: respondents were asked to 
+rate their level of agreement (on a 5 point Likert scale) with the following 
+statements: "If I wanted to meet with a friend outside of my home, I could do 
+so without seeking approval / permission from anyone in my household first" and 
+"I can make a purchase of 1000 SAR without needing to take permission from any 
+member of my family" (1000 SAR is roughly equivalent to 265 USD, in 2021 dollars). 
+Responses were transformed into binary indicators for above median response. 
+Variations in sample size are due to drop-off from telephone survey; order of 
+survey modules was randomized. All estimates include individual and household 
+controls: age (above median dummy), education level (less than a high school degree), 
+marital status (indicators for married, never-married, and widowed), household size 
+(number of members), number of cars owned (indicators for one car and for more than 
+one car), an indicator for baseline labor force participation, and strata fixed
+effects. SEs are clustered at household level. We replace missing control values 
+with 0 and include missing dummies for each. * p < 0.1 ** p < 0.05 *** p < 0.01
 ********************************************************************************
 ********************************************************************************
 *******************************************************************************/

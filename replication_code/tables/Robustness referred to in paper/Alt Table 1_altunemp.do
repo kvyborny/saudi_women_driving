@@ -2,8 +2,7 @@
 ********************************************************************************
 ********************************************************************************
 
-Purpose: 		ROBUSTNESS -	Labor market outcomes, own attitudes, social contact.
-								Unemployed redefined to include only those who
+Purpose: 		ROBUSTNESS -	Table 1, Unemployed redefined to include only those who
 								applied for at least one job in the previous
 								month
 				

@@ -2,22 +2,21 @@
 ********************************************************************************
 ********************************************************************************
 
-Purpose: 		APPENDIX FIGURE - TREATMENT FX ON TRAVEL FREQ
+Purpose: 		APPENDIX FIGURE - TREATMENT EFFECTS ON TRAVEL FREQUENCY
 
 
-Figure footnotes: This figure shows the results of a series of estimates of equation 1 in
-which the outcome variables are mutually exclusive and exhaustive indicators
-for the frequency of travel reported by the respondent in the recall period. Each
-control group bar show the control group mean, while the treatment bar shows
-the sum of the control group mean and the ITT treatment effect β1. Regres-
-sions include individual and household controls: age (above median dummy),
-education level (less than a highschool degree), marital status (indicators for
-married, never-married, and widowed), household size (number of members),
-number of cars owned (indicators for one car and for more than one car), an
-indicator for baseline labor force participation, and strata fixed effects. SEs
-are clustered at household level. We replace missing control values with 0 and
-include missing dummies for each. * p < 0.1 ** p < 0.05 *** p < 0.01
-				
+Figure footnotes: This figure shows the results of a series of estimates of 
+equation 1 in which the outcome variables are mutually exclusive and exhaustive 
+indicators for the frequency of driving reported by the respondent in the recall 
+period. Each control group bar show the control group mean, while the treatment 
+bar shows the sum of the control group mean and the ITT treatment effect β1. 
+Regressions include individual and household controls: age (above median dummy), 
+education level (less than a high school degree), marital status (indicators for 
+married, never-married, and widowed), household size (number of members), number 
+of cars owned (indicators for one car and for more than one car), an indicator for 
+baseline labor force participation, and strata fixed effects. SEs are clustered 
+at household level. We replace missing control values with 0 and include missing 
+dummies for each. * p < 0.1 ** p < 0.05 *** p < 0.01
 ********************************************************************************
 ********************************************************************************
 ********************************************************************************/

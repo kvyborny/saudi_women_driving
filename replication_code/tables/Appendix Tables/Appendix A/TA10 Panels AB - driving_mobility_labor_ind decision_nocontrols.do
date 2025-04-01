@@ -5,7 +5,10 @@
 Purpose: 		APPENDIX - 	Stacked: driving, mobility, labor market outcomes,
 							own, social contact; strata FEs; no controls
 	
-Table footnotes: Outcome variables are constructed as described in the notes for Tables 1 - 3. Variations in sample size are due to drop-off from telephone survey; order of survey modules was randomized. All estimates include randomization cohort fixed effects, SEs are clustered at household level. * p < 0.1 ** p < 0.05 *** p < 0.01.
+Table footnotes: Outcome variables are constructed as described in the notes for 
+Table 1 and A12. Variations in sample size are due to drop-off from telephone
+survey; order of survey modules was randomized. All estimates include strata fixed 
+effects, SEs are clustered at household level. * p < 0.1 ** p < 0.05 *** p < 0.01.
 	
 ********************************************************************************
 ********************************************************************************

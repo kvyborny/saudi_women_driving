@@ -2,23 +2,26 @@
 ********************************************************************************
 ********************************************************************************
 
-Purpose: 		APPENDIX TABLE - Stacked: labor market outcomes and ability to 
-								 spend without permission, weighted by BL 
-								 age-edu and by BL employment status
+Purpose: 		APPENDIX TABLE - Ability to spend without permission; unweighted,
+								 weighted by BL age-edu, and weighted by BL 
+								 employment status
 			
-Table footnotes: The outcome in column (4) indicates whether the respondent is employed and applied for at least one job in the previous
-month (a more general measure of search beyond job applications was not collected for employed respondents). Results for
-unemployment are similar if we redefine unemployed to include only those who applied for at least one job in the previous month.
-In Panels B and C we re-estimate our results using survey weights to map to population estimates of education according to age
-group (Panel B), and labor force participation (Panel C). We generate these weights using administrative data from GASTAT (2017)
-and GASTAT (2018b), the latter is reported in Table A2. We use LFP, age, and education measured in our sample at baseline.
-Variations in sample size are due to drop-off from telephone survey; order of survey modules was randomized. All estimates include
-individual and household controls: age (above median dummy), education level (less than a highschool degree), marital status
-(indicators for married, never-married, and widowed), household size (number of members), number of cars owned (indicators for
-one car and for more than one car), an indicator for baseline labor force participation, and randomization cohort fixed effects. SEs
-are clustered at household level. We impute for missing control values and include missing dummies for each. * p < 0.1 ** p <
-0.05 *** p < 0.01.
-
+Table footnotes: The outcome was constructed as follows: respondents were asked 
+to rate their level of agreement (on a 5 point Likert scale) with the statement: 
+"I can make a purchase of 1000 SAR without needing to take permission from any 
+member of my family" (1000 SAR is roughly equivalent to 265 USD, in 2021 dollars). 
+Responses were transformed into a binary indicator for above median response. In 
+Columns 2 and 3 we re-estimate our results using survey weights to map to population 
+estimates of education according to age group (Column 2), and labor force 
+participation (Column 3). We generate these weights as described in Table A11. 
+Variations in sample size are due to drop-off from telephone survey; order of 
+survey modules was randomized. All estimates include individual and household 
+controls: age (above median dummy), education level (less than a high school degree),
+marital status (indicators for married, never-married, and widowed), household size 
+(number of members), number of cars owned (indicators for one car and for more than 
+one car), an indicator for baseline labor force participation, and strata fixed 
+effects. SEs are clustered at household level. We replace missing control values 
+with 0 and include missing dummies for each. * p < 0.1 ** p < 0.05 *** p < 0.01.
 ********************************************************************************
 ********************************************************************************
 *******************************************************************************/

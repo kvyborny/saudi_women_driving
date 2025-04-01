@@ -2,23 +2,28 @@
 ********************************************************************************
 ********************************************************************************
 
-Purpose: 		APPENDIX - Stacked: second order gender attitudes
+Purpose: 		APPENDIX - Stacked: second order gender attitudes; index and 
+						   index components
 
 
-Table footnotes: Second order attitudes outcomes reported in Column 1 of each panel were constructed as follows: respondents were asked to
-think about each group (male family members, male members of social network, or female members of social network) and report
-what share of that group they think would `somewhat' or `completely' agree with the statement. Responses to each statement were
-then transformed into binary indicators for above median responses and are reported in columns 2-4 of each panel. The outcome in
-column (1) of each panel is a weighted index of the standardized binary responses to each statement using the swindex command
-developed by Schwab et al. (2020). The command uses all available data (hence a higher N in Column 1) and assigns lower weight
-to index components with missing values. Variations in sample size among Columns 2-4 are due to drop-off from telephone survey;
-order of survey modules was randomized. All estimates include individual and household controls: age (above median dummy),
-education level (less than a high school degree), marital status (indicators for married, never-married, and widowed), household
-size (number of members), number of cars owned (indicators for one car and for more than one car), an indicator for baseline labor
-force participation, and strata fixed effects. SEs are clustered at household level. We replace missing control values with 0 and
-include missing dummies for each. * p < 0.1 ** p < 0.05 *** p < 0.01
-
-
+Table footnotes: Second order belief outcomes were constructed as follows: 
+respondents were asked to think about each group (male family members, male members 
+of social network, or female members of social network) and report what share of 
+that group they think would `somewhat' or `completely' agree with the statement. 
+Responses to each statement were then transformed into binary indicators for above 
+median responses, which are reported in Columns 2-4 of each panel. The outcome in 
+Column 1 of each panel is a weighted index of the standardized binary responses 
+to each statement using the swindex command developed by Schwab et al. (2020). 
+The command uses all available data (hence a higher N in Column 1) and assigns 
+lower weight to index components with missing values. Variations in sample size 
+among Columns 2-4 are due to drop-off from telephone survey; order of survey modules
+was randomized. All estimates include individual and household controls: age 
+(above median dummy), education level (less than a high school degree), marital 
+status (indicators for married, never-married, and widowed), household size (number 
+of members), number of cars owned (indicators for one car and for more than one car), 
+an indicator for baseline labor force participation, and strata fixed effects. 
+SEs are clustered at household level. We replace missing control values with 0 
+and include missing dummies for each. * p < 0.1 ** p < 0.05 *** p < 0.01
 ********************************************************************************
 ********************************************************************************
 *******************************************************************************/

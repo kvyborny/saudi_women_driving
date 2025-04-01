@@ -7,13 +7,17 @@ Purpose: 		APPENDIX - Attrition without randomization cohort
 				
 Table footnotes:
 
-Table A6: Dependent variables are indicators for whether the respondent began the respective module in the survey; the order of modules was randomized. SEs are clustered at
-household level. We do not include additional controls in these estimations. * p < 0.1 ** p < 0.05 *** p < 0.01
+Table A7:  Dependent variables are indicators for whether the respondent began 
+the respective module in the survey; the order of modules was randomized SEs are 
+clustered at household level. We do not include additional controls in these 
+estimations. * p < 0.1 ** p < 0.05 *** p < 0.01
 
-Table A7:`Has husband/co-parent' is defined as (a) currently married or (b) divorced/separated with children under 18 in the household. Dependent variables are indicators for whether the respondent
-began the respective module in the survey; the order of modules was randomized. Four observations are dropped due to missing marital status at baseline. 18 additional observations are dropped in
-Columns 3 and 4 due to missing number of children under 18 in the household for divorced or separated women (`Has husband/co-parent' is coded to zero for single and widowed women, even if number
-of children under 18 in the household is missing). SEs are clustered at household level. * p < 0.1 ** p < 0.05 *** p < 0.01
+Table A8:`Has husband/co-parent' is defined as (a) currently married or 
+(b) divorced/separated with children under 18 in the household. Dependent variables 
+are indicators for whether the respondent began the respective module in the survey; 
+the order of modules was randomized. Four observations are dropped due to missing 
+marital status at baseline. SEs are clustered at household level. * p < 0.1 
+** p < 0.05 *** p < 0.01
 				
 ********************************************************************************
 ********************************************************************************

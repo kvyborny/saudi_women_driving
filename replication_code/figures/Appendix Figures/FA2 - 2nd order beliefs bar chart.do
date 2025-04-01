@@ -5,12 +5,14 @@
 Purpose: 		APPENDIX FIGURE - Second order beliefs within control group
 
 
-Figure footnotes: Notes: As part of the main follow up, respondents were asked to consider each of a series of statements and indicate what they
-believe the share of each second order group (their female social network, male family, and male social network) would agree
-with each statement. The statements presented to the respondent were: "On the whole, men make better business executives
-than women do", "A woman's priority should be in the home and with her family", "When a mother works for pay, the children
-suffer". Reported in this figure are responses given by the control group only, as percentages of the sample.
-				
+Figure footnotes: As part of the main follow-up, respondents were asked to consider 
+each of a series of statements and indicate what they believe the share of each 
+second order group (their female social network, male family, and male social 
+network) would agree with each statement. The statements presented to the respondent 
+were: "On the whole, men make better business executives than women do", "A woman's
+priority should be in the home and with her family", "When a mother works for pay, 
+the children suffer". Reported in this figure are responses given by the control 
+group only, as percentages of the sample.				
 ********************************************************************************
 ********************************************************************************
 ********************************************************************************/
