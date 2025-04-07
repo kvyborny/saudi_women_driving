@@ -2,7 +2,7 @@
 ********************************************************************************
 ********************************************************************************
 
-Purpose: 		APPENDIX FIGURE - Second order beliefs within control group
+Purpose: 	FIGURE A2 - Second order beliefs within control group
 
 
 Figure footnotes: As part of the main follow-up, respondents were asked to consider 
@@ -134,10 +134,10 @@ graph bar normsqdummy* if inlist(qversion,2,3,4), over(normgroup) horizontal sta
 	"$output_descr/figures/gph_files/womanpriority_combined.gph" ///
 	"$output_descr/figures/gph_files/childrensuffer_combined.gph", col(1) 
 	graph save "Graph" ///
-	"$output_descr/figures/gph_files/2nd order gender attitudes fig_control group.gph", ///
+	"$output_descr/figures/gph_files/Figure_A2.gph", ///
 	replace 
 	
-	graph 	export "$output_descr/figures/2nd order gender attitudes fig_control group.jpg", ///
+	graph 	export "$output_descr/figures/Figure_A2.jpg", ///
 	replace
 
 		

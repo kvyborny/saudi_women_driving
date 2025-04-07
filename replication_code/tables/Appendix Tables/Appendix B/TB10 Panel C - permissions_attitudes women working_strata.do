@@ -2,9 +2,9 @@
 ********************************************************************************
 ********************************************************************************
 
-Purpose: 		APPENDIX TABLE - Ability to leave house, make purchases, and second
-								order attitudes towards women working; robustness
-								to FEs for sub-strata
+Purpose: 	Table B10, Panel C	-	Ability to leave house, make purchases, and second
+									order attitudes towards women working; robustness
+									to FEs for sub-strata
 	
 Table footnotes: Outcome variables are constructed as described in the notes for 
 Table 1. Variations in sample size are due to drop-off from telephone survey; order 
@@ -67,7 +67,7 @@ eststo clear
 	* (1)
 	* Likert/cts version
 	esttab $attitudes_soccont_bi using ///
-	"$output_rct/Permissions_attitudes women working_sw_binary_strataPAP_`c(current_date)'.tex", ///
+	"$output_rct/Table_B10_Panel_C.tex", ///
 	label se nonotes keep(*treatment) ///
 	scalars("cmean Control mean" "b_cmean $\beta$/control mean" "pval P-value $\beta = 0$") ///
 	b(%9.3f) se(%9.3f) star(* 0.1 ** 0.05 *** 0.01) ///	

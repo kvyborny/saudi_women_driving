@@ -2,8 +2,9 @@
 ********************************************************************************
 ********************************************************************************
 
-Purpose: 		MULTIPLE HYPOTHESIS TESTING - JOB SEARCH; HTE (MED AGE, EDU,
-				BL LFP); TABLE B2 PANELS A & B, TABLE B3 PANEL B
+Purpose: 	Table B2, Panels A & B & Table B3, Panel B	-	Job search; multiple 
+															hypothesis testing; 
+															multiple HTE 
 								  
 								  
 TABLE FOOTNOTES: 
@@ -198,10 +199,10 @@ eststo clear
 
 		   
 * Write to latex
-	* TABLE A
+	* TABLE B2
 	* PANEL A - AGE
 	esttab employed_w3_hte1 unemployed_w3_hte1 empl_jobsearch_w3_hte1 using ///
-		"$output_rct/MHT_labor_multHTE_TabAPanelA_`c(current_date)'.tex", ///
+		"$output_rct/Table_B2_Panel_A.tex", ///
 		label se nogaps nobaselevels noobs ///
 		keep(*treatment *hte) b(%9.3f) se(%9.3f) star(* 0.1 ** 0.05 *** 0.01) ///	
 		mtitles("\shortstack{Employed}" ///
@@ -215,7 +216,7 @@ eststo clear
 			
 		 * Add total effects	
 		esttab 	employed_w3_hte1 unemployed_w3_hte1 empl_jobsearch_w3_hte1 using ///
-		"$output_rct/MHT_labor_multHTE_TabAPanelA_`c(current_date)'.tex", ///
+		"$output_rct/Table_B2_Panel_A.tex", ///
 		label se nogaps nobaselevels  ///
 		append fragment nomtitles nonumbers noconstant noobs nogaps nonotes ///
 		cells(none) stats(total_eff_b total_eff_se, ///
@@ -224,7 +225,7 @@ eststo clear
 		 
 		* Add N, control mean, p-val/q-val for test that total effect is different from zero 
 		esttab	employed_w3_hte1 unemployed_w3_hte1 empl_jobsearch_w3_hte1 using ///
-		"$output_rct/MHT_labor_multHTE_TabAPanelA_`c(current_date)'.tex", ///
+		"$output_rct/Table_B2_Panel_A.tex", ///
 		label se nogaps nobaselevels noobs ///
 				append fragment nomtitles nonumbers noconstant   nonotes  ///
 				cells(none) stats(N  cmean_hte b1 qval_b1 b1_b3 qval_b13, ///
@@ -237,7 +238,7 @@ eststo clear
 				
 	* PANEL B - EDU		 
 	esttab employed_w3_hte2 unemployed_w3_hte2 empl_jobsearch_w3_hte2 using ///
-		"$output_rct/MHT_labor_multHTE_TabAPanelB_`c(current_date)'.tex", ///
+		"$output_rct/Table_B2_Panel_B.tex", ///
 		label se nogaps nobaselevels noobs ///
 		keep(*treatment *hte) b(%9.3f) se(%9.3f) star(* 0.1 ** 0.05 *** 0.01) ///	
 		nomtitles ///
@@ -250,7 +251,7 @@ eststo clear
 			
 		 * Add total effects	
 		esttab employed_w3_hte2 unemployed_w3_hte2 empl_jobsearch_w3_hte2 using ///
-		"$output_rct/MHT_labor_multHTE_TabAPanelB_`c(current_date)'.tex", ///
+		"$output_rct/Table_B2_Panel_B.tex", ///
 		label se nogaps nobaselevels  ///
 		append fragment nomtitles nonumbers noconstant noobs nogaps nonotes ///
 		cells(none) stats(total_eff_b total_eff_se, ///
@@ -259,7 +260,7 @@ eststo clear
 		 
 		* Add N, control mean, and p-val for test that total effect is different from zero 
 		esttab employed_w3_hte2 unemployed_w3_hte2 empl_jobsearch_w3_hte2 using ///
-		"$output_rct/MHT_labor_multHTE_TabAPanelB_`c(current_date)'.tex", ///
+		"$output_rct/Table_B2_Panel_B.tex", ///
 		label se nogaps nobaselevels noobs ///
 				append fragment nomtitles nonumbers noconstant   nonotes  ///
 				cells(none) stats(N  cmean_hte b1 qval_b1 b1_b3 qval_b13, ///
@@ -272,11 +273,11 @@ eststo clear
 				
 		
 
-* TABLE B
+* TABLE B3, Panel B
 	
 		* PANEL B - In LF at BL 		 
 	esttab employed_w3_hte3 unemployed_w3_hte3 empl_jobsearch_w3_hte3 using ///
-		"$output_rct/MHT_labor_multHTE_TabBPanelB_`c(current_date)'.tex", ///
+		"$output_rct/Table_B3_Panel_B.tex", ///
 		label se nogaps nobaselevels noobs ///
 		keep(*treatment *hte) b(%9.3f) se(%9.3f) star(* 0.1 ** 0.05 *** 0.01) ///	
 		nomtitles ///
@@ -289,7 +290,7 @@ eststo clear
 			
 		 * Add total effects	
 		esttab employed_w3_hte3 unemployed_w3_hte3 empl_jobsearch_w3_hte3 using ///
-		"$output_rct/MHT_labor_multHTE_TabBPanelB_`c(current_date)'.tex", ///
+		"$output_rct/Table_B3_Panel_B.tex", ///
 		label se nogaps nobaselevels  ///
 		append fragment nomtitles nonumbers noconstant noobs nogaps nonotes ///
 		cells(none) stats(total_eff_b total_eff_se, ///
@@ -298,7 +299,7 @@ eststo clear
 		 
 		* Add N, control mean, and p-val for test that total effect is different from zero 
 		esttab employed_w3_hte3 unemployed_w3_hte3 empl_jobsearch_w3_hte3 using ///
-		"$output_rct/MHT_labor_multHTE_TabBPanelB_`c(current_date)'.tex", ///
+		"$output_rct/Table_B3_Panel_B.tex", ///
 		label se nogaps nobaselevels noobs ///
 				append fragment nomtitles nonumbers noconstant   nonotes  ///
 				cells(none) stats(N  cmean_hte b1 qval_b1 b1_b3 qval_b13, ///

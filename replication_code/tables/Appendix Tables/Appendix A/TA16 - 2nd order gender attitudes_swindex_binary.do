@@ -2,8 +2,8 @@
 ********************************************************************************
 ********************************************************************************
 
-Purpose: 		APPENDIX - Stacked: second order gender attitudes; index and 
-						   index components
+Purpose: 	Table A16	-	Stacked: second order gender attitudes; index and 
+							index components
 
 
 Table footnotes: Second order belief outcomes were constructed as follows: 
@@ -77,7 +77,7 @@ eststo clear
 * (1)
 	* Female (Panel A)
 		esttab  $fcom /// 
-			using "$output_rct/Gender Attitudes_cohortPAP_swindex_binary_Panel A_`c(current_date)'.tex", ///
+			using "$output_rct/Table_A16_Panel_A.tex", ///
 			posthead("\midrule \multicolumn{1}{@{}l}{\textbf{Panel A: Female Community}} \\ \midrule") ///
 			label se scalars("cmean Control mean" "b_cmean $\beta$/control mean" "pval P-value $\beta = 0$") ///
 			nonotes keep(treatment) ///
@@ -94,7 +94,7 @@ eststo clear
 		
 	* Male Family (Panel B)
 		esttab  $mfam /// 
-			using "$output_rct/Gender Attitudes_cohortPAP_swindex_binary_Panel B_`c(current_date)'.tex", ///
+			using "$output_rct/Table_A16_Panel_B.tex", ///
 			posthead("\multicolumn{1}{@{}l}{\textbf{Panel B: Male Family}} \\ \midrule") ///
 			label se scalars("cmean Control mean" "b_cmean $\beta$/control mean" "pval P-value $\beta = 0$") ///
 			nonotes keep(treatment) ///
@@ -104,7 +104,7 @@ eststo clear
 		 
 	* Male community (Panel C)
 		esttab $mcom /// 
-			using "$output_rct/Gender Attitudes_cohortPAP_swindex_binary_Panel C_`c(current_date)'.tex", ///
+			using "$output_rct/Table_A16_Panel_C.tex", ///
 			posthead("\multicolumn{1}{@{}l}{\textbf{Panel C: Male Community}} \\ \midrule") ///
 			label se scalars("cmean Control mean" "b_cmean $\beta$/control mean" "pval P-value $\beta = 0$") ///
 			nonotes keep(treatment) ///

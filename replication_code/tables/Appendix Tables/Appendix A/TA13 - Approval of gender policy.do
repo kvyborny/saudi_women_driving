@@ -2,8 +2,8 @@
 ********************************************************************************
 ********************************************************************************
 
-Purpose: 		APPENDIX TABLE - 	Approval of gender policy; index and index
-									components
+Purpose: 	Table A13	- 	Approval of gender policy; index and index
+							components
 
 									
 Table footnotes: Outcomes in Columns 2 and 3 were constructed as follows: 
@@ -100,7 +100,7 @@ eststo clear
 
 * Write to latex
 		esttab gen_policy_binary_sw P1_1_abovemed P1_2_abovemed ///
-		using "$output_rct/Appen_GenPol_cohortPAP_binary_`c(current_date)'.tex", ///
+		using "$output_rct/Table_A13.tex", ///
 		label se nonotes keep( treatment) b(%9.3f) se(%9.3f) star(* 0.1 ** 0.05 *** 0.01) ///
 		scalars("cmean Control mean" "b_cmean $\beta$/control mean" "pval P-value $\beta = 0$") ///
 		mtitles("\shortstack{Index: Approval\\of Gender Policy}" ///

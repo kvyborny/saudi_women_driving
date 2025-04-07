@@ -2,8 +2,8 @@
 ********************************************************************************
 ********************************************************************************
 
-Purpose: 		APPENDIX TABLE - descriptive stats on wave 2 travel patterns in 
-					controls group
+Purpose: 	Table A5	 - 	Descriptive stats on wave 2 travel patterns in 
+							controls group
 				
 				
 Table footnotes: Descriptive statistics from detailed travel diary collected as 
@@ -66,17 +66,17 @@ global travelvarsPanelC	trip_mode_buscond_w2 trip_mode_footcond_w2 trip_mode_car
 * Table
 estpost summarize trip_any_w2 tripnb_yesterday_w2 mean_trip_duration_w2 ///
 		trip_duration_work_cond_w2  if treatment==0 
-esttab using "$output_descr/tables/travel_desc_control_wave2_panel A.tex" , tex ///
+esttab using "$output_descr/tables/Table_A5_Section_1.tex" , tex ///
 	cells("count(label(N)) mean(fmt(2) label(Mean)) sd(fmt(2) label(SD)) min(label(Min)) max(label(Max))") ///
 	replace label nonum frag nogaps noobs
 	
 estpost summarize $travelvarsPanelB  if treatment==0 
-esttab using "$output_descr/tables/travel_desc_control_wave2_panel B.tex" , tex ///
+esttab using "$output_descr/tables/Table_A5_Section_2.tex" , tex ///
 	cells("count mean(fmt(2)) sd(fmt(2)) min max") replace label nonum frag nogaps ///
 	mlabels(none) collabels(none) noobs nolines
 	
 estpost summarize $travelvarsPanelC  if treatment==0 
-esttab using "$output_descr/tables/travel_desc_control_wave2_panel C.tex" , tex ///
+esttab using "$output_descr/tables/Table_A5_Section_3.tex" , tex ///
 	cells("count mean(fmt(2)) sd(fmt(2)) min max") replace label nonum frag nogaps ///
 	mlabels(none) collabels(none) noobs nolines
 

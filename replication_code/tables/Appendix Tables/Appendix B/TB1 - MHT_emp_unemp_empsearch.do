@@ -2,7 +2,7 @@
 ********************************************************************************
 ********************************************************************************
 
-Purpose: 		MULTIPLE HYPOTHESIS TESTING - JOB SEARCH
+Purpose: 	Table B1	- Job search, multiple hypothesis testing
 				
 Table footnotes: The outcome in Column 3 indicates whether the respondent is 
 employed and applied for at least one job in the previous month (a more general 
@@ -90,7 +90,7 @@ eststo clear
 			 
 		* Economic and financial agency
 		esttab $job_search2 using ///
-		"$output_rct/MHT_emp_unemp_empsearch_`c(current_date)'.tex", ///
+		"$output_rct/Table_B1.tex", ///
 		label se nonotes scalars("cmean Control mean" "b_cmean $\beta$/control mean" ///
 		"pval P-value $\beta = 0$" "qval FDR Q-value $\beta = 0$") ///
 		nobaselevels keep(treatment) nogaps  b(%9.3f) se(%9.3f) ///

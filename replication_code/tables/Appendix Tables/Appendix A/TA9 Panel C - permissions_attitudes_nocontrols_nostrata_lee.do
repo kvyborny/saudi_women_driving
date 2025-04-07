@@ -2,9 +2,9 @@
 ********************************************************************************
 ********************************************************************************
 
-Purpose: 		APPENDIX - 	Permissions (leave house and make purchase) and 
-							second order attitudes with Lee bounds. No strata FEs; 
-							no controls
+Purpose:	Table A9, Panel C	- 	Permissions (leave house and make purchase) and 
+									second order attitudes with Lee bounds. No strata FEs; 
+									no controls
 	
 Table footnotes: Outcome variables are constructed as described in the notes for 
 Table 1 and A12. Variations in sample size are due to drop-off from telephone 
@@ -68,7 +68,7 @@ eststo clear
 * Write to latex
 
 	esttab $permissions_2ndattitudes using ///
-	"$output_rct/Permissions_attitudes women working_sw_binary_cohortPAP_nocontrols_nostrata_`c(current_date)'.tex", ///
+	"$output_rct/Table_A9_Panel_C.tex", ///
 	label se nonotes keep(*treatment) ///
 	scalars("cmean Control mean" "b_cmean $\beta$/control mean" "pval P-value $\beta = 0$") ///
 	b(%9.3f) se(%9.3f) star(* 0.1 ** 0.05 *** 0.01) ///	
@@ -81,7 +81,7 @@ eststo clear
 	varwidth(75) modelwidth(15) fragment nobaselevels nogaps replace 
 	
 	esttab	$permissions_2ndattitudes_lee using ///
-		"$output_rct/Permissions_attitudes women working_sw_binary_cohortPAP_nocontrols_nostrata_Leebounds_`c(current_date)'.tex", ///
+		"$output_rct/Table_A9_Panel_C.tex", ///
 		nomtitles nodepvars nolines ///
 		replace star(* .1 ** .05 *** .01) se t(4) b(4) label ///
 		nonotes nonum fragment nogaps nobaselevels scalar("N Observations")

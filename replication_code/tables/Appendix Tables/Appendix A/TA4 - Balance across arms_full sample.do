@@ -2,7 +2,7 @@
 ********************************************************************************
 ********************************************************************************
 
-Purpose: 		APPENDIX - Balance across arms in full sample; strata FEs
+Purpose:	Table A4	-	Balance across arms in full sample; strata FEs
 
 Table footnotes: Data from administrative records and baseline survey. "Likely to 
 drive soon after ban is lifted" variables are binary response indicators based on 
@@ -106,7 +106,7 @@ global balance age_BL single married divorced_separated husb_influence_kids   //
 	
 	* write table to latex
 	texdoc init ///
-		"$output_rct/Balance across arms_full sample_`c(current_date)'", ///
+		"$output_rct/Table_A4", ///
 		replace force
 		
 		tex 			& (1)	 & (2) 	 	 & (3) 					& (4) 	  & (5) 	   & (6) 					 & (7) 		  & (8)	 	\\

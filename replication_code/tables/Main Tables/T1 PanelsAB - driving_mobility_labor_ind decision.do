@@ -2,8 +2,8 @@
 ********************************************************************************
 ********************************************************************************
 
-Purpose: 		MAIN TABLE - Stacked: driving, mobility, labor market outcomes,
-							 and independent decision making
+Purpose: 	Table 1, Panels A & B - Stacked: driving, mobility, labor market outcomes,
+									and independent decision making
 				
 Table footnotes: 
 Panel A, Column 5 and 6 outcomes are set to zero for 24 observations in which the 
@@ -109,7 +109,7 @@ eststo clear
 
 	* Drive training, license and mobility
 		esttab $drive_mob ///
-		using "$output_rct/Drive training & license_cohortPAP_`c(current_date)'.tex", ///
+		using "$output_rct/Table_1_Panel_A.tex", ///
 		 label se scalars("cmean Control mean" "b_cmean $\beta$/control mean" "pval P-value $\beta = 0$") ///
 		 nogaps nobaselevels ///
 		 keep(treatment) b(%9.3f) se(%9.3f) star(* 0.1 ** 0.05 *** 0.01) ///	
@@ -123,7 +123,7 @@ eststo clear
 			 
 		* Economic and financial agency
 		esttab $lab using ///
-		"$output_rct/LFP_ind dec_cohortPAP_binary_`c(current_date)'.tex", ///
+		"$output_rct/Table_1_Panel_B.tex", ///
 		label se nonotes scalars("cmean Control mean" "b_cmean $\beta$/control mean"  "pval P-value $\beta = 0$") ///
 		nobaselevels keep(treatment) nogaps  b(%9.3f) se(%9.3f) ///
 		star(* 0.1 ** 0.05 *** 0.01) ///	

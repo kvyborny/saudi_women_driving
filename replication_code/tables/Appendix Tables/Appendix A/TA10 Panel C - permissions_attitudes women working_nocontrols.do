@@ -2,8 +2,8 @@
 ********************************************************************************
 ********************************************************************************
 
-Purpose: 		APPENDIX - 	Permissions (leave house and make purchase) and 
-							second order attitudes; strata FEs, no controls
+Purpose:	Table A10, Panel C	- 	Permissions (leave house and make purchase) and 
+									second order attitudes; strata FEs, no controls
 	
 Table footnotes: Outcome variables are constructed as described in the notes for 
 Table 1 and A12. Variations in sample size are due to drop-off from telephone
@@ -60,7 +60,7 @@ eststo clear
 * Write to latex
 
 	esttab $permissions_2ndattitudes using ///
-	"$output_rct/Permissions_attitudes women working_sw_binary_cohortPAP_nocontrols_`c(current_date)'.tex", ///
+	"$output_rct/Table_A10_Panel_C.tex", ///
 	label se nonotes keep(*treatment) ///
 	scalars("cmean Control mean" "b_cmean $\beta$/control mean" "pval P-value $\beta = 0$") ///
 	b(%9.3f) se(%9.3f) star(* 0.1 ** 0.05 *** 0.01) ///	

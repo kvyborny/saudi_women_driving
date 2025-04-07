@@ -2,8 +2,8 @@
 ********************************************************************************
 ********************************************************************************
 
-Purpose: 		MULTIPLE HYPOTHESIS TESTING - Ability to leave the house, 
-											  Ability to make purchases
+Purpose: 	Table B4	-	Ability to leave the house, Ability to make purchases;
+							multiple hypothesis testing
 
 
 
@@ -95,7 +95,7 @@ eststo clear
 
 
 	esttab $mob_spen using ///
-	"$output_rct/MHT_Mobility_Spending_swindex_binary_cohortPAP_`c(current_date)'.tex", ///
+	"$output_rct/Table_B4.tex", ///
 	label se nonotes keep(*treatment) ///
 	scalars("cmean Control mean" "b_cmean $\beta$/control mean" "pval P-value $\beta = 0$" ///
 	"qval FDR Q-value $\beta = 0$") ///

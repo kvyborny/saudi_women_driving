@@ -2,8 +2,8 @@
 ********************************************************************************
 ********************************************************************************
 
-Purpose: 		APPENDIX TABLE - Robustness of heterogeneity results (employed) 
-								 to treatment interactions with BL characteristics
+Purpose: 	Table A17	-	Robustness of heterogeneity results (employed) 
+							to treatment interactions with BL characteristics
 								 
 
 Table footnotes: Column 2 repeats the estimation in Column 1 but additionally 
@@ -80,7 +80,7 @@ keep if endline_start_w3==1
 * Write to latex
 	* (1)
 	esttab	employed_w3_1 employed_w3_2 using ///
-			"$output_rct/treatmentinteract_cohortPAP_kids_`c(current_date)'.tex", se label ///
+			"$output_rct/Table_A17.tex", se label ///
 			scalars("cmean Mean: Control, no husband/co-parent" ///
 			"b1_b3 p-val: $\beta$\textsubscript{1} + $\beta$\textsubscript{3} = 0" ///
 			"edu Treatment x Education" ///

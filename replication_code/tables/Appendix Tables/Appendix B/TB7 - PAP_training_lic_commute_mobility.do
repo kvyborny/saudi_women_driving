@@ -2,8 +2,7 @@
 ********************************************************************************
 ********************************************************************************
 
-Purpose: 		APPENDIX TABLE - PAP -  training, license, expected commute, 
-										mobility
+Purpose: 	Table B7	-	Training, license, expected commute, mobility (PAP)
 
 
 Table footnotes: The outcome in Panel A, Column 6 was constructed as follows: 
@@ -57,9 +56,10 @@ global pap_mob saudidrive_w2 license_w2 expect_comm drive_lastm_w2 drive_month_w
 
 
 * Write to latex
+	* Panel A
 	esttab saudidrive_w2_1 license_w2_1 expect_comm_1 drive_lastm_w2_1 ///
 	drive_month_w2_1 future_drive_med_w2_1  using ///
-	"$output_rct/PAP_w2_mobility1_strataPAP_binary_`c(current_date)'.tex", ///
+	"$output_rct/Table_B7_Panel_A.tex", ///
 	label se scalars(N "cmean Control Group Mean" ) nogaps nobaselevels ///
 	keep( *wusool_T *driving_T) b(%9.3f) se(%9.3f) star(* 0.1 ** 0.05 *** 0.01) ///	
 	mtitles("\shortstack{Started driver's\\training}" ///
@@ -72,9 +72,10 @@ global pap_mob saudidrive_w2 license_w2 expect_comm drive_lastm_w2 drive_month_w
 	1.driving_T#1.wusool_T "$\beta\textsubscript{3}$: Driving training x Rideshare subsidy") ///
 	replace nonotes fragment modelwidth(15)
 
+	* Panel B
 	esttab drove_yest_w2_1 recenttripyestod_w2_1 rectripyestodnofam_w2_1 ///
 	rectripyestodrelat_w2_1 rectripyestodfd_w2_1 nonwork_trip_w2_1 ///
-	using "$output_rct/PAP_w2_mobility2_strataPAP_`c(current_date)'.tex", ///
+	using "$output_rct/Table_B7_Panel_B.tex", ///
 	label se scalars(N "cmean Control Group Mean" ) nogaps nobaselevels ///
 	keep( *wusool_T *driving_T) b(%9.3f) se(%9.3f) star(* 0.1 ** 0.05 *** 0.01) ///	
 	mtitles("\shortstack{Drove yesterday}" ///

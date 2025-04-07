@@ -2,9 +2,9 @@
 ********************************************************************************
 ********************************************************************************
 
-Purpose: 		APPENDIX - 	Stacked: driving, mobility, labor market outcomes,
-							own, social contact with Lee bounds. No strata FEs; 
-							no controls
+Purpose: 	Table A9, Panels A & B	-	Stacked: driving, mobility, labor market 
+										outcomes, own, social contact with Lee 
+										bounds. No strata FEs; no controls
 	
 Table footnotes: Outcome variables are constructed as described in the notes for 
 Table 1 and A12. Variations in sample size are due to drop-off from telephone 
@@ -73,10 +73,10 @@ eststo clear
 
 
 * Write to latex
-	* (1)
-	* Drive training, license and mobility
+
+	* Panel A: Drive training, license and mobility
 		esttab $drive_mob using ///
-		"$output_rct/Drive training & license_cohortPAP_nocontrols_nostrata_`c(current_date)'.tex", ///
+		"$output_rct/Table_A9_Panel_A.tex", ///
 		label se scalars("cmean Control mean" "b_cmean $\beta$/control mean" ///
 		"pval P-value $\beta = 0$") ///
 		nogaps nobaselevels ///
@@ -89,16 +89,16 @@ eststo clear
 		 replace  varwidth(25) modelwidth(12) fragment nonotes
 		 
 		 esttab	$drive_mob_lee using ///
-		"$output_rct/Drive training & license_cohortPAP_nocontrols_nostrata_Leebounds_`c(current_date)'.tex", ///
+		"$output_rct/Table_A9_Panel_A.tex", ///
 		nomtitles nodepvars nolines ///
 		replace star(* .1 ** .05 *** .01) se t(4) b(4) label ///
 		nonotes nonum nogaps nobaselevels fragment  scalar("N Observations")
 		 
 		
 			 
-		* Economic and financial agency
+		* Panel B: Economic and financial agency
 		esttab $lab using ///
-		"$output_rct/LFP_ind dec_cohortPAP_nocontrols_nostrata_binary_`c(current_date)'.tex", ///
+		"$output_rct/Table_A9_Panel_B.tex", ///
 		label se nonotes ///
 		scalars("cmean Control mean" "b_cmean $\beta$/control mean" "pval P-value $\beta = 0$") ///
 		nobaselevels nonotes keep(treatment) ///
@@ -113,7 +113,7 @@ eststo clear
 		fragment varwidth(25) modelwidth(15) replace
 		
 		 esttab	$lab_lee using ///
-		"$output_rct/LFP_ind dec_cohortPAP_nocontrols_nostrata_binary_Leebounds_`c(current_date)'.tex", ///
+		"$output_rct/Table_A9_Panel_B.tex", ///
 		nomtitles nodepvars nolines ///
 		replace star(* .1 ** .05 *** .01) se t(4) b(4) label ///
 		nonotes nonum nogaps nobaselevels fragment  scalar("N Observations")

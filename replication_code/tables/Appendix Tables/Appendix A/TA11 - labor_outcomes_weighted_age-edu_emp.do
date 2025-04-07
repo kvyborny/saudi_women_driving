@@ -2,9 +2,9 @@
 ********************************************************************************
 ********************************************************************************
 
-Purpose: 		APPENDIX TABLE - Stacked: labor market outcomes; unweighted,
-								 weighted by BL age-edu, and weighted by BL 
-								 employment status
+Purpose:	Table A11	-	Stacked: labor market outcomes; unweighted,
+							weighted by BL age-edu, and weighted by BL 
+							employment status
 			
 Table footnotes: The outcome in Column 4 indicates whether the respondent is 
 employed and applied for at least one job in the previous month (a more general 
@@ -78,7 +78,7 @@ eststo clear
 
 		* Write to latex			 
 		esttab ${labor_wt`i'} using ///
-		"$output_rct/LFP_spend_cohortPAP_`weight'_`c(current_date)'.tex", ///
+		"$output_rct/Table_A11_Panel_`weight'.tex", ///
 		label se nonotes scalars("cmean Control mean" "b_cmean $\beta$/control mean"  "pval P-value $\beta = 0$") ///
 		nobaselevels keep(treatment) nogaps  b(%9.3f) se(%9.3f) ///
 		star(* 0.1 ** 0.05 *** 0.01) ///	
@@ -117,7 +117,7 @@ eststo clear
 		
 		* Write to latex			 
 		esttab $labor using ///
-		"$output_rct/LFP_spend_cohortPAP_unweighted_`c(current_date)'.tex", ///
+		"$output_rct/Table_A11_Panel_A.tex", ///
 		label se nonotes scalars("cmean Control mean" "b_cmean $\beta$/control mean"  "pval P-value $\beta = 0$") ///
 		nobaselevels keep(treatment) nogaps  b(%9.3f) se(%9.3f) ///
 		star(* 0.1 ** 0.05 *** 0.01) ///	

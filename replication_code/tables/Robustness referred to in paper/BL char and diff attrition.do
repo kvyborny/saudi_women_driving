@@ -2,13 +2,15 @@
 ********************************************************************************
 ********************************************************************************
 
-Purpose: 		APPENDIX - Balance across arms among responders
+Purpose: 		Robustness - Regressing attrition on baseline characteristics 
+							 interacted with treatment status
 
-Table footnotes: Data from administrative records and baseline survey. Statistics reported for the subsample who started the endline survey. "Likely to
-drive soon after ban is lifted" variables are binary response indicators based on the following scale for whether the respondent would be likely to
-drive once the ban on female driving would be lifted (it was lifted partway through the baseline): unlikely to drive, somewhat likely, likely but
-not at first, and likely. Responders include 501 RCT participants who started the endline survey. To estimate the F-stat, we impute variable
-means for missing values.
+Table footnotes: Data from administrative records and baseline survey. Statistics 
+reported for the subsample who started the endline survey. "Likely to drive soon 
+after ban is lifted" variables are binary response indicators based on the following 
+scale for whether the respondent would be likely to drive once the ban on female 
+driving would be lifted (it was lifted partway through the baseline): unlikely to 
+drive, somewhat likely, likely but not at first, and likely.
 		
 ********************************************************************************
 ********************************************************************************

@@ -2,7 +2,7 @@
 ********************************************************************************
 ********************************************************************************
 
-Purpose: 						APPENDIX - Attrition (with and without controls)
+Purpose: 	Table A6	- 	Attrition (with and without controls)
 				
 Table footnotes: Dependent variables are indicators for whether the respondent 
 began the respective module in the survey; the order of modules was randomized. 
@@ -63,7 +63,7 @@ eststo clear
 		esttab endline_start_w3_noc endline_start_w3_c mobility_modstart_noc ///
 		mobility_modstart_c employ_modstart_noc ///
 		employ_modstart_c attitudes_modstart_noc attitudes_modstart_c ///
-		using "$output_descr/tables/Attrition_full sample_with and without controls_`c(current_date)'.tex", ///
+		using "$output_descr/tables/Table_A6.tex", ///
 		label se scalars("cmean Control Group Mean" "controls Controls") nogaps nobaselevels ///
 		keep(treatment) b(%9.3f) se(%9.3f) star(* 0.1 ** 0.05 *** 0.01) nonotes ///
 		mgroups("Started Endline Survey" "Started Mobility Module" "Started Employment Module" ///
