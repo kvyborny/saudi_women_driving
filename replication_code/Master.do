@@ -10,22 +10,26 @@ Purpose: 		Master replication file for Saudi commute project
 cap log close
 
 
-*** FIRST, SET UP AND RUN SETTINGS.DO IN MAIN FOLDER
+/*** First, set up and run settings_rep_package.do 
+     (located in saudi_women_driving/replication_code) 	*/
 
 
 * Install necessary packages
-local install = 0
+local ssc_packages swindex reghdfe ihstrans winsor2 outreg2 grc1leg scto ietoolkit ///
+				   blindschemes texdoc
 
-if `install' == 1 {
-ssc install 		swindex
-ssc install 		reghdfe
-ssc install 		ihstrans
-ssc install 		winsor2
-ssc install			outreg2
-ssc install			grc1leg
-ssc install			scto
-ssc install			ietoolkit
-
+foreach pkg in `ssc_packages' {
+	cap which `pkg'
+    if _rc {
+        di "Installing `pkg' from SSC..."
+        ssc install `pkg', replace
+		if "`pkg'"=="grc1leg" {
+			net install grc1leg, from( http://www.stata.com/users/vwiggins/)
+		}
+    }
+    else {
+        di "`pkg' is already installed."
+    }
 }
 
 
