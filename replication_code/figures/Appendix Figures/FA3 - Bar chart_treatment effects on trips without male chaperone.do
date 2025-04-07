@@ -2,7 +2,7 @@
 ********************************************************************************
 ********************************************************************************
 
-Purpose: 		APPENDIX FIGURE - TREATMENT EFFECTS ON TRIPS WITHOUT CHAPERONE
+Purpose: 	FIGURE A3 - TREATMENT EFFECTS ON TRIPS WITHOUT CHAPERONE
 
 
 Table footnotes: This figure shows the results of a series of estimates of equation 
@@ -157,7 +157,7 @@ eststo clear
 					yscale(range(0 .6)) ylabel(0 0.1 0.2 0.3 0.4 0.5 0.6) xtitle("")
 					
 	* save graphs as jpg
-	graph 			save "$output/RCT/figures/gph_files/Treatment FX on trips without chaperone_bar chart", replace
-	graph 			export "$output/RCT/figures/Treatment FX on trips without chaperone_bar chart.jpg" , replace
+	graph 			save "$output/RCT/figures/gph_files/Figure_A3", replace
+	graph 			export "$output/RCT/figures/Figure_A3.jpg" , replace
 
 	

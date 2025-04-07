@@ -2,7 +2,7 @@
 ********************************************************************************
 ********************************************************************************
 
-Purpose: 		APPENDIX - 	First order beliefs and social contact; index and
+Purpose: 	Table A12	- 	First order beliefs and social contact; index and
 							index components
 
 							
@@ -78,7 +78,7 @@ eststo clear
 
 	* First order beliefs
 	esttab $firstorder using ///
-	"$output_rct/Gender Attitudes_1storder_swindex_cohortPAP_binary_`c(current_date)'.tex", ///
+	"$output_rct/Table_A12_Panel_A.tex", ///
 	label se scalars("cmean Control mean" "b_cmean $\beta$/control mean" "pval P-value $\beta = 0$") ///
 	nonotes keep(*treatment) ///
 	b(%9.3f) se(%9.3f) star(* 0.1 ** 0.05 *** 0.01) ///	
@@ -95,7 +95,7 @@ eststo clear
 	
 	* Social Contact
 	esttab $soccont using ///
-	"$output_rct/Social Contact Index Components_swindex_binary_cohortPAP_`c(current_date)'.tex", ///
+	"$output_rct/Table_A12_Panel_B.tex", ///
 	label se nonotes keep(*treatment) ///
 	scalars("cmean Control mean" "b_cmean $\beta$/control mean" "pval P-value $\beta = 0$") ///
 	b(%9.3f) se(%9.3f) star(* 0.1 ** 0.05 *** 0.01) ///	

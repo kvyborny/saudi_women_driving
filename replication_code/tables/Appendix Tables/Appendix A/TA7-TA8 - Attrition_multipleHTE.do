@@ -2,7 +2,7 @@
 ********************************************************************************
 ********************************************************************************
 
-Purpose: 		APPENDIX - Attrition without randomization cohort 
+Purpose:	Tables A7 & A8	- 	Attrition without randomization cohort 
 								FEs; interacted with multiple HTE outcomes
 				
 Table footnotes:
@@ -116,11 +116,11 @@ eststo clear
 			
 	* write table to latex	
 	
-		* TABLE A
+		* TABLE A7
 			esttab employ_modstart_noFE1 attitudes_modstart_noFE1  ///
 			employ_modstart_noFE2 attitudes_modstart_noFE2 employ_modstart_noFE3 ///
 			attitudes_modstart_noFE3 ///
-			using "$output_descr/tables/Attrition_full sample_multHTE_without FEs_`c(current_date)'.tex", ///
+			using "$output_descr/tables/Table_A7.tex", ///
 			label se scalars("cmean Control Mean: HTE variable = 0" ///
 			 "htevar HTE variable") nogaps nobaselevels ///
 			keep(*treatment *hte) b(%9.3f) se(%9.3f) ///
@@ -137,10 +137,10 @@ eststo clear
 			replace fragment varwidth(25) modelwidth(12)	
 			
 			
-		* TABLE B
+		* TABLE A8
 		esttab employ_modstart_noFE4 attitudes_modstart_noFE4 ///
 			employ_modstart_noFE5 attitudes_modstart_noFE5 ///
-			using "$output_descr/tables/Attrition_full sample_HTEmar_husbinfl_without FEs_`c(current_date)'.tex", ///
+			using "$output_descr/tables/Table_A8.tex", ///
 			label se scalars("cmean_mar Mean: Control, married" ///
 			"cmean_sing Mean: Control, single" ///
 			"cmean_widnocopar Mean: Control, widowed" ///

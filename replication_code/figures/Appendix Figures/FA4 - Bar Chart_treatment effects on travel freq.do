@@ -2,7 +2,7 @@
 ********************************************************************************
 ********************************************************************************
 
-Purpose: 		APPENDIX FIGURE - TREATMENT EFFECTS ON TRAVEL FREQUENCY
+Purpose: 	FIGURE A4 - TREATMENT EFFECTS ON TRAVEL FREQUENCY
 
 
 Figure footnotes: This figure shows the results of a series of estimates of 
@@ -155,9 +155,9 @@ eststo clear
 					yscale(range(0 .6)) ylabel(0 0.1 0.2 0.3 0.4 0.5 0.6 .7) xtitle("")
 
 	
-	graph 			save "$output/RCT/figures/gph_files/driving_frequency" , replace
+	graph 			save "$output/RCT/figures/gph_files/Figure_A4" , replace
 						
-	graph 			export "$output/RCT/figures/driving_frequency.eps" , replace
+	graph 			export "$output/RCT/figures/Figure_A4.eps" , replace
 	
 	restore 
 	

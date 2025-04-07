@@ -2,8 +2,9 @@
 ********************************************************************************
 ********************************************************************************
 
-Purpose: 		APPENDIX - 	Stacked: driving, mobility, labor market outcomes,
-							own, social contact; strata FEs; no controls
+Purpose:	Table A10, Panels A & B 	-	Stacked: driving, mobility, labor 
+											market outcomes, own, social contact; 
+											strata FEs; no controls
 	
 Table footnotes: Outcome variables are constructed as described in the notes for 
 Table 1 and A12. Variations in sample size are due to drop-off from telephone
@@ -56,11 +57,11 @@ eststo clear
 
 
 * Write to latex
-	* (1)
-	* Drive training, license and mobility
+
+	* Panel A: Drive training, license and mobility
 		esttab s_train_bi_w3 license_w3 drive_any_mo_bi_w3 M4_1_TEXT ///
 		share_unaccomp no_trips_unaccomp_w3 ///
-		using "$output_rct/Drive training & license_cohortPAP_nocontrols_`c(current_date)'.tex", ///
+		using "$output_rct/Table_A10_Panel_A.tex", ///
 		label se scalars("cmean Control mean" "b_cmean $\beta$/control mean" ///
 		"pval P-value $\beta = 0$") ///
 		nogaps nobaselevels ///
@@ -74,10 +75,10 @@ eststo clear
 		 
 		
 			 
-		* Economic and financial agency
+		* Panel B: Economic and financial agency
 		esttab employed_w3 unemployed_w3 not_in_LF_w3 empl_jobsearch_w3 ///
 		ga_1st_order_binary_sw social_contact_sw using ///
-		"$output_rct/LFP_ind dec_cohortPAP_nocontrols_binary_`c(current_date)'.tex", ///
+		"$output_rct/Table_A10_Panel_B.tex", ///
 		label se nonotes ///
 		scalars("cmean Control mean" "b_cmean $\beta$/control mean" "pval P-value $\beta = 0$") ///
 		nobaselevels nonotes keep(treatment) ///

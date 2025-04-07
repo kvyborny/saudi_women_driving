@@ -2,7 +2,7 @@
 ********************************************************************************
 ********************************************************************************
 
-Purpose: 		APPENDIX TABLE - PAP - job search
+Purpose: 	Table B8	-	job search (PAP)
 
 
 Table footnotes: All outcomes reported in this table were collected during the 
@@ -47,9 +47,10 @@ global pap_jobsearch jobsearch_w2 careerfair_w2 jobhuntprop_w2 jh_travel_w2 ///
 
 
 * Write to latex
+	* Panel A
 	esttab jobsearch_w2_1 careerfair_w2_1 jobhuntprop_w2_1 jh_travel_w2_1 ///
 		lowestsalary_txt_w2_1 using ///
-		"$output_rct/PAP_w2_jobsearch1_strataPAP_`c(current_date)'.tex", ///
+		"$output_rct/Table_B8_Panel_A.tex", ///
 		label se scalars(N "cmean Control Group Mean" ) nogaps nobaselevels ///
 		keep( *wusool_T *driving_T) b(%9.3f) se(%9.3f) star(* 0.1 ** 0.05 *** 0.01) ///	
 		mtitles("\shortstack{Looking for\\a job}" ///
@@ -60,10 +61,11 @@ global pap_jobsearch jobsearch_w2 careerfair_w2 jobhuntprop_w2 jh_travel_w2 ///
 		coeflabels(1.driving_T "$\beta\textsubscript{1}$: Driving training" 1.wusool_T "$\beta\textsubscript{2}$: Rideshare subsidy" ///
 		1.driving_T#1.wusool_T "$\beta\textsubscript{3}$: Driving training x Rideshare subsidy") ///
 		replace nonotes fragment
-		
+	
+	* Panel B
 	esttab jobapplied_lastm_w2_1 job_interview_w2_1 job_interviewattend_w2_1 ///
 		takejob_15mins_w2_1 takejob_30mins_w2_1 using ///
-		"$output_rct/PAP_w2_jobsearch2_strataPAP_`c(current_date)'.tex", ///
+		"$output_rct/Table_B8_Panel_B.tex", ///
 		label se scalars(N "cmean Control Group Mean" ) nogaps nobaselevels ///
 		keep( *wusool_T *driving_T) b(%9.3f) se(%9.3f) star(* 0.1 ** 0.05 *** 0.01) ///	
 		mtitles("\shortstack{Job applications}" ///

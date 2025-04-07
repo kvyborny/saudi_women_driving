@@ -2,7 +2,7 @@
 ********************************************************************************
 ********************************************************************************
 
-Purpose: 		APPENDIX - Balance across arms among responders
+Purpose: 	Table A3	-	Balance across arms among responders
 
 Table footnotes: Data from administrative records and baseline survey. Statistics 
 reported for the subsample who started the endline survey. "Likely to drive soon 
@@ -111,7 +111,7 @@ eststo clear
 	
 	* write table to latex
 	texdoc init ///
-		"$output_rct/Balance across arms among responders_final_`c(current_date)'", ///
+		"$output_rct/Table_A3", ///
 		replace force
 		
 		tex 			& (1)	 & (2) 	 	 & (3) 					& (4) 	  & (5) 	   & (6) 					 & (7) 		  & (8)	 	\\

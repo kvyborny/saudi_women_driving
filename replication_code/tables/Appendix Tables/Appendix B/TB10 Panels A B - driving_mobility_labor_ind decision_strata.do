@@ -2,9 +2,9 @@
 ********************************************************************************
 ********************************************************************************
 
-Purpose: 		APPENDIX TABLE - Stacked: driving, mobility, labor market outcomes,
-								 and independent decision making, robustness to FEs 
-								 for sub-strata
+Purpose: 	Table B10, Panels A & B		-	Stacked: driving, mobility, labor market outcomes,
+											and independent decision making, robustness to FEs 
+											for sub-strata
 	
 Table footnotes: Outcome variables are constructed as described in the notes for 
 Table 1. Variations in sample size are due to drop-off from telephone survey; order 
@@ -68,10 +68,9 @@ eststo clear
 
 
 * Write to latex
-	* (1)
-	* Drive training, license and mobility
+	* Panel A: Drive training, license and mobility
 		esttab  $drive_mob ///
-		using "$output_rct/Drive training & license_strataPAP_`c(current_date)'.tex", ///
+		using "$output_rct/Table_B10_Panel_A.tex", ///
 		 label se scalars("cmean Control mean" "b_cmean $\beta$/control mean" "pval P-value $\beta = 0$") ///
 		 nogaps nobaselevels ///
 		 keep(treatment) b(%9.3f) se(%9.3f) star(* 0.1 ** 0.05 *** 0.01) ///	
@@ -82,9 +81,9 @@ eststo clear
 		"\shortstack{Always travels\\with male\\chaperone}") ///
 		 replace  varwidth(25) modelwidth(12) fragment nonotes
 			 
-		* Economic and financial agency
+	* Panel B: Economic and financial agency
 		esttab $lab using ///
-		"$output_rct/LFP_ind dec_strataPAP_binary_`c(current_date)'.tex", ///
+		"$output_rct/Table_B10_Panel_B.tex", ///
 		label se nonotes scalars("cmean Control mean" "b_cmean $\beta$/control mean" "pval P-value $\beta = 0$") ///
 		nobaselevels nonotes keep(treatment) ///
 		nogaps nobaselevels b(%9.3f) se(%9.3f) ///

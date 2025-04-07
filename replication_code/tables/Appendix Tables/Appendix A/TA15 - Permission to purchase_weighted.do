@@ -2,9 +2,9 @@
 ********************************************************************************
 ********************************************************************************
 
-Purpose: 		APPENDIX TABLE - Ability to spend without permission; unweighted,
-								 weighted by BL age-edu, and weighted by BL 
-								 employment status
+Purpose: 	Table A15	-	Ability to spend without permission; unweighted,
+							weighted by BL age-edu, and weighted by BL 
+							employment status
 			
 Table footnotes: The outcome was constructed as follows: respondents were asked 
 to rate their level of agreement (on a 5 point Likert scale) with the statement: 
@@ -100,7 +100,7 @@ eststo clear
 		
 		* Write to latex			 
 		esttab G1_3_abovemed G1_3_abovemed_wt1 G1_3_abovemed_wt2 using ///
-		"$output_rct/Spend_cohortPAP_weighted_`c(current_date)'.tex", ///
+		"$output_rct/Table_A15.tex", ///
 		label se nonotes scalars("cmean Control mean" "b_cmean $\beta$/control mean"  "pval P-value $\beta = 0$") ///
 		nobaselevels keep(treatment) nogaps  b(%9.3f) se(%9.3f) ///
 		star(* 0.1 ** 0.05 *** 0.01) ///	

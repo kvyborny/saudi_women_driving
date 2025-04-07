@@ -2,7 +2,7 @@
 ********************************************************************************
 ********************************************************************************
 
-Purpose:				Generate LFP figure with employed / unemployed 
+Purpose:	Figure A5	-	Generate LFP figure with employed / unemployed 
 
 
 Figure footnotes: Source: Estimates from Saudi LFS - GASTAT. Red vertical line 
@@ -52,4 +52,4 @@ shows the date of the driving ban repeal.
 					xline(234) 	// xline shows 2018 q3, when ban was lifted
 	
 	
-	graph		export "$output_descr/figures/lfp.eps" ,  replace 
+	graph		export "$output_descr/figures/Figure_A5.eps" ,  replace 

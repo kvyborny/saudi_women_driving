@@ -2,7 +2,7 @@
 ********************************************************************************
 ********************************************************************************
 
-Purpose: 		MAIN TABLE - 	HTE (AGE, EDU, CARS, RATIO OF KIDS TO ADULTS, 
+Purpose: 		Tables 2 & 3 - 	HTE (AGE, EDU, CARS, RATIO OF KIDS TO ADULTS, 
 								BL LFP, BL EMPLOYMENT) FOR OUTCOMES: EMPLOYED
 								AND ABILITY TO MAKE PURCHASES
 								  
@@ -192,11 +192,11 @@ eststo clear
 
 		
 * Write to latex
-	* TABLE A
+	* TABLE 2
 	* PANEL A - AGE
 	esttab license_w3_hte1	employed_w3_hte1 not_in_LF_w3_hte1 ///
 		 G1_3_abovemed_hte1 using ///
-		"$output_rct/Employed_ability to purchase_multHTE_TabAPanelA_`c(current_date)'.tex", ///
+		"$output_rct/Table_2_Panel_A.tex", ///
 		label se nogaps nobaselevels noobs ///
 		keep(*treatment *hte) b(%9.3f) se(%9.3f) star(* 0.1 ** 0.05 *** 0.01) ///	
 		mtitles("\shortstack{Received\\license}" "\shortstack{Employed}" ///
@@ -211,7 +211,7 @@ eststo clear
 		 * Add total effects	
 		esttab license_w3_hte1	employed_w3_hte1 not_in_LF_w3_hte1 ///
 		 G1_3_abovemed_hte1 using ///
-		"$output_rct/Employed_ability to purchase_multHTE_TabAPanelA_`c(current_date)'.tex", ///
+		"$output_rct/Table_2_Panel_A.tex", ///
 		label se nogaps nobaselevels  ///
 		append fragment nomtitles nonumbers noconstant noobs nogaps nonotes ///
 		cells(none) stats(total_eff_b total_eff_se, ///
@@ -221,7 +221,7 @@ eststo clear
 		* Add N, control mean, and p-val for test that total effect is different from zero 
 		esttab license_w3_hte1	employed_w3_hte1 not_in_LF_w3_hte1 ///
 		 G1_3_abovemed_hte1 using ///
-		"$output_rct/Employed_ability to purchase_multHTE_TabAPanelA_`c(current_date)'.tex", ///
+		"$output_rct/Table_2_Panel_A.tex", ///
 		label se nogaps nobaselevels noobs ///
 				append fragment nomtitles nonumbers noconstant   nonotes  ///
 				cells(none) stats(N  cmean_hte, ///
@@ -231,7 +231,7 @@ eststo clear
 	* PANEL B - EDU		 
 	esttab license_w3_hte2 employed_w3_hte2 not_in_LF_w3_hte2 ///
 		 G1_3_abovemed_hte2 using ///
-		"$output_rct/Employed_ability to purchase_multHTE_TabAPanelB_`c(current_date)'.tex", ///
+		"$output_rct/Table_2_Panel_B.tex", ///
 		label se nogaps nobaselevels noobs ///
 		keep(*treatment *hte) b(%9.3f) se(%9.3f) star(* 0.1 ** 0.05 *** 0.01) ///	
 		nomtitles ///
@@ -245,7 +245,7 @@ eststo clear
 		 * Add total effects	
 		esttab license_w3_hte2 employed_w3_hte2 not_in_LF_w3_hte2 ///
 		 G1_3_abovemed_hte2 using ///
-		"$output_rct/Employed_ability to purchase_multHTE_TabAPanelB_`c(current_date)'.tex", ///
+		"$output_rct/Table_2_Panel_B.tex", ///
 		label se nogaps nobaselevels  ///
 		append fragment nomtitles nonumbers noconstant noobs nogaps nonotes ///
 		cells(none) stats(total_eff_b total_eff_se, ///
@@ -255,7 +255,7 @@ eststo clear
 		* Add N, control mean, and p-val for test that total effect is different from zero 
 		esttab license_w3_hte2 employed_w3_hte2 not_in_LF_w3_hte2 ///
 		 G1_3_abovemed_hte2 using ///
-		"$output_rct/Employed_ability to purchase_multHTE_TabAPanelB_`c(current_date)'.tex", ///
+		"$output_rct/Table_2_Panel_B.tex", ///
 		label se nogaps nobaselevels noobs ///
 				append fragment nomtitles nonumbers noconstant   nonotes  ///
 				cells(none) stats(N  cmean_hte, ///
@@ -265,7 +265,7 @@ eststo clear
 		* PANEL C - MARITAL STATUS
 		esttab license_w3_mar employed_w3_mar not_in_LF_w3_mar  ///
 		G1_3_abovemed_mar using ///
-		"$output_rct/Employed_ability to purchase_multHTE_TabAPanelC_`c(current_date)'.tex", ///
+		"$output_rct/Table_2_Panel_C.tex", ///
 		label se nonotes nomtitles  ///
 		nogaps nobaselevels nonotes keep(*treatment *rel_status_BL) ///
 		drop(2.rel_status_BL 3.rel_status_BL 4.rel_status_BL) ///
@@ -285,7 +285,7 @@ eststo clear
 		* Add N, control mean, and p-val for test that total effect is different from zero 
 		esttab license_w3_mar employed_w3_mar not_in_LF_w3_mar  ///
 		G1_3_abovemed_mar using ///
-		"$output_rct/Employed_ability to purchase_multHTE_TabAPanelC_`c(current_date)'.tex", ///
+		"$output_rct/Table_2_Panel_C.tex", ///
 		append fragment nomtitles nonumbers noconstant noobs  nonotes  ///
 		cells(none) stats(N cmean_div cmean_mar cmean_sing cmean_wid, ///
 		labels("Observations" "Mean: Control, divorced" ///
@@ -298,13 +298,13 @@ eststo clear
 
 	
 
-* TABLE B
+* TABLE 3
 	
 				
 	* PANEL A - Has husband/co-parent		 
 	esttab license_w3_inf employed_w3_inf not_in_LF_w3_inf  ///
 	G1_3_abovemed_inf using ///
-		"$output_rct/Employed_ability to purchase_multHTE_TabBPanelA_`c(current_date)'.tex", ///
+		"$output_rct/Table_3_Panel_A.tex", ///
 		label se nogaps nobaselevels noobs ///
 		keep(*treatment *husb_influence_kids) b(%9.3f) se(%9.3f) star(* 0.1 ** 0.05 *** 0.01) ///	
 		mtitles("\shortstack{Received\\license}" "\shortstack{Employed}" ///
@@ -321,7 +321,7 @@ eststo clear
 		 * Add total effects	
 		esttab license_w3_inf employed_w3_inf not_in_LF_w3_inf  ///
 	G1_3_abovemed_inf using ///
-		"$output_rct/Employed_ability to purchase_multHTE_TabBPanelA_`c(current_date)'.tex", ///
+		"$output_rct/Table_3_Panel_A.tex", ///
 		label se nogaps nobaselevels  ///
 		append fragment nomtitles nonumbers noconstant noobs nogaps nonotes ///
 		cells(none) stats(total_eff_b total_eff_se, ///
@@ -331,7 +331,7 @@ eststo clear
 		* Add N, control mean, and p-val for test that total effect is different from zero 
 		esttab license_w3_inf employed_w3_inf not_in_LF_w3_inf  ///
 	G1_3_abovemed_inf using ///
-		"$output_rct/Employed_ability to purchase_multHTE_TabBPanelA_`c(current_date)'.tex", ///
+		"$output_rct/Table_3_Panel_A.tex", ///
 		label se nogaps nobaselevels noobs ///
 				append fragment nomtitles nonumbers noconstant   nonotes  ///
 				cells(none) stats(N  cmean_hte, ///
@@ -341,7 +341,7 @@ eststo clear
 		* PANEL B - In LF at BL 		 
 	esttab license_w3_hte3 employed_w3_hte3 not_in_LF_w3_hte3 ///
 		 G1_3_abovemed_hte3 using ///
-		"$output_rct/Employed_ability to purchase_multHTE_TabBPanelB_`c(current_date)'.tex", ///
+		"$output_rct/Table_3_Panel_B.tex", ///
 		label se nogaps nobaselevels noobs ///
 		keep(*treatment *hte) b(%9.3f) se(%9.3f) star(* 0.1 ** 0.05 *** 0.01) ///	
 		nomtitles ///
@@ -355,7 +355,7 @@ eststo clear
 		 * Add total effects	
 		esttab license_w3_hte3 employed_w3_hte3 not_in_LF_w3_hte3 ///
 		 G1_3_abovemed_hte3 using ///
-		"$output_rct/Employed_ability to purchase_multHTE_TabBPanelB_`c(current_date)'.tex", ///
+		"$output_rct/Table_3_Panel_B.tex", ///
 		label se nogaps nobaselevels  ///
 		append fragment nomtitles nonumbers noconstant noobs nogaps nonotes ///
 		cells(none) stats(total_eff_b total_eff_se, ///
@@ -365,7 +365,7 @@ eststo clear
 		* Add N, control mean, and p-val for test that total effect is different from zero 
 		esttab license_w3_hte3 employed_w3_hte3 not_in_LF_w3_hte3 ///
 		 G1_3_abovemed_hte3 using ///
-		"$output_rct/Employed_ability to purchase_multHTE_TabBPanelB_`c(current_date)'.tex", ///
+		"$output_rct/Table_3_Panel_B.tex", ///
 		label se nogaps nobaselevels noobs ///
 				append fragment nomtitles nonumbers noconstant   nonotes  ///
 				cells(none) stats(N  cmean_hte, ///

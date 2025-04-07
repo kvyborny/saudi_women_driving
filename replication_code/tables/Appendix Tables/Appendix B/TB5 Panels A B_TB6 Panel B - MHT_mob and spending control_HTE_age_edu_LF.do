@@ -2,10 +2,11 @@
 ********************************************************************************
 ********************************************************************************
 
-Purpose: 		MULTIPLE HYPOTHESIS TESTING - ABILITY TO LEAVE HOUSE, ABILITY TO 
-											  MAKE PURCHASES; HTE (MED AGE, EDU,
-											  BL LFP); TABLE B5 PANELS A & B, 
-											  TABLE B6 PANEL B
+Purpose: 	Table B5, Panels A & B; Table B6, Panel B	-	Ability to leave the 
+															house, Ability to make 
+															purchases; multiple 
+															hypothesis testing; 
+															multiple HTE
 								  
 								  
 TABLE FOOTNOTES:						
@@ -195,10 +196,10 @@ eststo clear
 
 		   
 * Write to latex
-	* TABLE A
+	* TABLE B5
 	* PANEL A - AGE
 	esttab G1_2_abovemed_hte1  G1_3_abovemed_hte1 using ///
-		"$output_rct/MHT_intraHH response_multHTE_TabAPanelA_`c(current_date)'.tex", ///
+		"$output_rct/Table_B5_Panel_A.tex", ///
 		label se nogaps nobaselevels noobs ///
 		keep(*treatment *hte) b(%9.3f) se(%9.3f) star(* 0.1 ** 0.05 *** 0.01) ///	
 		mtitles("\shortstack{Allowed to\\leave house\\w/o permission}" ///
@@ -211,7 +212,7 @@ eststo clear
 			
 		 * Add total effects	
 		esttab 	G1_2_abovemed_hte1  G1_3_abovemed_hte1 using ///
-		"$output_rct/MHT_intraHH response_multHTE_TabAPanelA_`c(current_date)'.tex", ///
+		"$output_rct/Table_B5_Panel_A.tex", ///
 		label se nogaps nobaselevels  ///
 		append fragment nomtitles nonumbers noconstant noobs nogaps nonotes ///
 		cells(none) stats(total_eff_b total_eff_se, ///
@@ -220,7 +221,7 @@ eststo clear
 		 
 		* Add N, control mean, p-val/q-val for test that total effect is different from zero 
 		esttab	G1_2_abovemed_hte1  G1_3_abovemed_hte1 using ///
-		"$output_rct/MHT_intraHH response_multHTE_TabAPanelA_`c(current_date)'.tex", ///
+		"$output_rct/Table_B5_Panel_A.tex", ///
 		label se nogaps nobaselevels noobs ///
 				append fragment nomtitles nonumbers noconstant   nonotes  ///
 				cells(none) stats(N  cmean_hte b1 qval_b1 b1_b3 qval_b13, ///
@@ -233,7 +234,7 @@ eststo clear
 				
 	* PANEL B - EDU		 
 	esttab G1_2_abovemed_hte2  G1_3_abovemed_hte2 using ///
-		"$output_rct/MHT_intraHH response_multHTE_TabAPanelB_`c(current_date)'.tex", ///
+		"$output_rct/Table_B5_Panel_B.tex", ///
 		label se nogaps nobaselevels noobs ///
 		keep(*treatment *hte) b(%9.3f) se(%9.3f) star(* 0.1 ** 0.05 *** 0.01) ///	
 		nomtitles ///
@@ -246,7 +247,7 @@ eststo clear
 			
 		 * Add total effects	
 		esttab G1_2_abovemed_hte2  G1_3_abovemed_hte2 using ///
-		"$output_rct/MHT_intraHH response_multHTE_TabAPanelB_`c(current_date)'.tex", ///
+		"$output_rct/Table_B5_Panel_B.tex", ///
 		label se nogaps nobaselevels  ///
 		append fragment nomtitles nonumbers noconstant noobs nogaps nonotes ///
 		cells(none) stats(total_eff_b total_eff_se, ///
@@ -255,7 +256,7 @@ eststo clear
 		 
 		* Add N, control mean, and p-val for test that total effect is different from zero 
 		esttab G1_2_abovemed_hte2  G1_3_abovemed_hte2 using ///
-		"$output_rct/MHT_intraHH response_multHTE_TabAPanelB_`c(current_date)'.tex", ///
+		"$output_rct/Table_B5_Panel_B.tex", ///
 		label se nogaps nobaselevels noobs ///
 				append fragment nomtitles nonumbers noconstant   nonotes  ///
 				cells(none) stats(N  cmean_hte b1 qval_b1 b1_b3 qval_b13, ///
@@ -268,11 +269,11 @@ eststo clear
 				
 		
 
-* TABLE B
+* TABLE B6
 	
 		* PANEL B - In LF at BL 		 
 	esttab G1_2_abovemed_hte3  G1_3_abovemed_hte3 using ///
-		"$output_rct/MHT_intraHH response_multHTE_TabBPanelB_`c(current_date)'.tex", ///
+		"$output_rct/Table_B6_Panel_B.tex", ///
 		label se nogaps nobaselevels noobs ///
 		keep(*treatment *hte) b(%9.3f) se(%9.3f) star(* 0.1 ** 0.05 *** 0.01) ///	
 		nomtitles ///
@@ -285,7 +286,7 @@ eststo clear
 			
 		 * Add total effects	
 		esttab G1_2_abovemed_hte3  G1_3_abovemed_hte3 using ///
-		"$output_rct/MHT_intraHH response_multHTE_TabBPanelB_`c(current_date)'.tex", ///
+		"$output_rct/Table_B6_Panel_B.tex", ///
 		label se nogaps nobaselevels  ///
 		append fragment nomtitles nonumbers noconstant noobs nogaps nonotes ///
 		cells(none) stats(total_eff_b total_eff_se, ///
@@ -294,7 +295,7 @@ eststo clear
 		 
 		* Add N, control mean, and p-val for test that total effect is different from zero 
 		esttab G1_2_abovemed_hte3  G1_3_abovemed_hte3 using ///
-		"$output_rct/MHT_intraHH response_multHTE_TabBPanelB_`c(current_date)'.tex", ///
+		"$output_rct/Table_B6_Panel_B.tex", ///
 		label se nogaps nobaselevels noobs ///
 				append fragment nomtitles nonumbers noconstant   nonotes  ///
 				cells(none) stats(N  cmean_hte b1 qval_b1 b1_b3 qval_b13, ///

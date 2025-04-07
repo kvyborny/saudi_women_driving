@@ -2,8 +2,9 @@
 ********************************************************************************
 ********************************************************************************
 
-Purpose: 		APPENDIX TABLE - Wusool/Uber interaction - stacked: training/license, 
-				mobility, LFP, attitudes, social interactions, decision-making
+Purpose: 	Table B9	-	Wusool/Uber interaction - stacked: training/license, 
+							mobility, LFP, attitudes, social interactions, 
+							decision-making
 				
 				
 Table footnotes: Outcome variables are constructed as described in the notes for 
@@ -70,8 +71,9 @@ lab var wusool_T "Wusool subsidy"
  
 
 * Write to latex
+	* Panel A
 	esttab $drive_mob  using ///
-		"$output_rct/Interact_Drive training_license_mob_`c(current_date)'.tex", ///
+		"$output_rct/Table_B9_Panel_A.tex", ///
 		 label se scalars("cmean Control Group Mean" ///
 		 "b1_b3_0 P-val: $\beta\textsubscript{1}$ + $\beta\textsubscript{3}$ = 0" ///
 		 "b2_b3_0 P-val: $\beta\textsubscript{2}$ + $\beta\textsubscript{3}$ = 0" ) ///
@@ -87,9 +89,9 @@ lab var wusool_T "Wusool subsidy"
 		1.driving_T#1.wusool_T "$\beta\textsubscript{3}$: Driving training x Rideshare subsidy") ///
 		 replace  varwidth(25) modelwidth(15) fragment nonotes
 	
-
+	* Panel B
 	esttab $lab using ///
-		"$output_rct/Interact_Labor force participation_binary_`c(current_date)'.tex", ///
+		"$output_rct/Table_B9_Panel_B.tex", ///
 		label se nonotes scalars("cmean Control Group Mean" ///
 		"b1_b3_0 P-val: $\beta\textsubscript{1}$ + $\beta\textsubscript{3}$ = 0" ///
 		"b2_b3_0 P-val: $\beta\textsubscript{2}$ + $\beta\textsubscript{3}$ = 0" ) ///
@@ -106,8 +108,9 @@ lab var wusool_T "Wusool subsidy"
 		1.driving_T#1.wusool_T "$\beta\textsubscript{3}$: Driving training x Rideshare subsidy") ///
 		fragment varwidth(25) modelwidth(15) replace
 		
-		esttab $permission_attitudes using ///
-	"$output_rct/Interact_permissions_attitudes women working_binary_`c(current_date)'.tex", ///
+	* Panel C
+	esttab $permission_attitudes using ///
+	"$output_rct/Table_B9_Panel_C.tex", ///
 	label se nonotes keep( *wusool_T *driving_T) ///
 	scalars("cmean Control Group Mean" ///
 		 "b1_b3_0 P-val: $\beta\textsubscript{1}$ + $\beta\textsubscript{3}$ = 0" ///

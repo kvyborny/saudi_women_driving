@@ -2,8 +2,8 @@
 ********************************************************************************
 ********************************************************************************
 
-Purpose: 		MULTIPLE HYPOTHESIS TESTING - JOB SEARCH; HTE (AS HUSBAND/CO-PARENT); 
-											  TABLE B3 PANEL A 
+Purpose: 	Table B3, Panel A	-	Job search; multiple hypothessis testing 
+									HTE (Has husband/co-parent)
 								  
 								  
 TABLE FOOTNOTES: Variations in sample size are due to drop-off from telephone survey; 
@@ -135,12 +135,12 @@ eststo clear
 		
 * Write to latex
 	
-* TABLE B
+* TABLE B3
 	  
 				
 	* PANEL A - Has husband/co-parent		 
 	esttab employed_w3_inf unemployed_w3_inf empl_jobsearch_w3_inf using ///
-		"$output_rct/MHT_labor_multHTE_TabBPanelA_`c(current_date)'.tex", ///
+		"$output_rct/Table_B3_Panel_A.tex", ///
 		label se nogaps nobaselevels noobs ///
 		keep(*treatment *husb_influence_kids) b(%9.3f) se(%9.3f) star(* 0.1 ** 0.05 *** 0.01) ///	
 		mtitles("\shortstack{Employed}" ///
@@ -156,7 +156,7 @@ eststo clear
 			
 		 * Add total effects	
 		esttab employed_w3_inf unemployed_w3_inf empl_jobsearch_w3_inf using ///
-		"$output_rct/MHT_labor_multHTE_TabBPanelA_`c(current_date)'.tex", ///
+		"$output_rct/Table_B3_Panel_A.tex", ///
 		label se nogaps nobaselevels  ///
 		append fragment nomtitles nonumbers noconstant noobs nogaps nonotes ///
 		cells(none) stats(total_eff_b total_eff_se, ///
@@ -165,7 +165,7 @@ eststo clear
 		 
 		* Add N, control mean, and p-val for test that total effect is different from zero 
 		esttab employed_w3_inf unemployed_w3_inf empl_jobsearch_w3_inf using ///
-		"$output_rct/MHT_labor_multHTE_TabBPanelA_`c(current_date)'.tex", ///
+		"$output_rct/Table_B3_Panel_A.tex", ///
 		label se nogaps nobaselevels noobs ///
 				append fragment nomtitles nonumbers noconstant   nonotes  ///
 				cells(none) stats(N  cmean_hte b1 qval_b1 b1_b3 qval_b13, ///

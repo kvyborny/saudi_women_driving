@@ -2,8 +2,8 @@
 ********************************************************************************
 ********************************************************************************
 
-Purpose: 		MULTIPLE HYPOTHESIS TESTING - JOB SEARCH; HTE (MARITAL STATUS); 
-											  PANEL C
+Purpose: 	Table B2, Panel C	-	Job search; multiple hypothesis testing HTE 
+									(marital status)
 								  
 								  
 TABLE FOOTNOTES: Variations in sample size are due to drop-off from telephone 
@@ -159,11 +159,11 @@ eststo clear
 
 		
 * Write to latex
-	* TABLE A
+	* TABLE B2
 	
 		* PANEL C - MARITAL STATUS
 		esttab employed_w3_mar unemployed_w3_mar empl_jobsearch_w3_mar using ///
-		"$output_rct/MHT_labor_multHTE_multHTE_TabAPanelC_`c(current_date)'.tex", ///
+		"$output_rct/Table_B2_Panel_C.tex", ///
 		label se nonotes nomtitles  ///
 		nogaps nobaselevels nonotes keep(*treatment *rel_status_BL) ///
 		drop(2.rel_status_BL 3.rel_status_BL 4.rel_status_BL) ///
@@ -177,7 +177,7 @@ eststo clear
 		
 		* Add N, control mean, and p-val for test that total effect is different from zero 
 		esttab employed_w3_mar unemployed_w3_mar empl_jobsearch_w3_mar using ///
-		"$output_rct/MHT_labor_multHTE_multHTE_TabAPanelC_`c(current_date)'.tex", ///
+		"$output_rct/Table_B2_Panel_C.tex", ///
 		append fragment nomtitles nonumbers noconstant noobs  nonotes  ///
 		cells(none) stats(N cmean_div cmean_mar cmean_sing cmean_wid b1 qval_b1 ///
 		b1_b5 qval_b15 b1_b6 qval_b16 b1_b7 qval_b17, ///

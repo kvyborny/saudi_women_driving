@@ -2,9 +2,9 @@
 ********************************************************************************
 ********************************************************************************
 
-Purpose: 		MULTIPLE HYPOTHESIS TESTING - ABILITY TO LEAVE HOUSE, ABILITY TO 
-											  MAKE PURCHASES; HTE (HAS HUSBAND/
-											  CO-PARENT); TABLE B6 PANEL A
+Purpose: 	Table B6, Panel A	-	Ability to leave the house, Ability to make 
+									purchases; multiple hypothesis testing; 
+									HTE (Has husband/co-parent)
 								  
 								  
 TABLE FOOTNOTES: Variations in sample size are due to drop-off from telephone survey; 
@@ -137,12 +137,12 @@ eststo clear
 		
 * Write to latex
 	
-* TABLE B
+* TABLE B6
 	  
 			  	
 	* PANEL A - Has husband/co-parent		 
 	esttab G1_2_abovemed_inf  G1_3_abovemed_inf using ///
-		"$output_rct/MHT_intraHH response_multHTE_TabBPanelA_`c(current_date)'.tex", ///
+		"$output_rct/Table_B6_Panel_A.tex", ///
 		label se nogaps nobaselevels noobs ///
 		keep(*treatment *husb_influence_kids) b(%9.3f) se(%9.3f) star(* 0.1 ** 0.05 *** 0.01) ///	
 		mtitles("\shortstack{Allowed to\\leave house\\w/o permission}" ///
@@ -157,7 +157,7 @@ eststo clear
 			
 		 * Add total effects	
 		esttab G1_2_abovemed_inf G1_3_abovemed_inf using ///
-		"$output_rct/MHT_intraHH response_multHTE_TabBPanelA_`c(current_date)'.tex", ///
+		"$output_rct/Table_B6_Panel_A.tex", ///
 		label se nogaps nobaselevels  ///
 		append fragment nomtitles nonumbers noconstant noobs nogaps nonotes ///
 		cells(none) stats(total_eff_b total_eff_se, ///
@@ -166,7 +166,7 @@ eststo clear
 		 
 		* Add N, control mean, and p-val for test that total effect is different from zero 
 		esttab G1_2_abovemed_inf G1_3_abovemed_inf using ///
-		"$output_rct/MHT_intraHH response_multHTE_TabBPanelA_`c(current_date)'.tex", ///
+		"$output_rct/Table_B6_Panel_A.tex", ///
 		label se nogaps nobaselevels noobs ///
 				append fragment nomtitles nonumbers noconstant   nonotes  ///
 				cells(none) stats(N  cmean_hte b1 qval_b1 b1_b3 qval_b13, ///

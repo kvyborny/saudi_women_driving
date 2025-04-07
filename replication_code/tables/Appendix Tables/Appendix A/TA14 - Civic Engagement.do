@@ -2,8 +2,8 @@
 ********************************************************************************
 ********************************************************************************
 
-Purpose: 		APPENDIX TABLE - 	Civic engagement; index and index
-									components
+Purpose: 	Table A14	-	Civic engagement; index and index
+							components
 
 Table footnotes: The outcome in Column 2 is constructed as follows: respondents 
 were asked whether they will vote in the next municipal election (definitely no, 
@@ -84,7 +84,7 @@ eststo clear
 * Write to latex
 
 		esttab $civic using ///
-		"$output_rct/Appen_CivEngage_cohortPAP_binary_`c(current_date)'.tex", ///
+		"$output_rct/Table_A14.tex", ///
 		label se nonotes keep( treatment) b(%9.3f) se(%9.3f) star(* 0.1 ** 0.05 *** 0.01) ///
 		scalars("cmean Control mean" "b_cmean $\beta$/control mean" "pval P-value $\beta = 0$") ///
 		mtitles("\shortstack{Index: Civic\\Engagement}" ///

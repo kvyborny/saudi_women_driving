@@ -2,10 +2,10 @@
 ********************************************************************************
 ********************************************************************************
 
-Purpose: 		MAIN - 		Ability to leave the house, Ability to make 
-							purchases, Attitudes towards women working 
-							(female and male social networks). Main result 
-							specifications
+Purpose: 	Table 1, Panel C - 		Ability to leave the house, Ability to make 
+									purchases, Attitudes towards women working 
+									(female and male social networks). Main result 
+									specifications
 
 
 
@@ -108,7 +108,7 @@ eststo clear
 
 
 	esttab $permission_attitudes using ///
-	"$output_rct/Permissions_attitudes women working_swindex_binary_cohortPAP_`c(current_date)'.tex", ///
+	"$output_rct/Table_1_Panel_C.tex", ///
 	label se nonotes keep(*treatment) ///
 	scalars("cmean Control mean" "b_cmean $\beta$/control mean" "pval P-value $\beta = 0$") ///
 	b(%9.3f) se(%9.3f) star(* 0.1 ** 0.05 *** 0.01) ///	
