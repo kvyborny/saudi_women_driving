@@ -184,7 +184,7 @@ eststo clear
 	* ALT TABLE A
 	* PANEL A 
 	esttab G1_3_likert_hte1 using ///
-		"$output_rct/robustness/Alt_Table_2_Panel_A_Col_4.tex", ///
+		"$output_rct/robustness/Alt_Table_2_Panel_A_Col_4_Likert.tex", ///
 		label se nogaps nobaselevels noobs ///
 		keep(*treatment *hte) b(%9.3f) se(%9.3f) star(* 0.1 ** 0.05 *** 0.01) ///	
 		mtitles("\shortstack{Allowed to\\make purchase\\without\\permission}") ///
@@ -196,7 +196,7 @@ eststo clear
 			
 		 * Add total effects	
 		esttab  G1_3_likert_hte1 using ///
-		"$output_rct/robustness/Alt_Table_2_Panel_A_Col_4.tex", ///
+		"$output_rct/robustness/Alt_Table_2_Panel_A_Col_4_Likert.tex", ///
 		label se nogaps nobaselevels  ///
 		append fragment nomtitles nonumbers noconstant noobs nogaps nonotes ///
 		cells(none) stats(total_eff_b total_eff_se, ///
@@ -205,7 +205,7 @@ eststo clear
 		 
 		* Add N, control mean, and p-val for test that total effect is different from zero 
 		esttab  G1_3_likert_hte1 using ///
-		"$output_rct/robustness/Alt_Table_2_Panel_A_Col_4.tex", ///
+		"$output_rct/robustness/Alt_Table_2_Panel_A_Col_4_Likert.tex", ///
 		label se nogaps nobaselevels noobs ///
 				append fragment nomtitles nonumbers noconstant   nonotes  ///
 				cells(none) stats(N  cmean_hte, ///
@@ -214,7 +214,7 @@ eststo clear
 				
 	* PANEL B		 
 	esttab G1_3_likert_hte2 using ///
-		"$output_rct/robustness/Alt_Table_2_Panel_B_Col_4.tex", ///
+		"$output_rct/robustness/Alt_Table_2_Panel_B_Col_4_Likert.tex", ///
 		label se nogaps nobaselevels noobs ///
 		keep(*treatment *hte) b(%9.3f) se(%9.3f) star(* 0.1 ** 0.05 *** 0.01) ///	
 		nomtitles ///
@@ -227,7 +227,7 @@ eststo clear
 			
 		 * Add total effects	
 		esttab G1_3_likert_hte2 using ///
-		"$output_rct/robustness/Alt_Table_2_Panel_B_Col_4.tex", ///
+		"$output_rct/robustness/Alt_Table_2_Panel_B_Col_4_Likert.tex", ///
 		label se nogaps nobaselevels  ///
 		append fragment nomtitles nonumbers noconstant noobs nogaps nonotes ///
 		cells(none) stats(total_eff_b total_eff_se, ///
@@ -236,7 +236,7 @@ eststo clear
 		 
 		* Add N, control mean, and p-val for test that total effect is different from zero 
 		esttab G1_3_likert_hte2 using ///
-		"$output_rct/robustness/Alt_Table_2_Panel_B_Col_4.tex", ///
+		"$output_rct/robustness/Alt_Table_2_Panel_B_Col_4_Likert.tex", ///
 		label se nogaps nobaselevels noobs ///
 				append fragment nomtitles nonumbers noconstant   nonotes  ///
 				cells(none) stats(N  cmean_hte, ///
@@ -245,7 +245,7 @@ eststo clear
 				
 	* PANEL C		 
 	esttab G1_3_likert_hte3 using ///
-		"$output_rct/robustness/Alt_Table_2_Panel_C_Col_4.tex", ///
+		"$output_rct/robustness/Alt_Table_2_Panel_C_Col_4_Likert.tex", ///
 		label se nogaps nobaselevels noobs ///
 		keep(*treatment *hte) b(%9.3f) se(%9.3f) star(* 0.1 ** 0.05 *** 0.01) ///	
 		nomtitles ///
@@ -258,7 +258,7 @@ eststo clear
 			
 		 * Add total effects	
 		esttab  G1_3_likert_hte3 using ///
-		"$output_rct/robustness/Alt_Table_2_Panel_C_Col_4.tex", ///
+		"$output_rct/robustness/Alt_Table_2_Panel_C_Col_4_Likert.tex", ///
 		label se nogaps nobaselevels  ///
 		append fragment nomtitles nonumbers noconstant noobs nogaps nonotes ///
 		cells(none) stats(total_eff_b total_eff_se, ///
@@ -267,7 +267,7 @@ eststo clear
 		 
 		* Add N, control mean, and p-val for test that total effect is different from zero 
 		esttab   G1_3_likert_hte3 using ///
-		"$output_rct/robustness/Alt_Table_2_Panel_C_Col_4.tex", ///
+		"$output_rct/robustness/Alt_Table_2_Panel_C_Col_4_Likert.tex", ///
 		label se nogaps nobaselevels noobs ///
 				append fragment nomtitles nonumbers noconstant   nonotes  ///
 				cells(none) stats(N  cmean_hte, ///
@@ -280,7 +280,7 @@ eststo clear
 * ALT TABLE 3
 	* PANEL A
 		esttab G1_3_likert_mar using ///
-		"$output_rct/robustness/Alt_Table_3_Panel_A_Col_4.tex", ///
+		"$output_rct/robustness/Alt_Table_3_Panel_A_Col_4_Likert.tex", ///
 		label se nonotes  ///
 		nogaps nobaselevels nonotes keep(*treatment *rel_status_BL) ///
 		drop(2.rel_status_BL 3.rel_status_BL 4.rel_status_BL) ///
@@ -300,7 +300,7 @@ eststo clear
 		
 		* Add N, control mean, and p-val for test that total effect is different from zero 
 		esttab G1_3_likert_mar using ///
-		"$output_rct/robustness/Alt_Table_3_Panel_A_Col_4.tex", ///
+		"$output_rct/robustness/Alt_Table_3_Panel_A_Col_4_Likert.tex", ///
 		append fragment nomtitles nonumbers noconstant noobs  nonotes  ///
 		cells(none) stats(N cmean_div cmean_mar cmean_sing cmean_wid, ///
 		labels("Observations" "Mean: Control, divorced" ///
@@ -313,7 +313,7 @@ eststo clear
 				
 	* PANEL B		 
 	esttab G1_3_likert_inf using ///
-		"$output_rct/robustness/Alt_Table_3_Panel_B_Col_4.tex", ///
+		"$output_rct/robustness/Alt_Table_3_Panel_B_Col_4_Likert.tex", ///
 		label se nogaps nobaselevels noobs ///
 		keep(*treatment *husb_influence_kids) b(%9.3f) se(%9.3f) star(* 0.1 ** 0.05 *** 0.01) ///	
 		nomtitles ///
@@ -327,7 +327,7 @@ eststo clear
 			
 		 * Add total effects	
 		esttab  G1_3_likert_inf using ///
-		"$output_rct/robustness/Alt_Table_3_Panel_B_Col_4.tex", ///
+		"$output_rct/robustness/Alt_Table_3_Panel_B_Col_4_Likert.tex", ///
 		label se nogaps nobaselevels  ///
 		append fragment nomtitles nonumbers noconstant noobs nogaps nonotes ///
 		cells(none) stats(total_eff_b total_eff_se, ///
@@ -336,7 +336,7 @@ eststo clear
 		 
 		* Add N, control mean, and p-val for test that total effect is different from zero 
 		esttab G1_3_likert_inf using ///
-		"$output_rct/robustness/Alt_Table_3_Panel_B_Col_4.tex", ///
+		"$output_rct/robustness/Alt_Table_3_Panel_B_Col_4_Likert.tex", ///
 		label se nogaps nobaselevels noobs ///
 				append fragment nomtitles nonumbers noconstant   nonotes  ///
 				cells(none) stats(N  cmean_hte, ///
