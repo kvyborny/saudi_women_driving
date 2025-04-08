@@ -62,7 +62,7 @@ eststo clear
 
 		* Write to latex			 
 		esttab ${labor_wt`i'} using ///
-		"$output_rct/Alt_Table_A11_Panel_`weight'_Col_2_AltDefn.tex", ///
+		"$output_rct/robustness/Alt_Table_A11_Panel_`weight'_Col_2_AltDefn.tex", ///
 		label se nonotes scalars("cmean Control mean" "b_cmean $\beta$/control mean"  "pval P-value $\beta = 0$") ///
 		nobaselevels keep(treatment) nogaps  b(%9.3f) se(%9.3f) ///
 		star(* 0.1 ** 0.05 *** 0.01) ///	
@@ -98,7 +98,7 @@ eststo clear
 		
 	* Write to latex			 
 		esttab $labor using ///
-		"$output_rct/Alt_Table_A11_Panel_A_Col_2_AltDefn.tex", ///
+		"$output_rct/robustness/Alt_Table_A11_Panel_A_Col_2_AltDefn.tex", ///
 		label se nonotes scalars("cmean Control mean" "b_cmean $\beta$/control mean"  "pval P-value $\beta = 0$") ///
 		nobaselevels keep(treatment) nogaps  b(%9.3f) se(%9.3f) ///
 		star(* 0.1 ** 0.05 *** 0.01) ///	
