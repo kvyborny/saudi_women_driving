@@ -77,7 +77,7 @@ eststo clear
 * Write to latex
 	 
 	esttab $hte_outcome using ///
-		"$output_rct/Alt_Table_3_Panel_A_MarStatusCtrls.tex", ///
+		"$output_rct/robustness/Alt_Table_3_Panel_A_MarStatusCtrls.tex", ///
 		label se nogaps nobaselevels noobs ///
 		keep(*treatment *husb_influence_kids) b(%9.3f) se(%9.3f) star(* 0.1 ** 0.05 *** 0.01) ///	
 		mtitles("\shortstack{Received\\license}" "\shortstack{Employed}" ///
@@ -92,7 +92,7 @@ eststo clear
 			
 		 * Add total effects	
 		esttab $hte_outcome using ///
-		"$output_rct/Alt_Table_3_Panel_A_MarStatusCtrls.tex", ///
+		"$output_rct/robustness/Alt_Table_3_Panel_A_MarStatusCtrls.tex", ///
 		label se nogaps nobaselevels  ///
 		append fragment nomtitles nonumbers noconstant noobs nogaps nonotes ///
 		cells(none) stats(total_eff_b total_eff_se, ///
