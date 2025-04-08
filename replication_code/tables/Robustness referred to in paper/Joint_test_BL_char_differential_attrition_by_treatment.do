@@ -5,13 +5,14 @@
 Purpose: 		Robustness - Regressing attrition on baseline characteristics 
 							 interacted with treatment status
 
-Table footnotes: Data from administrative records and baseline survey. Statistics 
-reported for the subsample who started the endline survey. "Likely to drive soon 
-after ban is lifted" variables are binary response indicators based on the following 
-scale for whether the respondent would be likely to drive once the ban on female 
-driving would be lifted (it was lifted partway through the baseline): unlikely to 
-drive, somewhat likely, likely but not at first, and likely.
-		
+Table footnotes: This is a joint test of whether baseline characteristics 
+differentially affect attrition by treatment. Data from administrative records 
+and baseline survey. Statistics reported for the subsample who started the endline 
+survey. "Likely to drive soon after ban is lifted" variables are binary response 
+indicators based on the following scale for whether the respondent would be likely 
+to drive once the ban on female driving would be lifted (it was lifted partway 
+through the baseline): unlikely to drive, somewhat likely, likely but not at first, 
+and likely.
 ********************************************************************************
 ********************************************************************************
 *******************************************************************************/
@@ -58,7 +59,7 @@ estadd scalar fval = `r(F)'
 estadd scalar f_pval = `r(p)' 
 
 	esttab attrit ///
-		using "$output_rct/robustness/Diff attrition_acrossBLchar_`c(current_date)'.tex", ///
+		using "$output_rct/robustness/Joint_test_BL_char_differential_attrition_by_treatment.tex", ///
 		label se scalars("fval F-test" "f_pval Prob $>$ F" ) ///
 		nogaps nobaselevels keep(1.treatment#c.age_BL 1.single#1.treatment 1.married#1.treatment ///
 	1.divorced_separated#1.treatment 1.husb_influence_kids#1.treatment   ///

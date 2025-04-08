@@ -107,7 +107,7 @@ eststo clear
 
 * Write to latex
 
-	* Drive training, license and mobility
+	* Panel A: Drive training, license and mobility
 		esttab $drive_mob ///
 		using "$output_rct/Table_1_Panel_A.tex", ///
 		 label se scalars("cmean Control mean" "b_cmean $\beta$/control mean" "pval P-value $\beta = 0$") ///
@@ -121,7 +121,7 @@ eststo clear
 		 replace  varwidth(25) modelwidth(12) fragment nonotes
 		 	
 			 
-		* Economic and financial agency
+	* Panel B: Economic and financial agency
 		esttab $lab using ///
 		"$output_rct/Table_1_Panel_B.tex", ///
 		label se nonotes scalars("cmean Control mean" "b_cmean $\beta$/control mean"  "pval P-value $\beta = 0$") ///

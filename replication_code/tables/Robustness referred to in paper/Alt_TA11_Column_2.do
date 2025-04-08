@@ -2,11 +2,9 @@
 ********************************************************************************
 ********************************************************************************
 
-Purpose: 		ROBUSTNESS TABLE - Stacked: labor market outcomes, weighted by
-									BL age-edu and by BL employment status.
-									Unemployed redefined to include only those who
-									applied for at least one job in the previous
-									month
+Purpose: 	Robustness	-	Alternate Table A11, Column 2; Unemployed redefined 
+							to include only those who applied for at least one 
+							job in the previous month
 			
 Table footnotes: This table is an alternate version of Table A11 Column 2 in the paper, where
 unemployed is redefined to include only those who applied for at least one job in the previous
@@ -37,8 +35,7 @@ eststo clear
 	foreach weight in age_edu_weight emp_weight {
 		
 	
-	global 	labor_wt`i' employed_w3_wt`i'  unempl_jobsearch_w3_wt`i' not_in_LF_w3_wt`i' ///
-			empl_jobsearch_w3_wt`i' 
+	global 	labor_wt`i' unempl_jobsearch_w3_wt`i' 
 		
 		* Cohort FEs, PAP controls, baseline employment - weighted
 		foreach var in  $labor {	
@@ -62,6 +59,15 @@ eststo clear
 			estadd scalar pval = `r(p)' 
 		}	
 	
+
+		* Write to latex			 
+		esttab ${labor_wt`i'} using ///
+		"$output_rct/Alt_Table_A11_Panel_`weight'_Col_2_AltDefn.tex", ///
+		label se nonotes scalars("cmean Control mean" "b_cmean $\beta$/control mean"  "pval P-value $\beta = 0$") ///
+		nobaselevels keep(treatment) nogaps  b(%9.3f) se(%9.3f) ///
+		star(* 0.1 ** 0.05 *** 0.01) ///	
+		mtitles("\shortstack{Unemployed}") ///
+		fragment varwidth(25) modelwidth(15) replace
 
 		local i = `i'+1		
 	}	
@@ -89,5 +95,17 @@ eststo clear
 			estadd scalar pval = `r(p)' 
 	
 		}
+		
+	* Write to latex			 
+		esttab $labor using ///
+		"$output_rct/Alt_Table_A11_Panel_A_Col_2_AltDefn.tex", ///
+		label se nonotes scalars("cmean Control mean" "b_cmean $\beta$/control mean"  "pval P-value $\beta = 0$") ///
+		nobaselevels keep(treatment) nogaps  b(%9.3f) se(%9.3f) ///
+		star(* 0.1 ** 0.05 *** 0.01) ///	
+		mtitles( "\shortstack{Employed}" ///
+		"\shortstack{Unemployed}" ///
+		"\shortstack{Out of\\labor force}" ///
+		"\shortstack{On the job\\search}") ///
+		fragment varwidth(25) modelwidth(15) replace
 		
 
