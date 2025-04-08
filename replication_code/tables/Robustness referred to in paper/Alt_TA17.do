@@ -2,13 +2,18 @@
 ********************************************************************************
 ********************************************************************************
 
-Purpose: 		ROBUSTNESS TABLE - Test robustness of marital status results to 
-							  treatment interactions - robustness to assumption
-								that respondents with missing value for children
-								under 18 in the HH have no children
+Purpose: 	Robustness	-	Alternate Table A17; robustness to including 
+							individual marital status dummies as controls
 
-
-							  
+* Table Footnotes: This is an alternate version of Table A17, where we include
+marital status dummies as controls (they are left out in Table A17 due to 
+collinearity with Has Husband/Co-Parent). Both columns include individual and 
+household controls: age (above median dummy), education level (less than a high 
+school degree), household size (number of members), number of cars owned (indicators 
+for one car and for more than one car), an indicator for baseline labor force 
+participation, and strata fixed effects. SEs are clustered at household level. 
+We replace missing control values with 0 and include missing dummies for each, 
+except for the interaction controls. * p < 0.1 ** p < 0.05 *** p < 0.01
 ********************************************************************************
 ********************************************************************************
 ********************************************************************************/
@@ -23,15 +28,13 @@ eststo clear
 	
 keep if endline_start_w3==1
 
-* Replace missing children var with 0 (robustness test)
-replace husb_influence_kids = 0 if hh_les18_w==. & !inlist(relationship_status_BL,"","Married")
-replace hh_les18_w = 0 if hh_les18_w==.
 	
 	
 * Run models
 
 	* (1) 	Cohort FEs, PAP controls,baseline employment, HTE husband influence
-		reghdfe employed_w3 treatment##i.husb_influence_kids $controls_HTEhusb, ///
+		reghdfe employed_w3 treatment##i.husb_influence_kids  $controls_HTEhusb ///
+					married single widowed, ///
 					absorb(randomization_cohort2)  vce(cluster file_nbr)
 		
 		eststo  employed_w3_1
@@ -47,7 +50,8 @@ replace hh_les18_w = 0 if hh_les18_w==.
 			treatment interactions with edu_category, age_4group, and hh_les18_w
 	*/
 		reghdfe employed_w3 treatment##i.husb_influence_kids treatment#i.edu_nohs_BL ///
-					treatment#i.age_med_BL treatment##hh_les18_w $controls_BLcharinteract, ///
+					treatment#i.age_med_BL treatment##hh_les18_w $controls_BLcharinteract ///
+					married single widowed, ///
 					absorb(randomization_cohort2)  vce(cluster file_nbr)
 		
 		eststo  employed_w3_2
@@ -68,8 +72,8 @@ replace hh_les18_w = 0 if hh_les18_w==.
 * Write to latex
 	* (1)
 	esttab	employed_w3_1 employed_w3_2 using ///
-			"$output_rct/robustness/treatmentinteract_cohortPAP_kids_missing assump_`c(current_date)'.tex", se label ///
-			scalars("cmean Mean: Control, no husband/co-parent" ///
+			"$output_rct/robustness/Alt_Table_A17_MarStatusCtrls.tex", ///
+			se label scalars("cmean Mean: Control, no husband/co-parent" ///
 			"b1_b3 p-val: $\beta$\textsubscript{1} + $\beta$\textsubscript{3} = 0" ///
 			"edu Treatment x Education" ///
 			"age Treatment x Age" ///

@@ -2,23 +2,28 @@
 ********************************************************************************
 ********************************************************************************
 
-Purpose: 		MAIN - 			HTE (AGE, EDU, CARS, RATIO OF KIDS TO ADULTS, 
-								BL LFP, BL EMPLOYMENT) FOR OUTCOMES: EMPLOYED
-								AND ABILITY TO MAKE PURCHASES
+Purpose: 	Robustness	-	Tables 2 & 3, Column 4; Likert version
 								  
 								  
-TABLE FOOTNOTES:							 
-
-Table 4: Variations in sample size are due to drop-off from telephone survey; order of survey modules was randomized. Outcomes are
-defined as described in Tables 1 and 2. All estimates include individual and household controls: age (above median dummy), education
-level (less than a highschool degree), marital status (indicators for married, never-married, and widowed), household size (number of
-members), number of cars owned (indicators for one car and for more than one car), an indicator for baseline labor force participation,
-and randomization cohort fixed effects. SEs are clustered at household level. We impute for missing control values and include missing
-dummies for each, except for the interaction control. * p < 0.1 ** p < 0.05 *** p < 0.01.
-								 
-Table 5: Variations in sample size are due to drop-off from telephone survey; order of survey modules was randomized. Outcomes are defined as described in Tables \ref{tab:train_mob} and \ref{tab:lfpdecision}. Four observations are dropped due to missing marital status at baseline. Twelve additional observations are dropped in Panel B due to missing number of children under 18 in the household.  
-All estimates include individual and household controls: age (above median dummy), education level (less than a highschool degree), household size (number of members), number of cars owned (indicators for one car and for more than one car), an indicator for baseline labor force participation, and 
- randomization cohort fixed effects. SEs are clustered at household level. We impute for missing control values and include missing dummies for each, except for the interaction control.  * p $<$ 0.1 ** p $<$ 0.05 *** p $<$ 0.01. 
+Table Footnotes: This table is an alternate version of Column 4 in each panel of
+Tables 2 and 3 in the paper. Variations in sample size are due to drop-off from 
+telephone survey; order of survey modules was randomized. Respondents were asked
+to rate their level of agreement (on a 5 point Likert scale) with the statement: 
+"I can make a purchase of 1000 SAR without needing to take permission from any member 
+of my family" (1000 SAR is roughly equivalent to 265 USD, in 2021 dollars). The
+outcome is a weighted index of the standardized responses described as follows 
+using the swindex command developed by Schwab et al. (2020).  In Panel 
+C the omitted marital status category is divorced women. All estimates 
+include individual and household controls: age (above median dummy), education 
+level (less than a high school degree), marital status (indicators for married, 
+never-married, and widowed), household size (number of members), number of cars 
+owned (indicators for one car and for more than one car), an indicator for baseline 
+labor force participation, and strata fixed effects. SEs are clustered at household 
+level. We replace missing control values with 0 and include missing dummies for 
+each, except for the interaction control. As such, some Ns are lower relative to 
+Table 1. 10 respondents are missing values for education level at baseline, with 
+some overlap in respondents who are also missing values for outcomes. Four 
+respondents are missing values marital status. * p < 0.1 ** p < 0.05 *** p < 0.01
 ********************************************************************************
 ********************************************************************************
 *******************************************************************************/
@@ -35,7 +40,7 @@ eststo clear
 
 	
 * Set global for table outcomes
-	global 	hte_outcome license_w3 employed_w3 not_in_LF_w3 G1_3_likert
+	global 	hte_outcome G1_3_likert
 	global	hte_var LF_BL age_med_BL edu_nohs_BL  
 			
 			
@@ -176,16 +181,13 @@ eststo clear
 
 		
 * Write to latex
-	* TABLE A
-	* PANEL A - 
-	esttab license_w3_hte1	employed_w3_hte1 not_in_LF_w3_hte1 ///
-		 G1_3_likert_hte1 using ///
-		"$output_rct/robustness/Employed_ability to purchase_multHTE_Panel A_likert_`c(current_date)'.tex", ///
+	* ALT TABLE A
+	* PANEL A 
+	esttab G1_3_likert_hte1 using ///
+		"$output_rct/robustness/Alt_Table_2_Panel_A_Col_4.tex", ///
 		label se nogaps nobaselevels noobs ///
 		keep(*treatment *hte) b(%9.3f) se(%9.3f) star(* 0.1 ** 0.05 *** 0.01) ///	
-		mtitles("\shortstack{Received\\license}" "\shortstack{Employed}" ///
-		"\shortstack{Not in LF}"  ///
-		"\shortstack{Allowed to\\make purchase\\without\\permission}") ///
+		mtitles("\shortstack{Allowed to\\make purchase\\without\\permission}") ///
 		varlabels(1.treatment "$\beta\textsubscript{1}$: Treatment" ///
 		1.hte "$\beta\textsubscript{2}$: In LF at BL" ///
 		1.treatment#1.hte "$\beta\textsubscript{5}$: Treatment x In LF at BL") ///	
@@ -193,9 +195,8 @@ eststo clear
 		//		scalars("htevar HTE Specification") ///	
 			
 		 * Add total effects	
-		esttab license_w3_hte1	employed_w3_hte1 not_in_LF_w3_hte1 ///
-		 G1_3_likert_hte1 using ///
-		"$output_rct/robustness/Employed_ability to purchase_multHTE_Panel A_likert_`c(current_date)'.tex", ///
+		esttab  G1_3_likert_hte1 using ///
+		"$output_rct/robustness/Alt_Table_2_Panel_A_Col_4.tex", ///
 		label se nogaps nobaselevels  ///
 		append fragment nomtitles nonumbers noconstant noobs nogaps nonotes ///
 		cells(none) stats(total_eff_b total_eff_se, ///
@@ -203,9 +204,8 @@ eststo clear
 		 
 		 
 		* Add N, control mean, and p-val for test that total effect is different from zero 
-		esttab license_w3_hte1	employed_w3_hte1 not_in_LF_w3_hte1 ///
-		 G1_3_likert_hte1 using ///
-		"$output_rct/robustness/Employed_ability to purchase_multHTE_Panel A_likert_`c(current_date)'.tex", ///
+		esttab  G1_3_likert_hte1 using ///
+		"$output_rct/robustness/Alt_Table_2_Panel_A_Col_4.tex", ///
 		label se nogaps nobaselevels noobs ///
 				append fragment nomtitles nonumbers noconstant   nonotes  ///
 				cells(none) stats(N  cmean_hte, ///
@@ -213,9 +213,8 @@ eststo clear
 				fmt(0 %9.3f %9.3f))
 				
 	* PANEL B		 
-	esttab license_w3_hte2 employed_w3_hte2 not_in_LF_w3_hte2 ///
-		 G1_3_likert_hte2 using ///
-		"$output_rct/robustness/Employed_ability to purchase_multHTE_Panel B_likert_`c(current_date)'.tex", ///
+	esttab G1_3_likert_hte2 using ///
+		"$output_rct/robustness/Alt_Table_2_Panel_B_Col_4.tex", ///
 		label se nogaps nobaselevels noobs ///
 		keep(*treatment *hte) b(%9.3f) se(%9.3f) star(* 0.1 ** 0.05 *** 0.01) ///	
 		nomtitles ///
@@ -227,9 +226,8 @@ eststo clear
 			
 			
 		 * Add total effects	
-		esttab license_w3_hte2 employed_w3_hte2 not_in_LF_w3_hte2 ///
-		 G1_3_likert_hte2 using ///
-		"$output_rct/robustness/Employed_ability to purchase_multHTE_Panel B_likert_`c(current_date)'.tex", ///
+		esttab G1_3_likert_hte2 using ///
+		"$output_rct/robustness/Alt_Table_2_Panel_B_Col_4.tex", ///
 		label se nogaps nobaselevels  ///
 		append fragment nomtitles nonumbers noconstant noobs nogaps nonotes ///
 		cells(none) stats(total_eff_b total_eff_se, ///
@@ -237,9 +235,8 @@ eststo clear
 		 
 		 
 		* Add N, control mean, and p-val for test that total effect is different from zero 
-		esttab license_w3_hte2 employed_w3_hte2 not_in_LF_w3_hte2 ///
-		 G1_3_likert_hte2 using ///
-		"$output_rct/robustness/Employed_ability to purchase_multHTE_Panel B_likert_`c(current_date)'.tex", ///
+		esttab G1_3_likert_hte2 using ///
+		"$output_rct/robustness/Alt_Table_2_Panel_B_Col_4.tex", ///
 		label se nogaps nobaselevels noobs ///
 				append fragment nomtitles nonumbers noconstant   nonotes  ///
 				cells(none) stats(N  cmean_hte, ///
@@ -247,9 +244,8 @@ eststo clear
 				fmt(0 %9.3f %9.3f))
 				
 	* PANEL C		 
-	esttab license_w3_hte3 employed_w3_hte3 not_in_LF_w3_hte3 ///
-		 G1_3_likert_hte3 using ///
-		"$output_rct/robustness/Employed_ability to purchase_multHTE_Panel C_likert_`c(current_date)'.tex", ///
+	esttab G1_3_likert_hte3 using ///
+		"$output_rct/robustness/Alt_Table_2_Panel_C_Col_4.tex", ///
 		label se nogaps nobaselevels noobs ///
 		keep(*treatment *hte) b(%9.3f) se(%9.3f) star(* 0.1 ** 0.05 *** 0.01) ///	
 		nomtitles ///
@@ -261,9 +257,8 @@ eststo clear
 			
 			
 		 * Add total effects	
-		esttab license_w3_hte3 employed_w3_hte3 not_in_LF_w3_hte3 ///
-		 G1_3_likert_hte3 using ///
-		"$output_rct/robustness/Employed_ability to purchase_multHTE_Panel C_likert_`c(current_date)'.tex", ///
+		esttab  G1_3_likert_hte3 using ///
+		"$output_rct/robustness/Alt_Table_2_Panel_C_Col_4.tex", ///
 		label se nogaps nobaselevels  ///
 		append fragment nomtitles nonumbers noconstant noobs nogaps nonotes ///
 		cells(none) stats(total_eff_b total_eff_se, ///
@@ -271,9 +266,8 @@ eststo clear
 		 
 		 
 		* Add N, control mean, and p-val for test that total effect is different from zero 
-		esttab license_w3_hte3 employed_w3_hte3 not_in_LF_w3_hte3 ///
-		 G1_3_likert_hte3 using ///
-		"$output_rct/robustness/Employed_ability to purchase_multHTE_Panel C_likert_`c(current_date)'.tex", ///
+		esttab   G1_3_likert_hte3 using ///
+		"$output_rct/robustness/Alt_Table_2_Panel_C_Col_4.tex", ///
 		label se nogaps nobaselevels noobs ///
 				append fragment nomtitles nonumbers noconstant   nonotes  ///
 				cells(none) stats(N  cmean_hte, ///
@@ -283,18 +277,15 @@ eststo clear
 
 	
 
-* TABLE B
+* ALT TABLE 3
 	* PANEL A
-		esttab license_w3_mar employed_w3_mar not_in_LF_w3_mar  ///
-		G1_3_likert_mar using ///
-		"$output_rct/robustness/Employed_ability to purchase_HTEmaritalhusbinfl_Panel A_likert_`c(current_date)'.tex", ///
+		esttab G1_3_likert_mar using ///
+		"$output_rct/robustness/Alt_Table_3_Panel_A_Col_4.tex", ///
 		label se nonotes  ///
 		nogaps nobaselevels nonotes keep(*treatment *rel_status_BL) ///
 		drop(2.rel_status_BL 3.rel_status_BL 4.rel_status_BL) ///
 		b(%9.3f) se(%9.3f) star(* 0.1 ** 0.05 *** 0.01) ///	
-		mtitles("\shortstack{Received\\license}" "\shortstack{Employed}" ///
-		"\shortstack{Not in LF}"  ///
-		"\shortstack{Allowed to make\\purchase without\\permission}") ///
+		mtitles("\shortstack{Allowed to make\\purchase without\\permission}") ///
 		varlabels(1.treatment "$\beta\textsubscript{1}$: Treatment" 2.rel_status_BL ///
 		"$\beta\textsubscript{2}$: Married" ///
 		3.rel_status_BL "$\beta\textsubscript{3}$: Never-married" 4.rel_status_BL ///
@@ -308,9 +299,8 @@ eststo clear
 		
 		
 		* Add N, control mean, and p-val for test that total effect is different from zero 
-		esttab license_w3_mar employed_w3_mar not_in_LF_w3_mar  ///
-		G1_3_likert_mar using ///
-		"$output_rct/robustness/Employed_ability to purchase_HTEmaritalhusbinfl_Panel A_likert_`c(current_date)'.tex", ///
+		esttab G1_3_likert_mar using ///
+		"$output_rct/robustness/Alt_Table_3_Panel_A_Col_4.tex", ///
 		append fragment nomtitles nonumbers noconstant noobs  nonotes  ///
 		cells(none) stats(N cmean_div cmean_mar cmean_sing cmean_wid, ///
 		labels("Observations" "Mean: Control, divorced" ///
@@ -322,9 +312,8 @@ eststo clear
 		fmt(0 %9.3f %9.3f))
 				
 	* PANEL B		 
-	esttab license_w3_inf employed_w3_inf not_in_LF_w3_inf  ///
-	G1_3_likert_inf using ///
-		"$output_rct/robustness/Employed_ability to purchase_HTEmaritalhusbinfl_Panel B_likert_`c(current_date)'.tex", ///
+	esttab G1_3_likert_inf using ///
+		"$output_rct/robustness/Alt_Table_3_Panel_B_Col_4.tex", ///
 		label se nogaps nobaselevels noobs ///
 		keep(*treatment *husb_influence_kids) b(%9.3f) se(%9.3f) star(* 0.1 ** 0.05 *** 0.01) ///	
 		nomtitles ///
@@ -337,9 +326,8 @@ eststo clear
 			
 			
 		 * Add total effects	
-		esttab license_w3_inf employed_w3_inf not_in_LF_w3_inf  ///
-	G1_3_likert_inf using ///
-		"$output_rct/robustness/Employed_ability to purchase_HTEmaritalhusbinfl_Panel B_likert_`c(current_date)'.tex", ///
+		esttab  G1_3_likert_inf using ///
+		"$output_rct/robustness/Alt_Table_3_Panel_B_Col_4.tex", ///
 		label se nogaps nobaselevels  ///
 		append fragment nomtitles nonumbers noconstant noobs nogaps nonotes ///
 		cells(none) stats(total_eff_b total_eff_se, ///
@@ -347,9 +335,8 @@ eststo clear
 		 
 		 
 		* Add N, control mean, and p-val for test that total effect is different from zero 
-		esttab license_w3_inf employed_w3_inf not_in_LF_w3_inf  ///
-	G1_3_likert_inf using ///
-		"$output_rct/robustness/Employed_ability to purchase_HTEmaritalhusbinfl_Panel B_likert_`c(current_date)'.tex", ///
+		esttab G1_3_likert_inf using ///
+		"$output_rct/robustness/Alt_Table_3_Panel_B_Col_4.tex", ///
 		label se nogaps nobaselevels noobs ///
 				append fragment nomtitles nonumbers noconstant   nonotes  ///
 				cells(none) stats(N  cmean_hte, ///

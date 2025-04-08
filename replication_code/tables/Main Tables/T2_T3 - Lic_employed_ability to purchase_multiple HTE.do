@@ -2,9 +2,9 @@
 ********************************************************************************
 ********************************************************************************
 
-Purpose: 		Tables 2 & 3 - 	HTE (AGE, EDU, CARS, RATIO OF KIDS TO ADULTS, 
-								BL LFP, BL EMPLOYMENT) FOR OUTCOMES: EMPLOYED
-								AND ABILITY TO MAKE PURCHASES
+Purpose: 		Tables 2 & 3 - 	HTE (AGE, EDU, BL LFP, MARITAL STATUS, HAS 
+								HUSBAND/CO-PAR) FOR OUTCOMES: LICENSE, EMPLOYED,
+								NOT IN LF, AND ABILITY TO MAKE PURCHASES
 								  
 								  
 Table Footnotes:							 
@@ -23,18 +23,23 @@ Table 1. 10 respondents are missing values for education level at baseline, with
 some overlap in respondents who are also missing values for outcomes. Four 
 respondents are missing values marital status. * p < 0.1 ** p < 0.05 *** p < 0.01
 								 
-Table 3: Variations in sample size are due to drop-off from telephone survey; 
-order of survey modules was randomized. Outcomes are defined as described in Table 
-1. All estimates include individual and household controls: age (above median 
-dummy), education level (less than a high school degree), household size (number 
-of members), number of cars owned (indicators for one car and for more than one
-car), an indicator for baseline labor force participation, and strata fixed effects. 
-SEs are clustered at household level. We replace missing control values with 0 and 
-include missing dummies for each, except for the interaction control. As such, Ns 
-are lower relative to Table 1. Four respondents are missing values for marital 
+Table 3: Variations in sample size are due to drop-off from telephone survey; order 
+of survey modules was randomized. Outcomes are defined as described in Table 1. 
+`Has husband/co-parent' is defined as (a) currently married or (b) divorced/separated 
+with children under 18 in the household. All estimates include individual and 
+household controls: age (above median dummy), education level (less than a high 
+school degree), household size (number of members), number of cars owned (indicators 
+for one car and for more than one car), an indicator for baseline labor force 
+participation, and strata fixed effects. SEs are clustered at household level. 
+Marital status dummies are not included as a control in Panel A because they are 
+highly collinear with "has husband/co-parent". However, results are unchanged if 
+we include individual indicators as controls for: never-married, married, and 
+widowed (divorced is the reference group).We replace missing control values with 
+0 and include missing dummies for each, except for the interaction control. As such, 
+Ns are lower relative to Table 1. Four respondents are missing values for marital 
 status (and therefore missing values for whether they have a husband or co-parent), 
 and one respondent is missing a value for labor force participation at baseline. 
-* p < 0.1 ** p < 0.05 *** p < 0.01
+* p < 0.1 ** p < 0.05 *** p < 0.01.
 ********************************************************************************
 ********************************************************************************
 *******************************************************************************/
@@ -206,7 +211,6 @@ eststo clear
 		1.hte "$\beta\textsubscript{2}$: Above median age" ///
 		1.treatment#1.hte "$\beta\textsubscript{3}$: Treatment x Above median age") ///	
 		replace   fragment nonotes 
-		//		scalars("htevar HTE Specification") ///	
 			
 		 * Add total effects	
 		esttab license_w3_hte1	employed_w3_hte1 not_in_LF_w3_hte1 ///
@@ -239,7 +243,6 @@ eststo clear
 		1.hte "$\beta\textsubscript{2}$: Less than HS" ///
 		1.treatment#1.hte "$\beta\textsubscript{3}$: Treatment x Less than HS") ///	
 		replace  fragment nonotes 
-//		scalars("htevar HTE Specification") ///
 			
 			
 		 * Add total effects	
@@ -315,7 +318,6 @@ eststo clear
 		1.treatment#1.husb_influence_kids ///
 		"$\beta\textsubscript{3}$: Treatment x Has husband/co-parent") ///	
 		replace   fragment nonotes 
-//		scalars("htevar HTE Specification") ///
 			
 			
 		 * Add total effects	
@@ -349,7 +351,6 @@ eststo clear
 		1.hte "$\beta\textsubscript{2}$: In LF at BL" ///
 		1.treatment#1.hte "$\beta\textsubscript{3}$: Treatment x In LF at BL") ///	
 		replace   fragment nonotes 
-//		scalars("htevar HTE Specification") ///
 			
 			
 		 * Add total effects	

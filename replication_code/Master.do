@@ -115,10 +115,16 @@ foreach pkg in `ssc_packages' {
 	log using "$logs/Robustness referred to in paper_`c(current_date)'.smcl", replace
 	
 	do 		"$rep_code/Stats_for_paper.do"	// Stats referred to in text
-	do 		"$rep_code/tables/Robustness referred to in paper/BL char and diff attrition.do"
-	do 		"$rep_code/tables/Robustness referred to in paper/Alt Table 1_altunemp.do"
-	do 		"$rep_code/tables/Robustness referred to in paper/Alt Table A11_altunemp.do"
-	do 		"$rep_code/tables/Robustness referred to in paper/Alt Table A17 - Employed_treatment interactions_marital dummies.do"
+	do 		"$rep_code/tables/Robustness referred to in paper/Joint_test_BL_char_differential_attrition_by_treatment.do"
+	do 		"$rep_code/tables/Robustness referred to in paper/Alt_T1_Panel_B_Column_2.do"
+	do 		"$rep_code/tables/Robustness referred to in paper/Alt_T3_Panel_A.do"
+	do 		"$rep_code/tables/Robustness referred to in paper/Alt_TA11_Column_2.do"
+	do 		"$rep_code/tables/Robustness referred to in paper/Alt_TA17.do"
+
+	do 		"$rep_code/tables/Robustness referred to in paper/Likert versions of index components/Alt_T1_PanelB_Col5_Likert.do"
+	do 		"$rep_code/tables/Robustness referred to in paper/Likert versions of index components/Alt_T1_PanelC_Likert.do"
+	do 		"$rep_code/tables/Robustness referred to in paper/Likert versions of index components/Alt_T2_T3_Col4_Likert.do"
+
 	
 	log close
 

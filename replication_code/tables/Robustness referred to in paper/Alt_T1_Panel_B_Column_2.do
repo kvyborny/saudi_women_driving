@@ -2,16 +2,13 @@
 ********************************************************************************
 ********************************************************************************
 
-Purpose: 		ROBUSTNESS -	Table 1, Unemployed redefined to include only those who
-								applied for at least one job in the previous
-								month
+Purpose: 	Robustness -	Table 1, Panel B, Column 2; Unemployed redefined to 
+							include only those who applied for at least one job 
+							in the previous month
 				
 Table footnotes: This table is an alternate version of Table 1 Panel B Column 2 in the paper, where
 unemployed is redefined to include only those who applied for at least one job in the previous
-month.  * p < 0.1 ** p <
-0.05 *** p < 0.01.
-
-
+month.  * p < 0.1 ** p <0.05 *** p < 0.01.
 ********************************************************************************
 ********************************************************************************
 ********************************************************************************/
@@ -54,7 +51,15 @@ eststo clear
 	
 		}	
 		
-		
+* Write to latex
+		* Economic and financial agency
+		esttab unempl_jobsearch_w3 using ///
+		"$output_rct/robustness/Alt_Table_1_Panel_B_Column_2_AltDefn.tex", ///
+		label se nonotes scalars("cmean Control mean" "b_cmean $\beta$/control mean"  "pval P-value $\beta = 0$") ///
+		nobaselevels keep(treatment) nogaps  b(%9.3f) se(%9.3f) ///
+		star(* 0.1 ** 0.05 *** 0.01) ///	
+		mtitles("\shortstack{Unemployed}") ///
+		fragment varwidth(25) modelwidth(15) replace
 
 
 		
