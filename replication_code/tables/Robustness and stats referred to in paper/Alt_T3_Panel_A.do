@@ -2,7 +2,8 @@
 ********************************************************************************
 ********************************************************************************
 
-Purpose: 	Robustness - Table 3, Panel A; Inclusion of marital status dummies
+Purpose: 	Robustness 	- 	Alternate Table 3, Panel A; Inclusion of marital 
+							status dummies
 							
 Table Footnotes: This is an alternate version of Table 3, Panel A, where we include
 marital status controls (they are not included in our main specifications for this

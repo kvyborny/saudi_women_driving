@@ -112,8 +112,7 @@ foreach pkg in `ssc_packages' {
 
 	* Robustness / results referenced in text
 	* Log output
-	log using "$logs/Robustness referred to in paper_`c(current_date)'.smcl", replace
-	
+	log using "$logs/Robustness referred to in paper_`c(current_date)'.smcl", replace	
 	do 		"$rep_code/tables/Robustness and stats referred to in paper/Stats_for_paper.do"	// Stats referred to in text
 	do 		"$rep_code/tables/Robustness and stats referred to in paper/Joint_test_BL_char_differential_attrition_by_treatment.do"
 	do 		"$rep_code/tables/Robustness and stats referred to in paper/Alt_T1_Panel_B_Column_2.do"
@@ -124,8 +123,23 @@ foreach pkg in `ssc_packages' {
 	do 		"$rep_code/tables/Robustness and stats referred to in paper/Likert versions of index components/Alt_T1_PanelB_Col5_Likert.do"
 	do 		"$rep_code/tables/Robustness and stats referred to in paper/Likert versions of index components/Alt_T1_PanelC_Likert.do"
 	do 		"$rep_code/tables/Robustness and stats referred to in paper/Likert versions of index components/Alt_T2_T3_Col4_Likert.do"
-
-	
+	do 		"$rep_code/tables/Robustness and stats referred to in paper/Likert versions of index components/Alt_TA9_PanelB_Col5_Likert.do"
+	do 		"$rep_code/tables/Robustness and stats referred to in paper/Likert versions of index components/Alt_TA9_PanelC_Likert.do"
+	do 		"$rep_code/tables/Robustness and stats referred to in paper/Likert versions of index components/Alt_TA10_PanelB_Col5_Likert.do"
+	do 		"$rep_code/tables/Robustness and stats referred to in paper/Likert versions of index components/Alt_TA10_PanelC_Likert.do"
+	do 		"$rep_code/tables/Robustness and stats referred to in paper/Likert versions of index components/Alt_TA12_PanelA_Likert.do"
+	do 		"$rep_code/tables/Robustness and stats referred to in paper/Likert versions of index components/Alt_TA13_Likert.do"
+	do 		"$rep_code/tables/Robustness and stats referred to in paper/Likert versions of index components/Alt_TA14_Likert.do"
+	do 		"$rep_code/tables/Robustness and stats referred to in paper/Likert versions of index components/Alt_TA15_Likert.do"
+	do 		"$rep_code/tables/Robustness and stats referred to in paper/Likert versions of index components/Alt_TA16_Likert.do"
+	do 		"$rep_code/tables/Robustness and stats referred to in paper/Likert versions of index components/Alt_TB4_Likert.do"
+	do 		"$rep_code/tables/Robustness and stats referred to in paper/Likert versions of index components/Alt_TB5_PanelC_Likert.do"
+	do 		"$rep_code/tables/Robustness and stats referred to in paper/Likert versions of index components/Alt_TB5PanelsAB_TB6_PanelB_Likert.do"
+	do 		"$rep_code/tables/Robustness and stats referred to in paper/Likert versions of index components/Alt_TB6_PanelA_Likert.do"
+	do 		"$rep_code/tables/Robustness and stats referred to in paper/Likert versions of index components/Alt_TB7_PanelA_Col6_Likert.do"
+	do 		"$rep_code/tables/Robustness and stats referred to in paper/Likert versions of index components/Alt_TB9_Likert.do"
+	do 		"$rep_code/tables/Robustness and stats referred to in paper/Likert versions of index components/Alt_TB10_PanelB_Col5_Likert.do"
+	do 		"$rep_code/tables/Robustness and stats referred to in paper/Likert versions of index components/Alt_TB10_PanelC_Likert.do"
 	log close
 
 	

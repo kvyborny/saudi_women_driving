@@ -7,9 +7,6 @@ Purpose: 		Robustness	-	Table 1, Panel C; Ability to leave the house,
 								working (female and male social networks); Likert
 								versions
 
-
-
-
 Table footnotes: This table is an alternate version of Table 1 Panel C in the paper,
 where we use the full likert scale to generate the index outcome. In Columns 
 1 and 2, respondents were asked to rate their level of agreement (on a 5 point 

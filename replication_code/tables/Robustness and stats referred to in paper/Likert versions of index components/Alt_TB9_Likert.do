@@ -2,16 +2,22 @@
 ********************************************************************************
 ********************************************************************************
 
-Purpose: 		APPENDIX TABLE - Wusool/Uber interaction - stacked: LFP, own
-									attitudes, social contact, permissions, 
-									second order attitudes; likert version
+Purpose: 	Robustness	 - 	Alternate Table B9, Panel B, Column 5, and Panel C; 
+							Wusool/Uber interaction, own attitudes; likert version
 				
 				
-Table footnotes: Outcome variables are constructed as described in the notes for Tables 1 - 3. Variations in sample size are due to drop-off from telephone survey; order of survey modules was randomized.
-All estimates include individual and household controls: age (above median dummy), education level (less than a highschool degree), marital status (indicators for married, never-married, and
-widowed), household size (number of members), number of cars owned (indicators for one car and for more than one car), an indicator for baseline labor force participation, and randomization
-cohort fixed effects. SEs are clustered at household level. We impute for missing control values and include missing dummies for each. * p < 0.1 ** p < 0.05 *** p < 0.01
-
+Table footnotes: Alternate version of Table B9, Panel B, Column 5, and Panel C, where we use 
+the full likert scale to generate the index outcomes. Outcome variables are 
+constructed as described in the notes for Tables 1 - 3, except that this version 
+does not transform responses into binary indicators for above median response. 
+Variations in sample size are due to drop-off from telephone survey; order of 
+survey modules was randomized. All estimates include individual and household 
+controls: age (above median dummy), education level (less than a highschool degree), 
+marital status (indicators for married, never-married, and widowed), household size 
+(number of members), number of cars owned (indicators for one car and for more 
+than one car), an indicator for baseline labor force participation, and randomization
+cohort fixed effects. SEs are clustered at household level. We impute for missing 
+control values and include missing dummies for each. * p < 0.1 ** p < 0.05 *** p < 0.01
 ********************************************************************************
 ********************************************************************************
 ********************************************************************************/
@@ -25,15 +31,10 @@ eststo clear
 
 keep if endline_start_w3==1
 	
-	
-* shorten var name for storage
-	rename share_trips_unaccomp_w3 share_unaccomp
-	
-	
+
 * Set global for table outcomes
 			
-	global 	lab employed_w3  unemployed_w3 not_in_LF_w3 ///
-			empl_jobsearch_w3 ga_1st_order_likert_sw social_contact_sw
+	global 	lab  ga_1st_order_likert_sw 
 			
 	global 	permission_attitudes G1_2_likert G1_3_likert ///
 			ga2nd_fcom_likert_sw ga2nd_allmen_likert_sw
@@ -66,7 +67,7 @@ lab var wusool_T "Wusool subsidy"
 * Write to latex	
 
 	esttab $lab using ///
-		"$output_rct/robustness/Interact_Labor force participation_likert_`c(current_date)'.tex", ///
+		"$output_rct/robustness/Alt_Table_B9_Panel_B_Column_5_Likert.tex", ///
 		label se nonotes scalars("cmean Control Group Mean" ///
 		"b1_b3_0 P-val: $\beta\textsubscript{1}$ + $\beta\textsubscript{3}$ = 0" ///
 		"b2_b3_0 P-val: $\beta\textsubscript{2}$ + $\beta\textsubscript{3}$ = 0" ) ///
@@ -84,7 +85,7 @@ lab var wusool_T "Wusool subsidy"
 		fragment varwidth(25) modelwidth(15) replace
 		
 		esttab $permission_attitudes using ///
-	"$output_rct/robustness/Interact_permissions_attitudes women working_likert_`c(current_date)'.tex", ///
+	"$output_rct/robustness/Alt_Table_B9_Panel_C_Likert.tex", ///
 	label se nonotes keep( *wusool_T *driving_T) ///
 	scalars("cmean Control Group Mean" ///
 		 "b1_b3_0 P-val: $\beta\textsubscript{1}$ + $\beta\textsubscript{3}$ = 0" ///

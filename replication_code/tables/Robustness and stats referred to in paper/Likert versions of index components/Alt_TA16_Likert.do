@@ -2,22 +2,28 @@
 ********************************************************************************
 ********************************************************************************
 
-Purpose: 		APPENDIX - Stacked: second order gender attitudes
+Purpose: 	Robustness	 - 	Alternate Table A16; second order gender attitudes;
+							Likert version
 
 
-Table footnotes: Second order attitudes outcomes reported in Column 1 of each panel were constructed as follows: respondents were asked to
-think about each group (male family members, male members of social network, or female members of social network) and report
-what share of that group they think would `somewhat' or `completely' agree with the statement. Responses to each statement are
-reported in columns 2-4 of each panel. The outcome in column (1) of each panel is a weighted index of the standardized responses
-to each statement using the swindex command developed by Schwab et al. (2020). The command uses all available data (hence
-a higher N in Column 1) and assigns lower weight to index components with missing values. Variations in sample size among
-Columns 2-4 are due to drop-off from telephone survey; order of survey modules was randomized. All estimates include individual
-and household controls: age (above median dummy), education level (less than a highschool degree), marital status (indicators for
-married, never-married, and widowed), household size (number of members), number of cars owned (indicators for one car and for
-more than one car), an indicator for baseline labor force participation, and randomization cohort fixed effects. SEs are clustered at
-household level. We impute for missing control values and include missing dummies for each. * p < 0.1 ** p < 0.05 *** p < 0.01
-
-
+Table footnotes: Alternate version of Table A16, where we use the full likert 
+scale to generate the index outcome. Second order belief outcomes were constructed 
+as follows: respondents were asked to think about each group (male family members, 
+male members of social network, or female members of social network) and report 
+what share of that group they think would `somewhat' or `completely' agree with 
+the statement, which are reported in Columns 2-4 of each panel. The outcome in 
+Column 1 of each panel is a weighted index of the standardized responses to each 
+statement using the swindex command developed by Schwab et al. (2020). The command 
+uses all available data (hence a higher N in Column 1) and assigns lower weight 
+to index components with missing values. Variations in sample size among Columns 
+2-4 are due to drop-off from telephone survey; order of survey modules was randomized. 
+All estimates include individual and household controls: age (above median dummy), 
+education level (less than a high school degree), marital status (indicators for 
+married, never-married, and widowed), household size (number of members), number 
+of cars owned (indicators for one car and for more than one car), an indicator for 
+baseline labor force participation, and strata fixed effects. SEs are clustered 
+at household level. We replace missing control values with 0 and include missing 
+dummies for each. * p < 0.1 ** p < 0.05 *** p < 0.01
 ********************************************************************************
 ********************************************************************************
 ********************************************************************************/
@@ -36,8 +42,8 @@ eststo clear
 	
 * Set global for table outcomes
 	global secondorder_full ga2nd_fcom_likert_sw G6_2_propor G8_2_propor G10_2_propor ///
-		ga2nd_mfam_likert_sw G6_1_propor G8_1_propor G10_1_propor ///
-		ga2nd_mcom_likert_sw G6_3_propor G8_3_propor G10_3_propor
+							ga2nd_mfam_likert_sw G6_1_propor G8_1_propor G10_1_propor ///
+							ga2nd_mcom_likert_sw G6_3_propor G8_3_propor G10_3_propor
 
 
 
@@ -68,10 +74,9 @@ eststo clear
 			
 	
 * Write to latex
-* (1)
 	* Female (Panel A)
 		esttab ga2nd_fcom_likert_sw G6_2_propor G8_2_propor G10_2_propor  /// 
-			using "$output_rct/robustness/Gender Attitudes_cohortPAP_swindex_likert_Panel A_`c(current_date)'.tex", ///
+			using "$output_rct/robustness/Alt_Table_A16_Panel_A_Likert.tex", ///
 			posthead("\midrule \multicolumn{1}{@{}l}{\textbf{Panel A: Female Social Network}} \\ \midrule") ///
 			label se scalars("cmean Control mean" "b_cmean $\beta$/control mean" "pval P-value $\beta = 0$") ///
 			nonotes keep(treatment) ///
@@ -88,7 +93,7 @@ eststo clear
 		
 	* Male Family (Panel B)
 		esttab  ga2nd_mfam_likert_sw G6_1_propor G8_1_propor G10_1_propor /// 
-			using "$output_rct/robustness/Gender Attitudes_cohortPAP_swindex_likert_Panel B_`c(current_date)'.tex", ///
+			using "$output_rct/robustness/Alt_Table_A16_Panel_B_Likert.tex", ///
 			posthead("\multicolumn{1}{@{}l}{\textbf{Panel B: Male Family}} \\ \midrule") ///
 			label se scalars("cmean Control mean" "b_cmean $\beta$/control mean" "pval P-value $\beta = 0$") ///
 			nonotes keep(treatment) ///
@@ -98,7 +103,7 @@ eststo clear
 		 
 	* Male community (Panel C)
 		esttab ga2nd_mcom_likert_sw G6_3_propor G8_3_propor G10_3_propor /// 
-			using "$output_rct/robustness/Gender Attitudes_cohortPAP_swindex_likert_Panel C_`c(current_date)'.tex", ///
+			using "$output_rct/robustness/Alt_Table_A16_Panel_C_Likert.tex", ///
 			posthead("\multicolumn{1}{@{}l}{\textbf{Panel C: Male Social Network}} \\ \midrule") ///
 			label se scalars("cmean Control mean" "b_cmean $\beta$/control mean" "pval P-value $\beta = 0$") ///
 			nonotes keep(treatment) ///

@@ -41,7 +41,7 @@ eststo clear
 	
 * Set global for table outcomes
 	global 	hte_outcome G1_3_likert
-	global	hte_var LF_BL age_med_BL edu_nohs_BL  
+	global	hte_var age_med_BL edu_nohs_BL LF_BL
 			
 			
 			
@@ -184,7 +184,7 @@ eststo clear
 	* ALT TABLE 2
 				
 	* PANEL A		 
-	esttab G1_3_likert_hte2 using ///
+	esttab G1_3_likert_hte1 using ///
 		"$output_rct/robustness/Alt_Table_2_Panel_A_Col_4_Likert.tex", ///
 		label se nogaps nobaselevels noobs ///
 		keep(*treatment *hte) b(%9.3f) se(%9.3f) star(* 0.1 ** 0.05 *** 0.01) ///	
@@ -193,11 +193,10 @@ eststo clear
 		1.hte "$\beta\textsubscript{2}$: Above median age" ///
 		1.treatment#1.hte "$\beta\textsubscript{5}$: Treatment x Above median age") ///	
 		replace  fragment nonotes 
-//		scalars("htevar HTE Specification") ///
 			
 			
 		 * Add total effects	
-		esttab G1_3_likert_hte2 using ///
+		esttab G1_3_likert_hte1 using ///
 		"$output_rct/robustness/Alt_Table_2_Panel_A_Col_4_Likert.tex", ///
 		label se nogaps nobaselevels  ///
 		append fragment nomtitles nonumbers noconstant noobs nogaps nonotes ///
@@ -206,7 +205,7 @@ eststo clear
 		 
 		 
 		* Add N, control mean, and p-val for test that total effect is different from zero 
-		esttab G1_3_likert_hte2 using ///
+		esttab G1_3_likert_hte1 using ///
 		"$output_rct/robustness/Alt_Table_2_Panel_A_Col_4_Likert.tex", ///
 		label se nogaps nobaselevels noobs ///
 				append fragment nomtitles nonumbers noconstant   nonotes  ///
@@ -215,7 +214,7 @@ eststo clear
 				fmt(0 %9.3f %9.3f))
 				
 	* PANEL B		 
-	esttab G1_3_likert_hte3 using ///
+	esttab G1_3_likert_hte2 using ///
 		"$output_rct/robustness/Alt_Table_2_Panel_B_Col_4_Likert.tex", ///
 		label se nogaps nobaselevels noobs ///
 		keep(*treatment *hte) b(%9.3f) se(%9.3f) star(* 0.1 ** 0.05 *** 0.01) ///	
@@ -224,11 +223,10 @@ eststo clear
 		1.hte "$\beta\textsubscript{2}$: Less than HS" ///
 		1.treatment#1.hte "$\beta\textsubscript{5}$: Treatment x Less than HS") ///	
 		replace   fragment nonotes 
-//		scalars("htevar HTE Specification") ///
 			
 			
 		 * Add total effects	
-		esttab  G1_3_likert_hte3 using ///
+		esttab  G1_3_likert_hte2 using ///
 		"$output_rct/robustness/Alt_Table_2_Panel_B_Col_4_Likert.tex", ///
 		label se nogaps nobaselevels  ///
 		append fragment nomtitles nonumbers noconstant noobs nogaps nonotes ///
@@ -237,7 +235,7 @@ eststo clear
 		 
 		 
 		* Add N, control mean, and p-val for test that total effect is different from zero 
-		esttab   G1_3_likert_hte3 using ///
+		esttab   G1_3_likert_hte2 using ///
 		"$output_rct/robustness/Alt_Table_2_Panel_B_Col_4_Likert.tex", ///
 		label se nogaps nobaselevels noobs ///
 				append fragment nomtitles nonumbers noconstant   nonotes  ///
@@ -292,7 +290,6 @@ eststo clear
 		1.treatment#1.husb_influence_kids ///
 		"$\beta\textsubscript{5}$: Treatment x Has husband/co-parent") ///	
 		replace   fragment nonotes 
-//		scalars("htevar HTE Specification") ///
 			
 			
 		 * Add total effects	
@@ -314,7 +311,7 @@ eststo clear
 				fmt(0 %9.3f %9.3f))
 
 	* PANEL B
-	esttab G1_3_likert_hte1 using ///
+	esttab G1_3_likert_hte3 using ///
 		"$output_rct/robustness/Alt_Table_3_Panel_B_Col_4_Likert.tex", ///
 		label se nogaps nobaselevels noobs ///
 		keep(*treatment *hte) b(%9.3f) se(%9.3f) star(* 0.1 ** 0.05 *** 0.01) ///	
@@ -323,10 +320,9 @@ eststo clear
 		1.hte "$\beta\textsubscript{2}$: In LF at BL" ///
 		1.treatment#1.hte "$\beta\textsubscript{5}$: Treatment x In LF at BL") ///	
 		replace   fragment nonotes 
-		//		scalars("htevar HTE Specification") ///	
 			
 		 * Add total effects	
-		esttab  G1_3_likert_hte1 using ///
+		esttab  G1_3_likert_hte3 using ///
 		"$output_rct/robustness/Alt_Table_3_Panel_B_Col_4_Likert.tex", ///
 		label se nogaps nobaselevels  ///
 		append fragment nomtitles nonumbers noconstant noobs nogaps nonotes ///
@@ -335,7 +331,7 @@ eststo clear
 		 
 		 
 		* Add N, control mean, and p-val for test that total effect is different from zero 
-		esttab  G1_3_likert_hte1 using ///
+		esttab  G1_3_likert_hte3 using ///
 		"$output_rct/robustness/Alt_Table_3_Panel_B_Col_4_Likert.tex", ///
 		label se nogaps nobaselevels noobs ///
 				append fragment nomtitles nonumbers noconstant   nonotes  ///

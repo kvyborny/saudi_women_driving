@@ -2,11 +2,15 @@
 ********************************************************************************
 ********************************************************************************
 
-Purpose: 		APPENDIX - 	Permissions (leave house and make purchase) and 
-							second order attitudes; strata FEs, no controls
+Purpose: 		Robustness	 - 	Alternate Table A10, Panel C; Ability to leave 
+								house, Ability to make purchase, second order
+								attitudes; Likert versions
 	
-Table footnotes: Outcome variables are constructed as described in the notes for Tables 1 - 3. Variations in sample size are due to drop-off from telephone survey; order of survey modules was randomized. All estimates include randomization cohort fixed effects, SEs are clustered at household level. * p < 0.1 ** p < 0.05 *** p < 0.01.
-	
+Table footnotes: Alternate version of Table A10, Panel C, where we use 
+the full likert scale to generate the index outcomes. Variations in sample size 
+are due to drop-off from telephone survey; order of survey modules was randomized. 
+All estimates include randomization cohort fixed effects, SEs are clustered at 
+household level. * p < 0.1 ** p < 0.05 *** p < 0.01.	
 ********************************************************************************
 ********************************************************************************
 ********************************************************************************/
@@ -57,7 +61,7 @@ eststo clear
 * Write to latex
 
 	esttab $permissions_2ndattitudes using ///
-	"$output_rct/robustness/Permissions_attitudes women working_sw_likert_cohortPAP_nocontrols_`c(current_date)'.tex", ///
+	"$output_rct/robustness/Alt_Table_A10_Panel_C_Likert.tex", ///
 	label se nonotes keep(*treatment) ///
 	scalars("cmean Control mean" "b_cmean $\beta$/control mean" "pval P-value $\beta = 0$") ///
 	b(%9.3f) se(%9.3f) star(* 0.1 ** 0.05 *** 0.01) ///	

@@ -2,13 +2,13 @@
 ********************************************************************************
 ********************************************************************************
 
-Purpose: 	Robustness -	Table 1, Panel B, Column 2; Unemployed redefined to 
+Purpose: 	Robustness -	Alternate Table 1, Panel B, Column 2; Unemployed redefined to 
 							include only those who applied for at least one job 
 							in the previous month
 				
-Table footnotes: This table is an alternate version of Table 1 Panel B Column 2 in the paper, where
-unemployed is redefined to include only those who applied for at least one job in the previous
-month.  * p < 0.1 ** p <0.05 *** p < 0.01.
+Table footnotes: This table is an alternate version of Table 1, Panel B, Column 2 
+in the paper, where unemployed is redefined to include only those who applied for 
+at least one job in the previous month.  * p < 0.1 ** p <0.05 *** p < 0.01.
 ********************************************************************************
 ********************************************************************************
 ********************************************************************************/
