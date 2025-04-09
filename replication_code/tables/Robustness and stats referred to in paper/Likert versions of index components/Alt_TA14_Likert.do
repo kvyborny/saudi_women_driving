@@ -2,20 +2,35 @@
 ********************************************************************************
 ********************************************************************************
 
-Purpose: 		APPENDIX TABLE - 	Civic engagement; index and index
-									components
+Purpose: 	Robustness	 - 	Alternate Table A14; Civic engagement; index and index
+							components; Likert version
 
-Table footnotes: The outcome in Column 2 is constructed as follows: respondents were asked whether they will vote in the next municipal election (definitely no, probably no, unsure, probably yes, definitely yes, I do
-not know how to vote, or I do not know about any elections). The last two options were combined with `definitely no' to create a likert scale. Outcomes in Columns 3-4 are indicators for whether the respondent expressed interest in signing up for a given program during the survey. We also sent respondents a text message with a
-link, tied to their survey ID, to a prompt that provided further information about the program and where to apply. The text message also asked respondents to forward the link to any of their friends or family
-whom they thought might also be interested in the program. Column 5 is an indicator for whether anyone clicked on the link (respondent or friend), and Column 6 is a measure of the number of people who
-clicked the link for more information. These outcomes are estimated for all respondents who started the survey, with the outcome for those who did not respond to that question or respond to the invitation
-coded as zero. The outcome in Column (1) is a weighted index of the standardized binary responses to each question using the swindex command developed by Schwab et al. (2020). All estimates include
-individual and household controls: age (above median dummy), education level (less than a highschool degree), marital status (indicators for married, never-married, and widowed), household size (number of
-members), number of cars owned (indicators for one car and for more than one car), an indicator for baseline labor force participation, and strata fixed effects. SEs are clustered at household level. We replace
-missing control values with 0 and include missing dummies for each. Variations in sample size are due to drop-off from telephone survey; order of survey modules was randomized. * p < 0.1 ** p < 0.05 *** p
-< 0.01
-				
+Table footnotes: Alternate version of Table A13, where we use the full likert 
+scale to generate the index outcome. The outcome in Column 2 is constructed as 
+follows: respondents were asked whether they will vote in the next municipal 
+election (definitely no, probably no, unsure, probably yes, definitely yes, I do
+not know how to vote, or I do not know about any elections). The last two options 
+were combined with `definitely no' to create a likert scale. Outcomes in Columns 
+3-4 are indicators for whether the respondent expressed interest in signing up 
+for a given program during the survey. We also sent respondents a text message
+with a link, tied to their survey ID, to a prompt that provided further information 
+about the program and where to apply. The text message also asked respondents to 
+forward the link to any of their friends or family whom they thought might also 
+be interested in the program. Column 5 is an indicator for whether anyone clicked 
+on the link (respondent or friend), and Column 6 is a measure of the number of
+people who clicked the link for more information. These outcomes are estimated 
+for all respondents who started the survey, with the outcome for those who did 
+not respond to that question or respond to the invitation coded as zero. The 
+outcome in Column 1 is a weighted index of the standardized binary responses to 
+each question using the swindex command developed by Schwab et al. (2020). All 
+estimates include individual and household controls: age (above median dummy), 
+education level (less than a high school degree), marital status (indicators for 
+married, never-married, and widowed), household size (number of members), number 
+of cars owned (indicators for one car and for more than one car), an indicator 
+for baseline labor force participation, and strata fixed effects. SEs are clustered 
+at household level. We replace missing control values with 0 and include missing 
+dummies for each. Variations in sample size are due to drop-off from telephone 
+survey; order of survey modules was randomized. * p < 0.1 ** p < 0.05 *** p < 0.01
 ********************************************************************************
 ********************************************************************************
 ********************************************************************************/
@@ -69,7 +84,7 @@ eststo clear
 * Write to latex
 
 		esttab $civic using ///
-		"$output_rct/robustness/Appen_CivEngage_cohortPAP_likert_`c(current_date)'.tex", ///
+		"$output_rct/robustness/Alt_Table_A14_Likert.tex", ///
 		label se nonotes keep( treatment) b(%9.3f) se(%9.3f) star(* 0.1 ** 0.05 *** 0.01) ///
 		scalars("cmean Control mean" "b_cmean $\beta$/control mean" "pval P-value $\beta = 0$") ///
 		mtitles("\shortstack{Index: Civic\\Engagement}" ///

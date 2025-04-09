@@ -2,7 +2,7 @@
 ********************************************************************************
 ********************************************************************************
 
-Purpose: 	Robustness	-	Table 1, Panel B, Likert Version of Column 5
+Purpose: 	Robustness	-	Table 1, Panel B, Column 5; Likert version
 				
 Table footnotes: 
 This table is an alternate version of Table 1 Panel B Column 5 in the paper, where
