@@ -22,12 +22,15 @@ do "$rep_code/1 - Pull in data.do"
 	"ok for women to have priorities outside the home" */
 	* Male Family
 	tab G8_1_propor 
-	// 59% disagreeing (completely or mostly - values 1 and 2) with "ok for women to have priorities outside home"
+	// 59% saying none or a minority (values 1 and 2) would agree with "ok for women to have priorities outside home"
+	tab G10_1_propor
+	//57% saying none or a minority (values 1 and 2) would agree with "ok for mothers to work"
 
 	* Male social network
 	tab G8_3_propor 
-	// 58% disagreeing (completely or mostly - values 1 and 2) with "ok for women to have priorities outside home"
-
+	// 58% saying none or a minority (values 1 and 2) would agree with "ok for women to have priorities outside home"
+	tab G10_3_propor
+	// 55% saying none or a minority (values 1 and 2) would agree with "ok for mothers to work"
 	
 * Sample stats for national comparison table
 	* Employment
@@ -100,7 +103,7 @@ do "$rep_code/1 - Pull in data.do"
 	 
 
 * Response rate 
-	tab  start_survey_w3
+	tab  endline_start_w3
 	// 83%
 	
 	
@@ -161,10 +164,10 @@ do "$rep_code/1 - Pull in data.do"
 		absorb(randomization_cohort2)  vce(cluster file_nbr)
 	sum unaccomp_trips_cat_1 if e(sample) & treatment==0 
 	// control mean: .491
-	// TE: -0.09
+	// TE: -0.091
 	* Shift out of making all trips with chaperone: 
-	di 0.09/0.491
-	// 18%
+	di 0.091/0.491
+	// 18.5%
 	
 * undo control imputation for general stats
 	do "$rep_code/1 - Pull in data.do"
