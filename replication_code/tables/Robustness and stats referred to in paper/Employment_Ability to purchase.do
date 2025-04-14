@@ -8,11 +8,11 @@ Purpose:	Robustness 	-  Employment and with/without ability to spend; HTE
 
 
 Table footnotes: This table adds an additional robustness check addressing the 
-possible alternative mechanism that withdrawing from the labor force leaves 
-married and divorced women with less spending autonomy simply because they have 
-lost their source of independent income. The table shows that for the group with 
-a husband/co-parent, the treatment induces a decrease in permission to spend 
-without any corresponding change in the probability of work (columns 3-4). 
+possible alternative mechanism that withdrawing from the labor force leaves married 
+and divorced women with less spending autonomy simply because they have lost their 
+source of independent income (discussed in section 5.3). The table shows that for 
+the group with a husband/co-parent, the treatment induces a decrease in permission 
+to spend without any corresponding change in the probability of work (columns 3-4). 
 Outcomes are dummies for whether, at endline, the respondent was employed and 
 whether she was able to make a purchase of SAR 1000 without needing permission. 
 Variations in sample size are due to drop-off from telephone survey; order of 
