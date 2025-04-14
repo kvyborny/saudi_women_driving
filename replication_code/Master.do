@@ -120,6 +120,8 @@ foreach pkg in `ssc_packages' {
 	do 		"$rep_code/tables/Robustness and stats referred to in paper/Alt_TA11_Column_2.do"
 	do 		"$rep_code/tables/Robustness and stats referred to in paper/Alt_TA17.do"
 	do 		"$rep_code/tables/Robustness and stats referred to in paper/Employment_Ability to purchase.do"
+	do 		"$rep_code/tables/Robustness and stats referred to in paper/Alt_main_results_alternate_controls.do"
+	do 		"$rep_code/tables/Robustness and stats referred to in paper/Alt_main_results_HTEhusbcopar_alternate_controls.do"
 
 	do 		"$rep_code/tables/Robustness and stats referred to in paper/Likert versions of index components/Alt_T1_PanelB_Col5_Likert.do"
 	do 		"$rep_code/tables/Robustness and stats referred to in paper/Likert versions of index components/Alt_T1_PanelC_Likert.do"
