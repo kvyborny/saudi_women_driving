@@ -1626,7 +1626,7 @@ lab var module_order3 "Third module presented"
 
 * Import qudra follow up dataset
 import excel "$data/RCT wave 3/Raw/Qudra Follow-up_September 21, 2022_14.47.xlsx", ///
-	sheet("Qudra Follow-up_September 21, 2") firstrow clear
+	sheet("Sheet1") firstrow clear
 
 
 * drop first row (excel labels), and test responses (participandid==0 or ==.)
@@ -1639,8 +1639,8 @@ format EndDate2 %tc
 lab var EndDate2 "EndDate as date and time var"
 
 
-sort IPAddress EndDate2
-collapse (lastnm) Status Progress-EndDate2, by(IPAddress)
+sort IPanon EndDate2
+collapse (lastnm) Status Progress-sauditraining EndDate2, by(IPanon)
 
 
 * CREATE OUTCOME VARS
@@ -1656,7 +1656,7 @@ collapse (lastnm) Status Progress-EndDate2, by(IPAddress)
 	bysort participantid: egen number_friends_clicked_w3 = total(Q2=="Someone else sent me this link")
 	
 * collapse to participandid level
-collapse (first) IPAddress-participantgroup residence_area-number_friends_clicked_w3, by(participantid)
+collapse (first) IPanon-participantgroup residence_area-number_friends_clicked_w3, by(participantid)
 	lab var anyone_clicked_w3 "Any clicks on Qudra link"
 	lab var number_people_clicked_w3 "Number of people who clicked on Qudra link"
 	lab var number_friends_clicked_w3 "Number of friends who clicked on Qudra link"
