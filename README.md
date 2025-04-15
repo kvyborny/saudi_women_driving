@@ -2,8 +2,9 @@ Description:
 This replication package cleans the raw data and produces the results included in the paper "Drivers of change: employment responses to the lifting of the Saudi female driving ban" (authors: Chaza Abou Daher, Erica Field, Kendal Swanson, and Kate Vyborny). 
 Software used: Stata Version 18
 
-Data: 
+Data and Data Availability Statement: 
 Baseline data and administrative data provided by Alnahda can be found in data/RCT admin and wave 1. Interim follow up data can be found in data/RCT wave 2. Main follow-up data can be found in data/RCT wave 3. Within each of the folders the Raw folder contains all raw data and Final folder contains analysis ready data. 
+The raw data included IP addresses and neighborhoods of work and residence. We remove these in case they may provide identifying information. Removal of these variables was done manually across datasets except of IPAdress, which was done using <replication_code/cleaning/Anonymize IP address in link data_Wave 3.do> as the IDs were used as a measure the number of different individuals that clicked on a link to information about a leadership program. 
 We also include publicly available data used to generate statistics as well as figures and tables in the paper. This includes: Global Findex Database 2021 (source: World Bank; found in data/Findex Saudi); Education and Training Survey 2017 (Source: Saudi Arabia GASTAT; found in data/Government admin data/education_and_training_surveyen_1.xlsx); and Labor Force Survey 2018 (source: Saudi Arabia GASTAT; found in data/Government admin data/gastat_lfp_levels.dta). 
 
 Order of execution:
