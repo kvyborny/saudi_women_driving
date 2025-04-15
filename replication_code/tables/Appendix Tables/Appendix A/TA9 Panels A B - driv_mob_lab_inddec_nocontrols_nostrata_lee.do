@@ -89,7 +89,7 @@ eststo clear
 		 replace  varwidth(25) modelwidth(12) fragment nonotes
 		 
 		 esttab	$drive_mob_lee using ///
-		"$output_rct/Table_A9_Panel_A.tex", ///
+		"$output_rct/Table_A9_Panel_A_Lee.tex", ///
 		nomtitles nodepvars nolines ///
 		replace star(* .1 ** .05 *** .01) se t(4) b(4) label ///
 		nonotes nonum nogaps nobaselevels fragment  scalar("N Observations")
@@ -113,7 +113,7 @@ eststo clear
 		fragment varwidth(25) modelwidth(15) replace
 		
 		 esttab	$lab_lee using ///
-		"$output_rct/Table_A9_Panel_B.tex", ///
+		"$output_rct/Table_A9_Panel_B_Lee.tex", ///
 		nomtitles nodepvars nolines ///
 		replace star(* .1 ** .05 *** .01) se t(4) b(4) label ///
 		nonotes nonum nogaps nobaselevels fragment  scalar("N Observations")

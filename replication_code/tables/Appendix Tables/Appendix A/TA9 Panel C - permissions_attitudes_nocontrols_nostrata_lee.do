@@ -81,7 +81,7 @@ eststo clear
 	varwidth(75) modelwidth(15) fragment nobaselevels nogaps replace 
 	
 	esttab	$permissions_2ndattitudes_lee using ///
-		"$output_rct/Table_A9_Panel_C.tex", ///
+		"$output_rct/Table_A9_Panel_C_Lee.tex", ///
 		nomtitles nodepvars nolines ///
 		replace star(* .1 ** .05 *** .01) se t(4) b(4) label ///
 		nonotes nonum fragment nogaps nobaselevels scalar("N Observations")
