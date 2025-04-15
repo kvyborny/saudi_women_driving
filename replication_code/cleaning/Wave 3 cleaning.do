@@ -1630,7 +1630,8 @@ import excel "$data/RCT wave 3/Raw/Qudra Follow-up_September 21, 2022_14.47.xlsx
 
 
 * drop first row (excel labels), and test responses (participandid==0 or ==.)
-drop if _n==1 | _n==2
+drop if StartDate=="Start Date"		// drop var label observation
+drop if strpos(StartDate, "Import")	// drop second var label observation
 drop if inlist(participantid, "0", "")
 
 * let's use IP address to collapse to individuals instead of individual clicks
