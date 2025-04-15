@@ -122,6 +122,9 @@ lab var wusool_T "Wusool subsidy"
 	mgroups("\shortstack{Agreement with the\\following statements}" ///
 	"\shortstack{Indices: Second order attitudes\\towards women working}", pattern(1 0 1 0) ///
 	prefix(\multicolumn{@span}{c}{) suffix(}) span erepeat(\cmidrule(lr){@span})) ///
+	varlabels(1.driving_T "$\beta\textsubscript{1}$: Driving training" ///
+		1.wusool_T "$\beta\textsubscript{2}$: Rideshare subsidy" ///
+		1.driving_T#1.wusool_T "$\beta\textsubscript{3}$: Driving training x Rideshare subsidy") ///
 	varwidth(75) modelwidth(15) fragment nobaselevels nogaps replace 
 		
 		

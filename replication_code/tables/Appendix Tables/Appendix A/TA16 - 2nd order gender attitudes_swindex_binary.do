@@ -85,7 +85,7 @@ eststo clear
 			mtitles("\shortstack{Index: Second\\order attitudes\\towards women\\working}" ///
 					"\shortstack{Women can be\\equally good\\business\\executives}" ///	
 					"\shortstack{It's ok for\\a woman to\\have priorities\\outside the\\home}" ///
-					"\shortstack{Children OK if\\mother works}") ///
+					"\shortstack{Children OK\\if mother\\works}") ///
 			mgroups("Index" "Index Components", pattern(1 1 0 0) ///
 			prefix(\multicolumn{@span}{c}{) suffix(})   ///
 			span erepeat(\cmidrule(lr){@span})) varwidth(25) modelwidth(15) fragment  ///
@@ -95,7 +95,6 @@ eststo clear
 	* Male Family (Panel B)
 		esttab  $mfam /// 
 			using "$output_rct/Table_A16_Panel_B.tex", ///
-			posthead("\multicolumn{1}{@{}l}{\textbf{Panel B: Male Family}} \\ \midrule") ///
 			label se scalars("cmean Control mean" "b_cmean $\beta$/control mean" "pval P-value $\beta = 0$") ///
 			nonotes keep(treatment) ///
 			b(%9.3f) se(%9.3f) star(* 0.1 ** 0.05 *** 0.01) nogaps nobaselevels ///	
@@ -105,7 +104,6 @@ eststo clear
 	* Male community (Panel C)
 		esttab $mcom /// 
 			using "$output_rct/Table_A16_Panel_C.tex", ///
-			posthead("\multicolumn{1}{@{}l}{\textbf{Panel C: Male Community}} \\ \midrule") ///
 			label se scalars("cmean Control mean" "b_cmean $\beta$/control mean" "pval P-value $\beta = 0$") ///
 			nonotes keep(treatment) ///
 			b(%9.3f) se(%9.3f) star(* 0.1 ** 0.05 *** 0.01) nogaps nobaselevels ///	
