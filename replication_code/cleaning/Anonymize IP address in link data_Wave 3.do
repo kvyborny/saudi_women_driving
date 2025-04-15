@@ -2,6 +2,10 @@
 
 * Purpose: Anonymize IP address in Qudra link dataset
 
+Notes: This do file takes the raw data and creates an anonymized ID for the 
+IP address. We include the anonymized version of the dataset in the replication 
+package and therefore this do file is not run as part of the Master.do and is
+included only for reference.
 *******************************************************************************/
 
 
