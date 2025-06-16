@@ -1,19 +1,29 @@
 Description:
-The code in this replication package cleans and produces the analysis files for seven data sources: four primary data sources (baseline, administrative data provided by Alnahda Society at baseline, interim follow-up, and main follow-up) and three secondary sources (Global Findex Database 2021; Saudi Education and Training Survey 2017; and Saudi Labor Force Survey 2018). The analysis files produce the 30 tables (3 main exhibits and 27 appendix) and 5 appendix figures included in the paper, "Drivers of change: employment responses to the lifting of the Saudi female driving ban" (authors: Chaza Abou Daher, Erica Field, Kendal Swanson, and Kate Vyborny). 
+The code in this replication package cleans and produces the analysis files for four data sources: primary data collected by our Riyadh-based partners at Alnahda (baseline, administrative data provided by Alnahda at baseline, interim follow-up, and main follow-up) and three secondary sources (Global Findex Database 2021; Saudi Education and Training Survey 2017; and Saudi Labor Force Survey 2018). The analysis files produce the 30 tables (3 main exhibits and 27 appendix) and 5 appendix figures included in the paper, "Drivers of change: employment responses to the lifting of the Saudi female driving ban" (authors: Chaza Abou Daher, Erica Field, Kendal Swanson, and Kate Vyborny). 
 Software used: Stata Version 18
 
 Data and Data Availability Statements: 
-Our main sources of data are primary and were collected by our field partners at Alnahda. Data were collected at baseline (and merged with administrative records at Alnahda)
+Our primary survey data were collected by our field partners at Alnahda. Data were collected at baseline (and merged with administrative records at Alnahda), during an interim follow up, and during a main followup.
 - Baseline data (which includes administrative data provided by Alnahda) can be found in "data/RCT admin and wave 1". The raw data file is "data/RCT admin and wave 1/Raw/deidentified commute dataset-20191017". An exclusion sheet (data/RCT admin and wave 1/Raw/Exclusion Sheet.xlsx) indicates baseline respondents who met inclusion/exclusion criteria and were included in the study. This Exclusion Sheet is used in the cleaning code to remove respondents not included in the study. The cleaned baseline data file is "data/RCT admin and wave 1/Final/Wave1.dta".
 - Interim follow up data can be found in data/RCT wave 2. The raw data file is "data/RCT wave 2/Raw/Commute Wave 2 round 1-raw-deidentified/xlsx". The cleaned interim follow up data file is "data/RCT wave 2/Final/Wave2.dta". This file gets merged with the cleaned baseline data file; this merged version is "data/RCT wave 2/Final/Combined_waves1and2_final.dta".
 - The raw data files for the main follow-up can be found in "data/RCT wave 3/Raw". The cleaned data file is merged with the cleaned data files from baseline and the interim follow up, and it is this merged file that is used in analysis. This analysis data file can be found in "data/RCT wave 3/Final/Combined_allwaves_final.dta".
 
-Please note: Raw data files included IP addresses and neighborhoods of work and residence. We remove these in case they may provide identifying information. Removal of these potentially identifying variables was done manually across datasets except for the IP Addresses, which was done using <replication_code/cleaning/Anonymize IP address in link data_Wave 3.do> as the IDs were used as a measure the number of different individuals that clicked on a link to information about a leadership program (as part of the main follow up).
+Please note: Raw data files included IP addresses and neighborhoods of work and residence. We remove these in case they could be used to partially identify households. Removal of these potentially identifying variables was done manually across datasets except for the IP Addresses, which was done using <replication_code/cleaning/Anonymize IP address in link data_Wave 3.do> as the IDs were used as a measure the number of different individuals that clicked on a link to information about a leadership program (as part of the main follow up).
 
 We also include in this replication package publicly available data that we used to generate statistics as well as figures and tables in the paper. This includes: 
 - Global Findex Database 2021 (source: World Bank; found in "data/Findex Saudi/micro_sau.dta"). 
 - Education and Training Survey 2017 (Source: Saudi Arabia GASTAT; found in "data/Government admin data/education_and_training_surveyen_1.xlsx")
-- Labor Force Survey 2018 (source: Saudi Arabia GASTAT; found in "data/Government admin data/gastat_lfp_levels.dta"). 
+- Labor Force Survey 2018 (source: Saudi Arabia GASTAT; found in "data/Government admin data/gastat_lfp_levels.dta").
+
+Rights:
+[x] I certify that the authors of the manuscript have legitiment access to and permission to use the data used in this manuscript.
+All data are publicly available.
+
+Details on each data source:
+| Data Name | Data file(s) | Location | Citation |
+|---|:---:| :---:| :--- |
+| "Drivers of Change Survey Data" | Combined_allwaves_final.dta | data/RCT wave 3/Final/Combined_allwaves_final.dta | Drivers of Change (2025) |
+| "Global Findex Database 2021" | micro_sau.dta | data/Findex Saudi/ | Saudi Arabia GASTAT |
 
 Order of execution:
 To run this replication package and generate the figures and tables found in the paper, please follow these steps:
