@@ -144,4 +144,5 @@ List of tables/figures and programs
 | Table B8 | "replication_code/tables/Appendix Tables/Appendix B/TB8 - PAP_job search.do" | "replication_code/results/RCT/tables/": Table_B8_Panel_A.tex; Table_B8_Panel_B.tex |
 | Table B9 | "replication_code/tables/Appendix Tables/Appendix B/TB9 - wusool interaction_stacked_training_mobility_LFP.do" | "replication_code/results/RCT/tables/": Table_B9_Panel_A.tex; Table_B9_Panel_B.tex; Table_B9_Panel_C.tex |
 | Table B10 | "replication_code/tables/Appendix Tables/Appendix B/TB10 Panels A B - driving_mobility_labor_ind decision_strata.do" and "replication_code/tables/Appendix Tables/Appendix B/TB10 Panel C - permissions_attitudes women working_strata.do" | "replication_code/results/RCT/tables/": Table_B10_Panel_A.tex; Table_B10_Panel_B.tex; Table_B10_Panel_C.tex |
+| Stats referenced in text | "replication_code/tables/Robustness and stats referred to in paper/Stats_for_paper.do" | "replication_code/results/log_files/Robustness referred to in paper_[current_date] |
 
