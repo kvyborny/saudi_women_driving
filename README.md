@@ -15,8 +15,8 @@ We also include in this replication package publicly available data that we used
 - Education and Training Survey 2017 (Source: Saudi Arabia GASTAT; found in "data/Government admin data/education_and_training_surveyen_1.xlsx")
 - Labor Force Survey 2018 (source: Saudi Arabia GASTAT; found in "data/Government admin data/gastat_lfp_levels.dta").
 
-Rights:
-[x] I certify that the authors of the manuscript have legitiment access to and permission to use the data used in this manuscript.
+Rights: //
+-[x] I certify that the authors of the manuscript have legitiment access to and permission to use the data used in this manuscript.
 All data are publicly available.
 
 Details on each data source:
