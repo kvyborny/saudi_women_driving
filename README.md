@@ -110,38 +110,38 @@ List of tables/figures and programs
 |---|:---:| :---:| :--- |
 | Table 1 | "replication_code/tables/Main Tables/T1 PanelsAB - driving_mobility_labor_ind decision.do"; "replication_code/tables/Main Tables/T1 PanelC - Permissions_attitudes women working.do" |  |
 | Table 2 | "replication_code/tables/Main Tables/T2_T3 - Lic_employed_ability to purchase_multiple HTE.do" |  |
-| Table 3 |  |  |
+| Table 3 |  "replication_code/tables/Main Tables/T2_T3 - Lic_employed_ability to purchase_multiple HTE.do" |  |
 | Appendix A |  |  |
-| Figure A1 |  |  |
-| Figure A2 |  |  |
-| Figure A3 |  |  |
-| Figure A4 |  |  |
-| Figure A5 |  |  |
-| Table A1 |  |  |
-| Table A2 |  |  |
-| Table A3 |  |  |
-| Table A4 |  |  |
-| Table A5 |  |  |
-| Table A6 |  |  |
-| Table A7 |  |  |
-| Table A8 |  |  |
-| Table A9 |  |  |
-| Table A10 |  |  |
-| Table A11 |  |  |
-| Table A12 |  |  |
-| Table A13 |  |  |
-| Table A14 |  |  |
-| Table A15 |  |  |
-| Table A16 |  |  |
-| Table A17 |  |  |
-| Table B1 |  |  |
-| Table B2 |  |  |
-| Table B3 |  |  |
-| Table B4 |  |  |
-| Table B5 |  |  |
-| Table B6 |  |  |
-| Table B7 |  |  |
-| Table B8 |  |  |
-| Table B9 |  |  |
-| Table B10 |  |  |
+| Figure A1 |  |  | This figure is a study timeline, created in PowerPoint
+| Figure A2 | "replication_code/figures/Appendix Figures/FA2 - 2nd order beliefs bar chart.do" |  |
+| Figure A3 | "replication_code/figures/Appendix Figures/FA3 - Bar chart_treatment effects on trips without male chaperone.do" |  |
+| Figure A4 | "replication_code/figures/Appendix Figures/FA4 - Bar Chart_treatment effects on travel freq.do" |  |
+| Figure A5 | "replication_code/figures/Appendix Figures/FA5 - Saudi LFP graph.do" |  |
+| Table A1 |  |  | This table was written manually in Latex
+| Table A2 |  |  | This table was written manually in Latex, stats from experimental sample were estimated in "replication_code/tables/Robustness and stats referred to in paper/Stats_for_paper.do"
+| Table A3 | "replication_code/tables/Appendix Tables/Appendix A/TA3 - Balance across arms among responders.do" |  |
+| Table A4 | "replication_code/tables/Appendix Tables/Appendix A/TA4 - Balance across arms_full sample.do" |  |
+| Table A5 | "replication_code/tables/Appendix Tables/Appendix A/TA5 - descriptive stats on wave 2 travel patterns in control group.do" |  |
+| Table A6 | "replication_code/tables/Appendix Tables/Appendix A/TA6 - Attrition table with and without controls.do" |  |
+| Table A7 | "replication_code/tables/Appendix Tables/Appendix A/TA7-TA8 - Attrition_multipleHTE.do" |  |
+| Table A8 | "replication_code/tables/Appendix Tables/Appendix A/TA7-TA8 - Attrition_multipleHTE.do" |  |
+| Table A9 | "replication_code/tables/Appendix Tables/Appendix A/TA9 Panels A B - driv_mob_lab_inddec_nocontrols_nostrata_lee.do" and "replication_code/tables/Appendix Tables/Appendix A/TA9 Panel C - permissions_attitudes_nocontrols_nostrata_lee.do" |  |
+| Table A10 | "replication_code/tables/Appendix Tables/Appendix A/TA10 Panels AB - driving_mobility_labor_ind decision_nocontrols.do" and "replication_code/tables/Appendix Tables/Appendix A/TA10 Panel C - permissions_attitudes women working_nocontrols.do" |  |
+| Table A11 | "replication_code/tables/Appendix Tables/Appendix A/TA11 - labor_outcomes_weighted_age-edu_emp.do" |  |
+| Table A12 | "replication_code/tables/Appendix Tables/Appendix A/TA12 - First order beliefs_soccont_swindex.do" |  |
+| Table A13 | "replication_code/tables/Appendix Tables/Appendix A/TA13 - Approval of gender policy.do" |  |
+| Table A14 | "replication_code/tables/Appendix Tables/Appendix A/TA14 - Civic Engagement.do" |  |
+| Table A15 | "replication_code/tables/Appendix Tables/Appendix A/TA15 - Permission to purchase_weighted.do" |  |
+| Table A16 | "replication_code/tables/Appendix Tables/Appendix A/TA16 - 2nd order gender attitudes_swindex_binary.do" |  |
+| Table A17 | "replication_code/tables/Appendix Tables/Appendix A/TA17 - Employed_HTE marital robustness to treatment interactions with BL characteristics.do" |  |
+| Table B1 | "replication_code/tables/Appendix Tables/Appendix B/TB1 - MHT_emp_unemp_empsearch.do" |  |
+| Table B2 | "replication_code/tables/Appendix Tables/Appendix B/TB2 Panels AB_TB3 Panel B - MHT_emp_unemp_empsearch_HTE_age_edu_LF.do" and "replication_code/tables/Appendix Tables/Appendix B/TB2 Panel C - MHT_emp_unemp_empsearch_HTE_marital.do" |  |
+| Table B3 | "replication_code/tables/Appendix Tables/Appendix B/TB3 Panel A - MHT_emp_unemp_empsearch_HTE_husbcopar.do" and "replication_code/tables/Appendix Tables/Appendix B/TB2 Panels AB_TB3 Panel B - MHT_emp_unemp_empsearch_HTE_age_edu_LF" |  |
+| Table B4 | "replication_code/tables/Appendix Tables/Appendix B/TB4 - MHT_mob and spending control.do" |  |
+| Table B5 | "replication_code/tables/Appendix Tables/Appendix B/TB5 Panels A B_TB6 Panel B - MHT_mob and spending control_HTE_age_edu_LF.do" and "replication_code/tables/Appendix Tables/Appendix B/TB5 Panel C - MHT_mob and spending control_HTE_marital.do" |  |
+| Table B6 | "replication_code/tables/Appendix Tables/Appendix B/TB6 Panel A - MHT_mob and spending control_HTE_husbcopar.do" and "replication_code/tables/Appendix Tables/Appendix B/TB5 Panels A B_TB6 Panel B - MHT_mob and spending control_HTE_age_edu_LF.do" |  |
+| Table B7 | "replication_code/tables/Appendix Tables/Appendix B/TB7 - PAP_training_lic_commute_mobility.do" |  |
+| Table B8 | "replication_code/tables/Appendix Tables/Appendix B/TB8 - PAP_job search.do" |  |
+| Table B9 | "replication_code/tables/Appendix Tables/Appendix B/TB9 - wusool interaction_stacked_training_mobility_LFP.do" |  |
+| Table B10 | "replication_code/tables/Appendix Tables/Appendix B/TB10 Panels A B - driving_mobility_labor_ind decision_strata.do" and "replication_code/tables/Appendix Tables/Appendix B/TB10 Panel C - permissions_attitudes women working_strata.do" |  |
 
