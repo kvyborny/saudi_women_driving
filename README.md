@@ -58,6 +58,21 @@ Dataset list:
 | data/Government admin data/education_and_training_surveyen_1.xlsx | Saudi Arabia GASTAT (2017) | Data from Saudi Education and Training Survey 2017 | Yes |
 | data/Findex Saudi/micro_sau.dta | World Bank (2021) | Data from Findex | Yes |
 
+Software requirements:
+Stata (code was last run with version 18)
+- swindex
+- reghdfe
+- ihstrans
+- winsor2
+- outreg2
+- grc1leg
+- scto
+- ietoolkit
+- blindschemes
+- texdoc
+- estout
+- The program "replication_code/Master.do" will (in addition to running all data cleaning and analysis files for results in the paper) install necessary user-written packages
+
 
 Order of execution:
 To run this replication package and generate the figures and tables found in the paper, please follow these steps:
