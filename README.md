@@ -58,6 +58,7 @@ Dataset list:
 | data/Government admin data/education_and_training_surveyen_1.xlsx | Saudi Arabia GASTAT (2017) | Data from Saudi Education and Training Survey 2017 | Yes |
 | data/Findex Saudi/micro_sau.dta | World Bank (2021) | Data from Findex | Yes |
 
+
 Software requirements:
 Stata (code was last run with version 18)
 - swindex
@@ -74,7 +75,27 @@ Stata (code was last run with version 18)
 - The program "replication_code/Master.do" will (in addition to running all data cleaning and analysis files for results in the paper) install necessary user-written packages
 
 
-Order of execution:
+Controlled randomness:
+- [x] Random seed is set at lines 42-43 of program "replication_code/Master.do"
+
+
+Runtime and storage requirements:
+- Approximate time needed to reproduce the analyses on a standard 2025 desktop machine: <10 minutes
+- Approximate storage space needed: 250MB - 2GB
+
+
+Description of programs/code:
+- "replication_code/settings_rep_package" requires user input. This program sets globals specific to the users machine (based on the location of the rep package in their local files). The file path to the replication package must be added by user to line 18 before running any of the following programs.
+- "replication_code/Master.do" will load/install all necessary Stata packages, run all cleaning and analysis programs, and run a program that generates any additional statistic reported in the paper that was not part of a table/figure.
+- "replication_code/1 - Pull in data" opens the survey data used in analysis (note: this does not need to be run individually, it is called in each individual program that uses the survey data)
+- "replication_code/2 - Setting regression controls" generates globals for the regression controls used in analysis for tables/figures (note: this does not need to be run individually, it is called in each individual program that uses the survey data)
+- "replication_code/3 - Imputation for controls" replaces missing control values with "0" and creates a flag variable for observations with missing control values for use in analysis (note: this does not need to be run individually, it is called in each individual program that uses the survey data)
+- Programs in "replication_code/cleaning" will open all raw data files, merge, and clean as needed for analysis used in this paper.
+- Programs in "replication_code/figures" will generate all figures used in the online appendices of the paper
+- Programs in "replication_code/tables" will generate all tables in the paper and in the online appendices
+  
+
+Instructions to replicators:
 To run this replication package and generate the figures and tables found in the paper, please follow these steps:
 1) Open <replication_code/settings_rep_package.do. On line 18 replace "[INSERT FILE PATH TO REP PACKAGE]" with the file path to where you have saved the <saudi_women_driving> replication package. Then run this file.
 2) Open <replication_code/Master.do>. Run this file. <Master.do> will load all necessary Stata packages, load and prepare analysis ready data, and generate all figures and tables included in the paper. It will also run all robustness and statistics referred to in the paper. The run time for this file (and the accompanying do files that will run automatically as part of it) takes approximately 5 minutes.
@@ -83,4 +104,44 @@ To run this replication package and generate the figures and tables found in the
 5) Results stored in <replication_code/tables/Robustness and stats referred to in paper> after running <replication_code/Master.do> include alternate versions of some tables as referenced in the text or table footnotes.
 6) Log files from data cleaning and from the robustness section after running <replication_code/Master.do> will be saved in <results/log_files>.
 
+
+List of tables/figures and programs
+| Figure/Table # | Program | Output file | Notes |
+|---|:---:| :---:| :--- |
+| Table 1 | "replication_code/tables/Main Tables/T1 PanelsAB - driving_mobility_labor_ind decision.do"; "replication_code/tables/Main Tables/T1 PanelC - Permissions_attitudes women working.do" |  |
+| Table 2 | "replication_code/tables/Main Tables/T2_T3 - Lic_employed_ability to purchase_multiple HTE.do" |  |
+| Table 3 |  |  |
+| Appendix A |  |  |
+| Figure A1 |  |  |
+| Figure A2 |  |  |
+| Figure A3 |  |  |
+| Figure A4 |  |  |
+| Figure A5 |  |  |
+| Table A1 |  |  |
+| Table A2 |  |  |
+| Table A3 |  |  |
+| Table A4 |  |  |
+| Table A5 |  |  |
+| Table A6 |  |  |
+| Table A7 |  |  |
+| Table A8 |  |  |
+| Table A9 |  |  |
+| Table A10 |  |  |
+| Table A11 |  |  |
+| Table A12 |  |  |
+| Table A13 |  |  |
+| Table A14 |  |  |
+| Table A15 |  |  |
+| Table A16 |  |  |
+| Table A17 |  |  |
+| Table B1 |  |  |
+| Table B2 |  |  |
+| Table B3 |  |  |
+| Table B4 |  |  |
+| Table B5 |  |  |
+| Table B6 |  |  |
+| Table B7 |  |  |
+| Table B8 |  |  |
+| Table B9 |  |  |
+| Table B10 |  |  |
 
