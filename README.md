@@ -146,3 +146,14 @@ List of tables/figures and programs
 | Table B10 | "replication_code/tables/Appendix Tables/Appendix B/TB10 Panels A B - driving_mobility_labor_ind decision_strata.do" and "replication_code/tables/Appendix Tables/Appendix B/TB10 Panel C - permissions_attitudes women working_strata.do" | "replication_code/results/RCT/tables/": Table_B10_Panel_A.tex; Table_B10_Panel_B.tex; Table_B10_Panel_C.tex |
 | Stats referenced in text | "replication_code/tables/Robustness and stats referred to in paper/Stats_for_paper.do" | "replication_code/results/log_files/Robustness referred to in paper_[current_date] |
 
+
+References: 
+
+Chaza Abou Daher, Erica Field, Kendal Swanson, and Kate Vyborny. 2025. "Drivers of Change: Employment responses to the lifting of the Saudi female driving ban [dataset]."
+
+Saudi Arabia GASTAT, “Education and Training Survey,” 2017. 
+
+Saudi Arabia GASTAT, “Labor Force Survey,” 2018.
+
+World Bank, “Global Findex Database 2021,” 2021.
+
