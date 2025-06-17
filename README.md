@@ -23,7 +23,41 @@ Details on each data source:
 | Data Name | Data file(s) | Location | Citation |
 |---|:---:| :---:| :--- |
 | "Drivers of Change Survey Data" | Combined_allwaves_final.dta | data/RCT wave 3/Final/Combined_allwaves_final.dta | Drivers of Change (2025) |
-| "Global Findex Database 2021" | micro_sau.dta | data/Findex Saudi/ | Saudi Arabia GASTAT |
+| "Global Findex Database 2021" | micro_sau.dta | data/Findex Saudi/ | World Bank (2021) |
+| "Education and Training Survey 2017" | education_and_training_surveyen_1.xlsx | data/Government admin data/ | Saudi Arabia GASTAT (2017) |
+| "Labor Force Survey 2018" | gastat_lfp_levels.dta | data/Government admin data/ | Saudi Arabia GASTAT (2018) |
+
+Dataset list:
+| Data File | Source | Notes | Provided |
+|---|:---:| :---:| :--- |
+| data/RCT admin and wave 1/Raw/deidentified commute dataset-20191017 | Drivers of Change (2025) | Raw baseline data | Yes |
+| data/RCT admin and wave 1/Raw/Exclusion sheet.xlsx (.dta) | Drivers of Change (2025) | Provides indicator for baseline respondents included in the study | Yes |
+| data/RCT admin and wave 1/Final/Wave1.dta | Drivers of Change (2025) | Cleaned (Final) baseline data | Yes |
+| data/RCT wave 1/Raw/Commute Wave 2 round 1-raw-deidentified.xlsx | Drivers of Change (2025) | Raw interim follow up data | Yes |
+| data/RCT wave 1/Raw/block randomizer.xlsx | Drivers of Change (2025) | Provides randomized survey block order for interim follow up data | Yes |
+| data/RCT wave 1/Cleaned/block randomizer.dta | Drivers of Change (2025) | Cleaned randomized survey block order for interim follow up data | Yes |
+| data/RCT wave 1/Cleaned/Wave2_raw.dta | Drivers of Change (2025) | Raw interim follow up data, removing duplicate observations | Yes |
+| data/RCT wave 1/Cleaned/cleaned_wave2_dataset_full.dta | Drivers of Change (2025) | Cleaned interim follow up data | Yes |
+| data/RCT wave 1/Final/Wave2.dta | Drivers of Change (2025) | Cleaned (final) interim follow up data | Yes |
+| data/RCT wave 1/Final/Combined_waves1and2_final.dta | Drivers of Change (2025) | Cleaned (final) interim follow up data merged with cleaned (final) baseline data | Yes |
+| data/RCT wave 3/Raw/Wave 3 - High Freq 1_redownload with module randomizer info_August 26, 2022.xlsx | Drivers of Change (2025) | Raw main follow up (longer survey version) after rephrasing question on pace of societal change | Yes |
+| data/RCT wave 3/Raw/Wave 3 new wording survey - Raw.dta | Drivers of Change (2025) | Raw main follow up (longer survey version), formatted for Stata | Yes |
+| data/RCT wave 3/Raw/Wave 3 - High Freq 1_pre wording change for govt progress.xlsx | Drivers of Change (2025) | Raw main follow up (longer survey version), pre-rephrasing question on pace of societal change | Yes |
+| data/RCT wave 3/Raw/Wave 3 full survey - Raw.dta | Drivers of Change (2025) | Combined raw data for main follow up, with some missing respondent IDs | Yes |
+| data/RCT wave 3/Raw/Wave 3 IDs for missing respondents_5Oct2022.xlsx | Drivers of Change (2025) | Respondent IDs merged into main follow up data (excel version)  | Yes |
+| data/RCT wave 3/Raw/Wave 3 IDs for missing respondents_5Oct2022.dta | Drivers of Change (2025) | Respondent IDs merged into main follow up data (Stata version)  | Yes |
+| data/RCT wave 3/Raw/Wave 3 - Limited Version_October 4, 2022_08.36.xlsx | Drivers of Change (2025) | Raw data from shortened main follow up survey | Yes |
+| data/RCT wave 3/Raw/Wave 3 - combined full and lim survey.dta | Drivers of Change (2025) | Combined raw data for main follow up  | Yes |
+| data/RCT wave 3/Raw/Qudra Follow-up_September 21, 2022_14.47.xlsx | Drivers of Change (2025) | Volunteer program (Qudra) data for main follow up  | Yes |
+| data/RCT wave 3/Data for survey embedding/Feb 2022 Limited Survey/Wave_3__Limited_Version-Distribution_History_AlNahda survey links_27Feb2022.csv | Drivers of Change (2025) | Respondent IDs merged into main follow up data  | Yes |
+| data/RCT wave 3/Cleaned/Wave3_combinedrawdata.dta | Drivers of Change (2025) | Raw main follow up data, cleaned to be merged with baseline and interim follow up data | Yes |
+| data/RCT wave 3/Cleaned/Wave3raw_mergedwaves1and2.dta | Drivers of Change (2025) | Raw main follow up data merged with baseline and interim follow up data | Yes |
+| data/RCT wave 3/Cleaned/Combined_allwaves_fullwave3vars_cleaned.dta | Drivers of Change (2025) | Cleaned survey data (baseline, interim, and main follow up merged) | Yes |
+| data/RCT wave 3/Final/Combined_allwaves_final.dta | Drivers of Change (2025) | Cleaned (final) survey data file - used in analysis for paper | Yes |
+| data/Government admin data/gastat_lfp_levels.dta | Saudi Arabia GASTAT (2018) | Data from Saudi Labor Force Survey 2018 | Yes |
+| data/Government admin data/education_and_training_surveyen_1.xlsx | Saudi Arabia GASTAT (2017) | Data from Saudi Education and Training Survey 2017 | Yes |
+| data/Findex Saudi/micro_sau.dta | World Bank (2021) | Data from Findex | Yes |
+
 
 Order of execution:
 To run this replication package and generate the figures and tables found in the paper, please follow these steps:
